@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System.Collections;
 
 
@@ -85,4 +85,4 @@ public class Towers : MonoBehaviour {
 		//set shoot time interval
 		ActionOnEnemy ();
 	}
-}
+}*/
