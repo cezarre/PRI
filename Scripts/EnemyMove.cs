@@ -17,7 +17,7 @@ public class EnemyMove : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col)
 	{
 		player = GetComponent<Rigidbody2D> ();
-		Debug.Log("Something has entered this zone."+ col.gameObject.tag);
+		//Debug.Log("Something has entered this zone."+ col.gameObject.tag);
 
 		if (firstPath) {
 			firstPath = false;
