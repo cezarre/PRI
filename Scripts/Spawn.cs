@@ -17,7 +17,7 @@ public class Spawn : MonoBehaviour {
 	void Start () {
 
 	
-	}
+	}	
 
 	void SpawnEnemy()
 	{

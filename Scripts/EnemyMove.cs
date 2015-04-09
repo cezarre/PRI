@@ -5,9 +5,22 @@ public class EnemyMove : MonoBehaviour {
 	public float speed; //predkosc wroga
 	Rigidbody2D player;
 	bool firstPath = true;
+	public float hp;
+
 	void Start () {
-	
+		hp = 10;
 	}
+
+
+	public void damage (float d)
+	{
+		hp -= d;
+		if (hp <= 0) {
+			Destroy (gameObject);
+		}
+	}
+
+
 	
 	// Update is called once per frame
 	void Update () {

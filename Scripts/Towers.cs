@@ -1,45 +1,85 @@
-﻿/*using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 
 
 
 public class Towers : MonoBehaviour {
-	//to class Board
-	List<Enemy> enemies = new List<Enemy>();
+
+	public List <GameObject> enemies = new List<GameObject>();
+
+	IEnumerator Start()
+	{
+		damage = 11;
+		radius = 10;
+		timeInterval = 4f;
+		type3 = false;
+		TowerCord = gameObject.AddComponent<Point>();
+		TowerCord.Set (gameObject.transform.position.x, gameObject.transform.position.y);
+
+
+		yield return new WaitForSeconds(1);
+		LoadEnemies ();
+		StartCoroutine(Actioning ());
+
+	}
+
+	public void LoadEnemies() {
+		enemies.Clear ();
+		foreach(GameObject enem in GameObject.FindGameObjectsWithTag("Enemy"))
+		{
+			enemies.Add (enem);
+		}
+	}
+	
 	//----------------------------------
 
 	public int t_level;
-	public int damage;
-	public int areaDamageDist;
-	public int timeInterval;
-	public int radius;
+	public float damage;
+	public float areaDamageDist;
+	public float timeInterval;
+	public float radius;
 	public bool type3;
-	public Point TowerCord = new Point();
+	public Point TowerCord;
 
-	public Towers(int x, int y){
-		this.TowerCord.Set (x, y);
-	}
 
-	int distance(Point a, Point b) {
+
+	float distance(Point a, Point b) {
 		//calculate distance
-		int x = a.GetX () - b.GetX ();
-		int y = a.GetY () - b.GetY ();
+		float x = a.GetX () - b.GetX ();
+		float y = a.GetY () - b.GetY ();
 		
 		return Mathf.Sqrt (x * x + y * y);
 	}
 
-	bool DetectedEnemy(Point EnemyCord) {
-		if (distance (EnemyCord, TowerCord) <= radius) {
+	private Point enemyToPoint (GameObject enemy) {
+		Point tempP = gameObject.AddComponent<Point>();
+		tempP.Set (enemy.transform.position.x, enemy.transform.position.y);
+		return tempP;
+	}
+
+	bool DetectedEnemy(GameObject enemy) {
+
+		if (distance (enemyToPoint(enemy), TowerCord) <= radius) {
 			return true;
 		} else {
 			return false;
 		}
 	}
 
+	IEnumerator Actioning() {
+		while(true) {
+			ActionOnEnemy ();
+			yield return new WaitForSeconds (timeInterval);
+		}
+	}
+
 	void ActionOnEnemy(){
 
-		foreach (Enemy enemy in enemies) {
+		LoadEnemies();
+		foreach (GameObject enemy in enemies) {
+
 			if (DetectedEnemy(enemy)) {
 				if (type3) {
 					AreaShoot(enemy);
@@ -47,25 +87,27 @@ public class Towers : MonoBehaviour {
 					Shoot(enemy);
 				}
 
+
+				break;
 				//other actions, if any
 			}
 		}
 
 	}
 
-	void Shoot(Enemy enemy) {
-		enemy.damage (damage);
+	void Shoot(GameObject enemy) {
+		enemy.GetComponent<EnemyMove>().damage(damage);
 	}
 
-	void AreaShoot(Enemy enemy) {
-		Shoot (enemy);
+	void AreaShoot(GameObject enemy) {
+		/*Shoot (enemy);
 
-		foreach (Enemy otherEnemy in enemies) {
-			int dist = distance(otherEnemy, enemy);
+		foreach (GameObject otherEnemy in enemies) {
+			float dist = distance(enemyToPoint(otherEnemy), enemyToPoint(enemy));
 			if (dist < areaDamageDist) {
 				otherEnemy.damage = (1 - dist/areaDamageDist) * damage;
 			}
-		}
+		}*/
 
 	}
 
@@ -74,15 +116,12 @@ public class Towers : MonoBehaviour {
 	}
 
 
+	
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
 	// Update is called once per frame
 	void Update () {
-		//set shoot time interval
-		ActionOnEnemy ();
+
+
+		//Debug.Log("From tower: " + enemies.Count);
 	}
-}*/
+}

@@ -3,19 +3,19 @@ using System.Collections;
 
 public class Point : MonoBehaviour {
 
-		private int x;
-		private int y;
+		private float x;
+		private float y;
 
-	public void Set(int x, int y) {
+	public void Set(float x, float y) {
 		this.x = x;
 		this.y = y;
 	}
 
-	public int GetX(){
+	public float GetX(){
 		return x;
 	}
 
-	public int GetY() {
+	public float GetY() {
 		return y;
 	}
 
