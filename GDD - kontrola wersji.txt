@@ -1,19 +1,11 @@
----<<<***>>>---
-INSTRUKCJA OBS£UGI
-
-Jako ¿e GitHub nie "widzi" treœci plików .odt proponujê przy ka¿dej nowej wersji wklejaæ do tego pliku treœæ dokumentu,
-bez ¿¹dnej dotatkowej edycji - wtedy od razu powinny byæ widoczne zmiany w dokumentacji.
-
----<<<***>>>---
-
-[Tytu³ Gry]
+[TytuÅ‚ Gry]
 
 Game Design Document
 
 Wersja
-1.2
+1.4
 Grupa
-„Gra Tower Defence”
+â€Gra Tower Defenceâ€
 
 
 
@@ -55,26 +47,26 @@ Grupa
 
 
 
-Spis Treœci
+Spis TreÅ›ci
 Do Zrobienia	3
 Uwagi	3
-Omówienie	3
+OmÃ³wienie	3
 Platformy docelowe	4
 Styl Graficzny	4
 Styl Audio	4
-Interface U¿ytkownika	4
-Menu g³ówne	4
+Interface UÅ¼ytkownika	4
+Menu gÅ‚Ã³wne	4
 Menu kampanii	4
-Menu ulepszeñ 	5
-Ekran ustawieñ gry	5
+Menu ulepszeÅ„ 	5
+Ekran ustawieÅ„ gry	5
 Menu opcji	5
 HUD	5
-Ekran „Koniec Gry”	5
-Wybór Poziomu 	5
-Typy poziomów:	5
-Pe³na lista poziomów	5
+Ekran â€Koniec Gryâ€	5
+WybÃ³r Poziomu 	5
+Typy poziomÃ³w:	5
+PeÅ‚na lista poziomÃ³w	5
 Gameplay	6
-Rozpoczêcie gry	6
+RozpoczÄ™cie gry	6
 Przebieg misji	6
 Mechanika	7
 Sterowanie	7
@@ -84,53 +76,53 @@ Punkty	7
 Achievementy	8
 Zasoby	8
 Wrogowie	8
-Wie¿e	8
+WieÅ¼e	8
 Ulepszenia	8
-Œrodowisko	8
+Åšrodowisko	8
 Audio	8
-Fabu³a 	8
+FabuÅ‚a 	8
 Filmiki	8
-S³ownik	9
+SÅ‚ownik	9
 Steampunk	9
 Pixel art	9
 Misja, Poziom	9
 Menu kampanii, Mapa kampanii	9
 Gracz	9
-Wie¿a	9
-¯o³nierz wroga, Wróg	9
-Œcie¿ka	9
-Punkt pocz¹tkowy œcie¿ki	9
-Punkt koñcowy œcie¿ki	10
+WieÅ¼a	9
+Å»oÅ‚nierz wroga, WrÃ³g	9
+ÅšcieÅ¼ka	9
+Punkt poczÄ…tkowy Å›cieÅ¼ki	9
+Punkt koÅ„cowy Å›cieÅ¼ki	10
 Fundusze	10
-Punkty ¿ycia	10
+Punkty Å¼ycia	10
 Unity	10
-Urz¹dzenie mobilne	10
-Przegl¹darka internetowa	10
+UrzÄ…dzenie mobilne	10
+PrzeglÄ…darka internetowa	10
 [kolejny wpis]	10
 
 
 
 
 Do Zrobienia
-Uzupe³niæ treœæ dokumentu
+UzupeÅ‚niÄ‡ treÅ›Ä‡ dokumentu
 Uwagi
-WPISUJCIE DO SLOWNIKA WSZYSKIE POJÊCIA Z KTÓRYCH KO¯YSTACIE PRZY OPISIE CZEGOKOLWIEK
-PAMIÊTAJCIE ¯EBY PRZY KA¯DYM UPLOADZIE ZWIÊKSZYÆ WERSJÊ
-Sugerujê dla u³atwienia zaznaczaæ tekst pomocniczy uzupe³nianych akapitow na szaro – usunie siê go na samym koñcu
+WPISUJCIE DO SLOWNIKA WSZYSKIE POJÄ˜CIA Z KTÃ“RYCH KOÅ»YSTACIE PRZY OPISIE CZEGOKOLWIEK
+PAMIÄ˜TAJCIE Å»EBY PRZY KAÅ»DYM UPLOADZIE ZWIÄ˜KSZYÄ† WERSJÄ˜
+SugerujÄ™ dla uÅ‚atwienia zaznaczaÄ‡ tekst pomocniczy uzupeÅ‚nianych akapitow na szaro â€“ usunie siÄ™ go na samym koÅ„cu
 
-Omówienie
+OmÃ³wienie
 1 short sentences about the overall gameplay
-[Tytu³ Gry] jest gr¹ typu Tower Defence tworzon¹ i rozwijan¹ za pomoc¹ œrodowiska Unity, targetowan¹ na œrodowiska mobilne oraz internetowe. Celem gracza na poszczególnych poziomach jest obrona „œcie¿ki” i niedopuszczenie by jednostki przeciwnika dotar³y na jej koniec. Gracz realizuje ten cel poprzez budowanie wzd³u¿ œcie¿ki wie¿ które automatycznie atakuj¹ ¿o³nierzy wroga w swoim zasiêgu.
+[TytuÅ‚ Gry] jest grÄ… typu Tower Defence tworzonÄ… i rozwijanÄ… za pomocÄ… Å›rodowiska Unity, targetowanÄ… na Å›rodowiska mobilne oraz internetowe. Celem gracza na poszczegÃ³lnych poziomach jest obrona â€Å›cieÅ¼kiâ€ i niedopuszczenie by jednostki przeciwnika dotarÅ‚y na jej koniec. Gracz realizuje ten cel poprzez budowanie wzdÅ‚uÅ¼ Å›cieÅ¼ki wieÅ¼, ktÃ³re automatycznie atakujÄ… Å¼oÅ‚nierzy wroga w swoim zasiÄ™gu.
 1-2 Paragraphs setting up the storyline or environment of the game.  Describe the first 2 minutes after the player hits the start button
-Po rozpoczêciu rozgrywki gracz widzi mapê kampanii, na której kolejno pojawiaj¹ siê dostêpne misje – poziomy gry. Gdy gracz wybierze jeden z dostêpnych poziomów i ustawi jego parametry startowe przenosi siê do w³aœciwego poziomu. Po rozpoczêciu misji gracz ma mo¿liwoœæ wybudowania kilku wie¿ w ramach dostêpnych zasobów pocz¹tkowych, oraz „wypuszczenia” pierwszej fali przeciwników, w którym to momencie rozpoczyna siê w³aœciwa rozgrywka na danym poziomie.
-W trakcie rozgrywki w³aœciwej w okreœlonych odstêpach czasu na planszê wkraczaj¹ nowe fale wrogów. Gdy okreœlony przeciwnik znajdzie siê w zasiêgu jednej z wie¿ gracza ta automatycznie rozpoczyna ostrza³ wroga a¿ do zabicia go, lub opuszczenia przez niego zasiêgu danej wie¿y. W przypadku gdy przeciwnik dotrze do punktu koñcowego œcie¿ki gracz traci pewn¹ iloœæ punktów „¿ycia” dostêpnych na danym poziomie.
-W przypadku gdyby gracz utraci³ wszystkie dostêpne na okreœlonym poziomie punkty ¿ycia, rozgrywka na tym poziomie koñczy siê niepowodzeniem. W przeciwnym przypadku, t.j. gdy wszyscy wrogowie zostan¹ zabici, lub opuszcz¹ mapê a graczowi pozostan¹ punkty ¿ycia, gra na tym poziomie koñczy siê powodzeniem. Gdy gracz ukoñczy z sukcesem poziom, zostaje nagrodzony pewn¹ iloœci¹ punktów, w zale¿noœci od wyniku na danym poziomie, a na mapie kampanii zostaje odblokowany kolejny poziom. Zdobyte punkty gracz mo¿e wydawaæ na ulepszenia u³atwiaj¹ce dalsz¹ rozgrywkê.
+Po rozpoczÄ™ciu rozgrywki gracz widzi mapÄ™ kampanii, na ktÃ³rej kolejno pojawiajÄ… siÄ™ dostÄ™pne misje â€“ poziomy gry. Gdy gracz wybierze jeden z dostÄ™pnych poziomÃ³w i ustawi jego parametry startowe przenosi siÄ™ do wÅ‚aÅ›ciwego poziomu. Po rozpoczÄ™ciu misji gracz ma moÅ¼liwoÅ›Ä‡ wybudowania kilku wieÅ¼ w ramach dostÄ™pnych zasobÃ³w poczÄ…tkowych, oraz â€wypuszczeniaâ€ pierwszej fali przeciwnikÃ³w, w ktÃ³rym to momencie rozpoczyna siÄ™ wÅ‚aÅ›ciwa rozgrywka na danym poziomie.
+W trakcie rozgrywki wÅ‚aÅ›ciwej w okreÅ›lonych odstÄ™pach czasu na planszÄ™ wkraczajÄ… nowe fale wrogÃ³w. Gdy okreÅ›lony przeciwnik znajdzie siÄ™ w zasiÄ™gu jednej z wieÅ¼ gracza ta automatycznie rozpoczyna ostrzaÅ‚ wroga aÅ¼ do zabicia go, lub opuszczenia przez niego zasiÄ™gu danej wieÅ¼y. W przypadku gdy przeciwnik dotrze do punktu koÅ„cowego Å›cieÅ¼ki gracz traci pewnÄ… iloÅ›Ä‡ punktÃ³w â€Å¼yciaâ€ dostÄ™pnych na danym poziomie.
+W przypadku gdyby gracz utraciÅ‚ wszystkie dostÄ™pne na okreÅ›lonym poziomie punkty Å¼ycia, rozgrywka na tym poziomie koÅ„czy siÄ™ niepowodzeniem. W przeciwnym przypadku, t.j. gdy wszyscy wrogowie zostanÄ… zabici, lub opuszczÄ… mapÄ™ a graczowi pozostanÄ… punkty Å¼ycia, gra na tym poziomie koÅ„czy siÄ™ powodzeniem. Gdy gracz ukoÅ„czy z sukcesem poziom, zostaje nagrodzony pewnÄ… iloÅ›ciÄ… punktÃ³w, w zaleÅ¼noÅ›ci od wyniku na danym poziomie, a na mapie kampanii zostaje odblokowany kolejny poziom. Zdobyte punkty gracz moÅ¼e wydawaÄ‡ na ulepszenia uÅ‚atwiajÄ…ce dalszÄ… rozgrywkÄ™.
 2-3 sentences that sum up the general gameplay, the general visual style and the overall feel of the game.
-Gra utrzymana jest w klimacie Steampunku, z grafik¹ w stylu pixel art.
+Gra utrzymana jest w klimacie Steampunku, z grafikÄ… w stylu pixel art.
 
 Platformy docelowe
 What platforms are you making this game for, what engine is it in, what are the min specs players need to play this, etc etc?
-Platformami docelowymi gry s¹ urz¹dzenia mobilne oraz przegl¹darki internetowe.
+Platformami docelowymi gry sÄ… urzÄ…dzenia mobilne oraz przeglÄ…darki internetowe.
 Styl Graficzny
 Description of the visual style. This section of the game design document is very important when the director is not the visual designer. Even when the same person, this section will be a great inspiration and motivator for the rest of the team, as well as help pitch the idea to any stakeholders.
 The section should include visual references as well as concept art of locations, sketches etc.
@@ -141,34 +133,35 @@ Music style and Genre with References
 Audio Effects style
 The kind of characters that would have dialogue with references
 When dialogue or voice work would be used
+Muzyka w grze jest dostosowana do klimatu i stylistyki graficznej w grze. Wykorzystywana tylko jako tÅ‚o do rozgrywki.
 
-Interface U¿ytkownika
-Menu g³ówne
+Interface UÅ¼ytkownika
+Menu gÅ‚Ã³wne
 Describe the aesthetics and style of the menu, how it is displayed and how it is interacted with.  Cite examples and post images of reference menus.
 
 Menu kampanii
 Describe the aesthetics and style of the menu, how it is displayed and how it is interacted with.  Cite examples and post images of reference menus.
 
-Menu ulepszeñ 
+Menu ulepszeÅ„ 
 List the elements and options for the UI involved with setting up the player, buying and selling weapons, equiping items, etc etc.
 
-Ekran ustawieñ gry
+Ekran ustawieÅ„ gry
 Go over the elements, options and UI involved with setting up or joining a match in multiplayer or starting/resuming a single player game.
 Menu opcji
 Flow Chart and/or Wireframe
 HUD
 Describe what information needs to be displayed and how it will be displayed.  Cite examples and shot sample shots of other games that contain similar styles or elements
 
-Ekran „Koniec Gry”
+Ekran â€Koniec Gryâ€
 What information is displayed once a match is finished?
 
-Wybór Poziomu 
+WybÃ³r Poziomu 
 Describe the level selection and unlocking process.  How many levels does your average player start out with and how does he progress through the game?  How are the levels organized and grouped?  Are there distinct areas within the game and levels within those areas?  What motivates the player to unlock and go through the levels?
 
-Typy poziomów:
+Typy poziomÃ³w:
 If there are distinct sectors or groupings of levels(ie: desert, cities, river, outpost) how are they grouped and what groups are planned?  How does the player access/unlock them?  Each level type or sector should have a template that defines key characteristics that are common in all levels within this sector, not only visually but even strategically.  Describe each level type in detail and go over the characteristics that define them, both from an aesthetic and gameplay stand point.
 
-Pe³na lista poziomów
+PeÅ‚na lista poziomÃ³w
 A full rundown of the levels to be included in the game, organized by grouping.  Full details of each level should be contained within a separate level design document.
 Gameplay
 Go over the gameplay from start to finished.. Break this section up into the setup in the beginning, what the first couple things are that happens when the match starts. How do the players prepare or get ready?
@@ -178,17 +171,17 @@ What kind of play styles are available to the player?
 How does the player interact with the environment?  
 What are the main challenges facing the player and how are we rewarding the player for successful behavior.
 Describe the multiplayer aspect of gamplay both from the adversarial/competitive aspect and from the co-operative aspect
-Rozpoczêcie gry
+RozpoczÄ™cie gry
 Describe how the game loads up, what does the player do?
 What happens after he/she gets past the loading screen and first menu? 
 How is the character selection / creation handled?
 How is their character management handled?  How do they outfit their character?  What is the interface like with the store or management screen?  
 What does the player use to purchase upgrades for his weapon, how is this currency earned? What can be purchased?  Can they sell back?
 Do they even have access to this before the intro campaign?
-Po uruchomieniu i za³adowaniu gry u¿ytkownik widzi ekran startowy na którym ma do wyboru nastêpuj¹ce opcje: „Nowa gra”, „Kontynuuj” (nieaktywn¹ w przypadku pierwszego uruchomienia) oraz „Ustawienia”.
-Po wybraniu opcji „Nowa gra” lub „Kontynuuj” gracz przenosi siê do widoku kampanii, natomiast wybranie opcji „Ustawiania” przenosi go do menu ustawieñ.
-W widoku kampanii gracz ma mo¿liwoœæ wyboru jednej z dostêpnych misji, dodatkowo dostêpne s¹ menu ulepszeñ, encyklopedia gry, menu osi¹gniêæ (tzw. achievementów) oraz menu ustawieñ.
-Po wybraniu konkretnej misji wyœwietlone zostaje menu misji zawieraj¹ce jej szczegó³y, t³o fabularne, mo¿liwoœæ wyboru poziomu trudnoœci rozgrywki oraz przyciski umo¿liwiaj¹ce rozpoczêcie rozgrywki lub wyjœcie z menu misji.
+Po uruchomieniu i zaÅ‚adowaniu gry uÅ¼ytkownik widzi ekran startowy na ktÃ³rym ma do wyboru nastÄ™pujÄ…ce opcje: â€Nowa graâ€, â€Kontynuujâ€ (nieaktywnÄ… w przypadku pierwszego uruchomienia) oraz â€Ustawieniaâ€.
+Po wybraniu opcji â€Nowa graâ€ lub â€Kontynuujâ€ gracz przenosi siÄ™ do widoku kampanii, natomiast wybranie opcji â€Ustawianiaâ€ przenosi go do menu ustawieÅ„.
+W widoku kampanii gracz ma moÅ¼liwoÅ›Ä‡ wyboru jednej z dostÄ™pnych misji, dodatkowo dostÄ™pne sÄ… menu ulepszeÅ„, encyklopedia gry, menu osiÄ…gniÄ™Ä‡ (tzw. achievementÃ³w) oraz menu ustawieÅ„.
+Po wybraniu konkretnej misji wyÅ›wietlone zostaje menu misji zawierajÄ…ce jej szczegÃ³Å‚y, tÅ‚o fabularne, moÅ¼liwoÅ›Ä‡ wyboru poziomu trudnoÅ›ci rozgrywki oraz przyciski umoÅ¼liwiajÄ…ce rozpoczÄ™cie rozgrywki lub wyjÅ›cie z menu misji.
 Przebieg misji
 After they create and setup their character what do they do?  How do they start the game? How do they choose or find a server?  Are their choices limited in the beginning?
 Is there a single player option and a multiplayer?  Is there some kind of tutorial they go through? Maybe a start mission or a brief little story mode to guide them through the mechanics of the game, introducing them to one mechanic per level, setting up the level so that they need a minimum amount of points to pass and that they have to use a specific mechanic in the level to achieve that.  
@@ -196,18 +189,19 @@ How many levels do they go through to learn all of the basic mechanics?
 General overview of gameplay, how does the level start, what information is displayed to the player before, during and immediately after loading and how is it displayed?
 How are the players setup and spawned? 
 Describe the gameplay briefly once the game starts
-Po rozpoczêciu misji gracz widzi mapê poziomu ze œcie¿k¹ przemarszu wroga, placami budowy na których ma mo¿liwoœæ zbudowania kilku wie¿ w zale¿noœci od funduszy pocz¹tkowych oraz przycisk wypuszczenia pierwszej fali wrogów.
-Po wypuszczeniu pierwszej fali wrogów na œcie¿kê w jej punkcie pocz¹tkowym zaczynaj¹ wkraczaæ kolejno wrodzy ¿o³nierze.
-Po wkroczeniu wrogiego ¿o³nierza w obszar zasiêgu wie¿y gracza ta rozpoczyna ostrza³, który kontynuuje do momentu zabicia tego ¿o³nierza, b¹dŸ opuszczenia przez niego obszaru zasiêgu wie¿y. Nastêpnie wie¿a rozpoczyna ostrza³ kolejnego ¿o³nierza w swoim zasiêgu o ile taki istnieje.
-Jeœli jakiœ wróg dotrze do punktu koñcowego œcie¿ki gracz traci czêœæ dostêpnych na tym poziomie punktów ¿ycia. Jeœli gracz utraci wszystkie punkty ¿ycia rozgrywka na tym poziomie koñczy siê niepowodzeniem.
-Za ka¿dego zabitego ¿o³nierza wroga gracz otrzymuje pewn¹ iloœæ funduszy które mo¿e wydaæ na budowê dodatkowych wie¿.
-W okreœlonych odstêpach czasu na mapê wkraczaj¹ kolejne fale wroga.
-W przypadku gdy po zabiciu, b¹dŸ opuszczeniu mapy przez wszystkich wrogów graczowi pozostan¹ jeszcze punkty ¿ycia rozgrywka na danym poziomie koñczy siê powodzeniem. Gracz jest przenoszony z powrotem do widoku kampanii na którym zostaje odblokowana kolejna misja.
-Za ka¿dy ukoñczony poziom gracz otrzymuje pewn¹ liczbê punktów które mo¿e wydaæ, za poœrednictwem menu ulepszeñ, na ulepszenia u³atwiaj¹ce dalsz¹ rozgrywkê.
+Po rozpoczÄ™ciu misji gracz widzi mapÄ™ poziomu ze Å›cieÅ¼kÄ… przemarszu wroga, placami budowy na ktÃ³rych ma moÅ¼liwoÅ›Ä‡ zbudowania kilku wieÅ¼ w zaleÅ¼noÅ›ci od funduszy poczÄ…tkowych oraz przycisk wypuszczenia pierwszej fali wrogÃ³w.
+Po wypuszczeniu pierwszej fali wrogÃ³w na Å›cieÅ¼kÄ™ w jej punkcie poczÄ…tkowym zaczynajÄ… wkraczaÄ‡ kolejno wrodzy Å¼oÅ‚nierze.
+Po wkroczeniu wrogiego Å¼oÅ‚nierza w obszar zasiÄ™gu wieÅ¼y gracza ta rozpoczyna ostrzaÅ‚, ktÃ³ry kontynuuje do momentu zabicia tego Å¼oÅ‚nierza, bÄ…dÅº opuszczenia przez niego obszaru zasiÄ™gu wieÅ¼y. NastÄ™pnie wieÅ¼a rozpoczyna ostrzaÅ‚ kolejnego Å¼oÅ‚nierza w swoim zasiÄ™gu o ile taki istnieje.
+JeÅ›li jakiÅ› wrÃ³g dotrze do punktu koÅ„cowego Å›cieÅ¼ki gracz traci czÄ™Å›Ä‡ dostÄ™pnych na tym poziomie punktÃ³w Å¼ycia. JeÅ›li gracz utraci wszystkie punkty Å¼ycia rozgrywka na tym poziomie koÅ„czy siÄ™ niepowodzeniem.
+Za kaÅ¼dego zabitego Å¼oÅ‚nierza wroga gracz otrzymuje pewnÄ… iloÅ›Ä‡ funduszy ktÃ³re moÅ¼e wydaÄ‡ na budowÄ™ dodatkowych wieÅ¼.
+W okreÅ›lonych odstÄ™pach czasu na mapÄ™ wkraczajÄ… kolejne fale wroga.
+W przypadku gdy po zabiciu, bÄ…dÅº opuszczeniu mapy przez wszystkich wrogÃ³w graczowi pozostanÄ… jeszcze punkty Å¼ycia rozgrywka na danym poziomie koÅ„czy siÄ™ powodzeniem. Gracz jest przenoszony z powrotem do widoku kampanii na ktÃ³rym zostaje odblokowana kolejna misja.
+Za kaÅ¼dy ukoÅ„czony poziom gracz otrzymuje pewnÄ… liczbÄ™ punktÃ³w ktÃ³re moÅ¼e wydaÄ‡, za poÅ›rednictwem menu ulepszeÅ„, na ulepszenia uÅ‚atwiajÄ…ce dalszÄ… rozgrywkÄ™.
 Mechanika
 What kind of mechanics are to be employed in the game?  Go over movement, combat, health, equipment usage, special abilities and anything else that governs how the player plays the game.
 Sterowanie
 Describe how the player controls his character, fires his weapon, etc etc.
+Gracz aby wybudowaÄ‡ wieÅ¼e, winien nacisnÄ…Ä‡ na miejsce, ktÃ³re pozwala na budowanie wieÅ¼. NastÄ™pnie na wyÅ›wietlonym menu wyboru, gracz ma moÅ¼liwoÅ›Ä‡ wyboru rodzaju wieÅ¼y. Gracz rÃ³wnieÅ¼ ma moÅ¼liwoÅ›Ä‡ wypuszczenia nastÄ™pnej fali wrogÃ³w poprzez naciÅ›niÄ™cie specjalnej ikony.
 Tryby gry
 What modes are available to the player, if any?
 Wygrana
@@ -228,50 +222,56 @@ Animation requirements: Rigging limits, Programs to be used for rigging and anim
 A full asset list, budget and schedule will be laid out within a spreadsheetw
 Wrogowie
 A run down of all of the 2D, 3D, Animation and Audio work needed for the enemies in the game.  Including back story, abilities and special traits
-Wie¿e
+Wrogowie bÄ™dÄ… wychodziÄ‡ falami. PoruszajÄ… siÄ™ oni po z gÃ³ry wyznaczonej Å›cieÅ¼ce z punktu poczÄ…tkowego do punktu koÅ„cowego Å›cieÅ¼ki, po dotarciu do punktu koÅ„cowego wrogowie odejmujÄ… graczowi punkty Å¼ycia (iloÅ›Ä‡ odjÄ™tych punktÃ³w jest rÃ³Å¼na dla rÃ³Å¼nego rodzaju wrogÃ³w). 
+WieÅ¼e
 A run down of all of the 2D, 3D, Animation and Audio work needed for the towers in the game.  Including costs, upgrade system and special abilities
+Po wybudowaniu, wieÅ¼e automatycznie wykrywajÄ… wrogÃ³w w ich zasiÄ™gu oraz bezzwÅ‚ocznie rozpoczynajÄ… atak. W zaleÅ¼noÅ›ci od rodzaju wybudowanej wieÅ¼y, moÅ¼e to byÄ‡ atak pociskami bezpoÅ›rednio we wroga, jak i rÃ³wnieÅ¼ rodzaj ataku w ktÃ³rym obraÅ¼enia wrogom sÄ… przyznawane na pewnym obszarze. Ponadto wieÅ¼e majÄ… moÅ¼liwoÅ›Ä‡ upgradowania, co przyczynia siÄ™ do wzrostu ich siÅ‚y raÅ¼enia, czy teÅ¼ szybkoÅ›ci wysyÅ‚ania pociskÃ³w.
 Ulepszenia
 A run down of all of the 2D, 3D and Audio work needed for the perks in the game
-Œrodowisko
+Åšrodowisko
 All global environmental assets(which could be reskinned depending on the level they appear in) to be laid out here as well as their role in the puzzle process and their possible effect on the scene and environment around them.
 Audio
 All global audio assets like UI sounds and audio tracks
-Fabu³a 
+FabuÅ‚a 
 Desribe the backstory of the game, if any
 Filmiki
 Any cinematics should be listed and described here.  Further detail to be found in a beat sheet
 
-S³ownik
-Wiêkszoœæ hase³ w s³owniku zosta³a szerzej opisana w dzia³ach Interface U¿ytkownika, Gameplay i/lub Zasoby. Aby uzyskaæ wiêcej informacji na temat danego has³a przeczytaj odpowiadaj¹ce im artyku³y w tych dzia³ach.
+SÅ‚ownik
+WiÄ™kszoÅ›Ä‡ haseÅ‚ w sÅ‚owniku zostaÅ‚a szerzej opisana w dziaÅ‚ach Interface UÅ¼ytkownika, Gameplay i/lub Zasoby. Aby uzyskaÄ‡ wiÄ™cej informacji na temat danego hasÅ‚a przeczytaj odpowiadajÄ…ce im artykuÅ‚y w tych dziaÅ‚ach.
 Steampunk
-Podgatunek science fiction i fantasy oparty na technologiach i wzorach estetycznych inspirowanych XIX-wieczn¹ przemys³ow¹ maszyneri¹ parow¹. Dobry przyk³ad steampunku mog¹ stanowiæ filmy takie jak: „Liga niezwyk³ych d¿entelmenów”, „Bardzo dziki zachód”, „Ruchomy zamek Hauru” a tak¿e gry komputerowe: „Arcanum: Przypowieœæ o Maszynach i Magyi”, „Dishonored” oraz „Syberia”.
+Podgatunek science fiction i fantasy oparty na technologiach i wzorach estetycznych inspirowanych XIX-wiecznÄ… przemysÅ‚owÄ… maszyneriÄ… parowÄ…. Dobry przykÅ‚ad steampunku mogÄ… stanowiÄ‡ filmy takie jak: â€Liga niezwykÅ‚ych dÅ¼entelmenÃ³wâ€, â€Bardzo dziki zachÃ³dâ€, â€Ruchomy zamek Hauruâ€ a takÅ¼e gry komputerowe: â€Arcanum: PrzypowieÅ›Ä‡ o Maszynach i Magyiâ€, â€Dishonoredâ€ oraz â€Syberiaâ€.
 Pixel art
-Styl tworzenia grafiki rastrowej tak aby rozró¿nialne by³y poszczególne pixele rysunku. Charakterystyczny szczególnie dla starszych produkcji oraz gier w stylu retro.
+Styl tworzenia grafiki rastrowej tak aby rozrÃ³Å¼nialne byÅ‚y poszczegÃ³lne pixele rysunku. Charakterystyczny szczegÃ³lnie dla starszych produkcji oraz gier w stylu retro.
 Misja, Poziom
 Pojedynczy poziom gry.
 Menu kampanii, Mapa kampanii
-Ekran w formie mapy krainy na którym zaznaczone s¹ wszystkie dostêpne w danym czasie misje.
+Ekran w formie mapy krainy na ktÃ³rym zaznaczone sÄ… wszystkie dostÄ™pne w danym czasie misje.
 Gracz
-U¿ytkownik aplikacji.
-Wie¿a
-Podstawowy obiekt w grze. Wie¿e automatycznie atakuj¹ wrogów w swoim zasiêgu umo¿liwiaj¹c graczowi pozytywne ukoñczenie poziomu. Gracz ma mo¿liwoœæ budowania wie¿ na danym poziomie w zakresie posiadanych funduszy.
-¯o³nierz wroga, Wróg
-Pojedyncza jednostka wroga, sterowana przez silnik gry. Podstawowym celem gracza jest niedopuszczenie aby wróg dotar³ do punktu koñcowego œcie¿ki na danym poziomie.
-Œcie¿ka
-Wyznaczona trasa po której na danym poziomie poruszaj¹ siê ¿o³nierze wroga. Posiada punkt pocz¹tkowy i koñcowy.
-Punkt pocz¹tkowy œcie¿ki
-Punkt na pocz¹tku œcie¿ki (poza krawêdzi¹ ekranu) w którym pojawiaj¹ siê kolejni ¿o³nierze wroga.
-Punkt koñcowy œcie¿ki
-Punkt na koñcu œcie¿ki (poza krawêdzi¹ ekranu). Jeœli jakikolwiek ¿o³nierz wroga osi¹gnie punkt koñcowy gracz traci czêœæ punktów ¿ycia. Podstawowym zadaniem gracza jest niedopuszczenie do zaistnienia takiej sytuacji.
+UÅ¼ytkownik aplikacji.
+WieÅ¼a
+Podstawowy obiekt w grze. WieÅ¼e automatycznie atakujÄ… wrogÃ³w w swoim zasiÄ™gu umoÅ¼liwiajÄ…c graczowi pozytywne ukoÅ„czenie poziomu. Gracz ma moÅ¼liwoÅ›Ä‡ budowania wieÅ¼ na danym poziomie w zakresie posiadanych funduszy.
+Å»oÅ‚nierz wroga, WrÃ³g
+Pojedyncza jednostka wroga, sterowana przez silnik gry. Podstawowym celem gracza jest niedopuszczenie aby wrÃ³g dotarÅ‚ do punktu koÅ„cowego Å›cieÅ¼ki na danym poziomie.
+ÅšcieÅ¼ka
+Wyznaczona trasa po ktÃ³rej na danym poziomie poruszajÄ… siÄ™ Å¼oÅ‚nierze wroga. Posiada punkt poczÄ…tkowy i koÅ„cowy.
+Punkt poczÄ…tkowy Å›cieÅ¼ki
+Punkt na poczÄ…tku Å›cieÅ¼ki (poza krawÄ™dziÄ… ekranu) w ktÃ³rym pojawiajÄ… siÄ™ kolejni Å¼oÅ‚nierze wroga.
+Punkt koÅ„cowy Å›cieÅ¼ki
+Punkt na koÅ„cu Å›cieÅ¼ki (poza krawÄ™dziÄ… ekranu). JeÅ›li jakikolwiek Å¼oÅ‚nierz wroga osiÄ…gnie punkt koÅ„cowy gracz traci czÄ™Å›Ä‡ punktÃ³w Å¼ycia. Podstawowym zadaniem gracza jest niedopuszczenie do zaistnienia takiej sytuacji.
 Fundusze
-Punkty, zliczane indywidualnie dla ka¿dego poziomu, za które gracz mo¿e na tym poziomie budowaæ wie¿e. Gracz otrzymuje pewn¹ iloœæ funduszy przy rozpoczêciu danego poziomu, oraz ka¿dorazowo poz zabiciu ¿o³nierza wroga.
-Punkty ¿ycia
-Punkty, zliczane indywidualnie dla ka¿dego poziomu, które odzwierciedlaj¹ ile jeszcze wrogów mo¿e dotrzeæ do koñca œcie¿ki bez powodowania niezaliczenia przez gracza poziomu. Gwarantuj¹ graczowi margines b³êdu w trakcie rozgrywki.
+Punkty, zliczane indywidualnie dla kaÅ¼dego poziomu, za ktÃ³re gracz moÅ¼e na tym poziomie budowaÄ‡ wieÅ¼e. Gracz otrzymuje pewnÄ… iloÅ›Ä‡ funduszy przy rozpoczÄ™ciu danego poziomu, oraz kaÅ¼dorazowo poz zabiciu Å¼oÅ‚nierza wroga.
+Punkty Å¼ycia
+Punkty, zliczane indywidualnie dla kaÅ¼dego poziomu, ktÃ³re odzwierciedlajÄ… ile jeszcze wrogÃ³w moÅ¼e dotrzeÄ‡ do koÅ„ca Å›cieÅ¼ki bez powodowania niezaliczenia przez gracza poziomu. GwarantujÄ… graczowi margines bÅ‚Ä™du w trakcie rozgrywki.
 Unity
-Unity 5 Personal Edition. Œrodowisko w którym tworzona jest gra [tytu³ gry].
-Urz¹dzenie mobilne
-Dowolne urz¹dzenie mobilne (smartphone lub tablet) z zainstalowanym systemem operacyjnym Android, Windows Phone lub iOS o specyfikacji zgodnej z wymaganiami gry.
-Przegl¹darka internetowa
-Dowolna przegl¹darka internetowa z zainstalowan¹ aktualn¹ wtyczk¹ Unity Web Player.
+Unity 5 Personal Edition. Åšrodowisko w ktÃ³rym tworzona jest gra [tytuÅ‚ gry].
+UrzÄ…dzenie mobilne
+Dowolne urzÄ…dzenie mobilne (smartphone lub tablet) z zainstalowanym systemem operacyjnym Android, Windows Phone lub iOS o specyfikacji zgodnej z wymaganiami gry.
+PrzeglÄ…darka internetowa
+Dowolna przeglÄ…darka internetowa z zainstalowanÄ… aktualnÄ… wtyczkÄ… Unity Web Player.
+
+Fala
+Fala- jest to grupa wrogÃ³w, rÃ³Å¼nego rodzaju, atakujÄ…ca gracza w okreÅ›lonej chwili rozgrywki. Rodzaj wrogÃ³w i ich iloÅ›Ä‡ jest uzaleÅ¼niona od poziomu gry oraz postÄ™pu gry
+
 [kolejny wpis]
-Treœæ treœæ
+TreÅ›Ä‡ treÅ›Ä‡
