@@ -20,7 +20,9 @@ public class EnemyMove : MonoBehaviour {
 		}
 	}
 
-
+	public bool EndPointReached() {
+		return false;
+	}
 	
 	// Update is called once per frame
 	void Update () {
