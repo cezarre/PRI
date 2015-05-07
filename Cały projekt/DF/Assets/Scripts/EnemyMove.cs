@@ -78,21 +78,28 @@ public class EnemyMove : MonoBehaviour {
 			if (col.gameObject.tag == "UTLTL" || col.gameObject.tag == "LTUTU") {
 				
 				player.AddForce (new Vector2 (-speed, speed));
+
 			} else
 
 			if (col.gameObject.tag == "UTRTR" || col.gameObject.tag == "RTUTU") {
 				
 				player.AddForce (new Vector2 (speed, speed));
+
+				
 			}else
 			if (col.gameObject.tag == "DTLTL" || col.gameObject.tag == "LTDTD") {
 				
 				player.AddForce (new Vector2 (-speed, -speed));
+
+				
+
 			}else
 			if (col.gameObject.tag == "DTRTR" || col.gameObject.tag == "RTDTD") {
 				
 				player.AddForce (new Vector2 (speed, -speed));
+			
+				
 			}
-
 		}
 	}
 	void ChangeDirection()
@@ -111,7 +118,7 @@ public class EnemyMove : MonoBehaviour {
 			if (player.velocity.x > 0) {//to right
 				anim.SetInteger ("Direction", 2);
 		}
-		Debug.Log (anim.GetInteger("Direction").ToString ());
+		//Debug.Log (anim.GetInteger("Direction").ToString ());
 
 	}
 }
