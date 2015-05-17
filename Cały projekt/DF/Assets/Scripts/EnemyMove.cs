@@ -7,9 +7,12 @@ public class EnemyMove : MonoBehaviour {
 	bool firstPath = true;
 	public float hp;
 
+	//public GameObject spawnPoint;
+
 	Animator anim;
 
 	void Start () {
+
 		//hp = 10;
 		anim = GetComponent<Animator> ();
 		player = GetComponent<Rigidbody2D> ();
@@ -107,6 +110,8 @@ public class EnemyMove : MonoBehaviour {
 
 		//player = GetComponent<Rigidbody2D> ();
 		if (player.velocity.y < 0) { //to down
+				//animation["animation"].time = 0;
+			//anim.Stop();
 				anim.SetInteger ("Direction", 1);
 		} else 
 			if (player.velocity.y > 0) {//to up

@@ -8,6 +8,7 @@ public class Pause : MonoBehaviour {
 
 	void Update()
 	{
+		/*
 		RaycastHit hitInfo = new RaycastHit();
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		
@@ -21,6 +22,7 @@ public class Pause : MonoBehaviour {
 				
 			}
 		}
+		*/
 	}
 	
 	public void OnMouseDown(){
