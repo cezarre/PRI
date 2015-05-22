@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 
 public class Spawn : MonoBehaviour {
@@ -37,10 +38,13 @@ public class Spawn : MonoBehaviour {
 	
 	private bool oneSpawned = false;
 
+	int numberOfWavesLeft=0;
+
 	public GameObject NextWaveGameObject;
 	public int NextWaveButtonInterval;
+	public int NextWaveTimeInterval;
 	//int numberOfWaves=7; //ilosc fal
-
+	bool nextWaveButtonClickedFirstTime=false;
 
 	float t;
 
@@ -49,36 +53,70 @@ public class Spawn : MonoBehaviour {
 
 	public void isClickedNextWaved()
 	{
-
-		Debug.Log ("NextClicked");
+		if (!nextWaveButtonClickedFirstTime) {
+			InvokeRepeating ("PushNextWave", 2, 1F);
+			
+			nextWaveButtonClickedFirstTime = true;
+		}
+		
+		Debug.Log ("isClickedNextWaved");
 		if (waveReleased<allWaves.Count) LoadNextWave ();
 		whenDeactiveNextWaveButton = System.DateTime.Now;
 		NextWaveGameObject.SetActive (false);
-
+		numberOfWavesLeft=numberOfWavesLeft-1;
 
 	
 
 	}
 	void ActiveNextWavedButton()
 	{
-		//Debug.Log (((System.DateTime.Now - whenDeactiveNextWaveButton) >= System.TimeSpan.FromSeconds (30)).ToString ());
-		if (whenDeactiveNextWaveButton != null) {
-			if ((System.DateTime.Now - whenDeactiveNextWaveButton) >= System.TimeSpan.FromSeconds (NextWaveButtonInterval)) NextWaveGameObject.SetActive (true);
-		}
+		Debug.Log (numberOfWavesLeft);
+		if (numberOfWavesLeft > 0) {
+
+			//Debug.Log (((System.DateTime.Now - whenDeactiveNextWaveButton) >= System.TimeSpan.FromSeconds (30)).ToString ());
+			if (whenDeactiveNextWaveButton != null) {
+				if ((System.DateTime.Now - whenDeactiveNextWaveButton) >= System.TimeSpan.FromSeconds (NextWaveButtonInterval)) {
+
+					NextWaveGameObject.SetActive (true);
+
+				}
+
+			}
+		} else
+			CancelInvoke ("PushNextWave");
 
 	}
 
+	void PushNextWave()
+	{
+		if (numberOfWavesLeft >= 0 && whenDeactiveNextWaveButton != null ) {
+
+			//Debug.Log (((System.DateTime.Now - whenDeactiveNextWaveButton) >= System.TimeSpan.FromSeconds (30)).ToString ());
+			{
+
+				if ((System.DateTime.Now - whenDeactiveNextWaveButton) >= System.TimeSpan.FromSeconds (NextWaveTimeInterval))
+				{
+					//Debug.Log ((System.DateTime.Now - whenDeactiveNextWaveButton).ToString());
+					isClickedNextWaved();
+					//numberOfWavesLeft=numberOfWavesLeft-1;
+				}
+				
+			}
+		}
+
+	}
 	void Start () {
 		for (int i =0; i<7; i++) {
 			enemySpawned.Add (0);
 		}
 		FillAllWaves ();
 		//Debug.Log (allWaves[0][1].ToString());
-
+		NumerOfWaves ();
 		//LoadNextWave();
 
+
 	}	
-	
+
 	void FillAllWaves()
 	{
 		if (numberToSpawnInFirstWave.Count!=0)
@@ -99,11 +137,29 @@ public class Spawn : MonoBehaviour {
 
 	}
 
+	void NumerOfWaves()
+	{
+		if (numberToSpawnInFirstWave.Count != 0)
+			numberOfWavesLeft = numberOfWavesLeft + 1;
+		if (numberToSpawnInSecondWave.Count!=0)
+			numberOfWavesLeft = numberOfWavesLeft + 1;
+		if (numberToSpawnInThirdWave.Count!=0)
+			numberOfWavesLeft = numberOfWavesLeft + 1;
+		if (numberToSpawnInFourthWave.Count!=0)
+			numberOfWavesLeft = numberOfWavesLeft + 1;
+		if (numberToSpawnInFifthWave.Count!=0)
+			numberOfWavesLeft = numberOfWavesLeft + 1;
+		if (numberToSpawnInSixthWave.Count!=0)
+			numberOfWavesLeft = numberOfWavesLeft + 1;
+		if (numberToSpawnInSeventhWave.Count!=0)
+			numberOfWavesLeft = numberOfWavesLeft + 1;
+	}
+
 	void SpawnEnemy(GameObject singleEnemy)
 	{
 		float x = this.transform.position.x;
 		float y = this.transform.position.y;
-		singleEnemy.transform.position = new Vector2 (Random.Range(x-0.6F, x+0.6F), Random.Range (y-0.6F,y+0.6F));
+		singleEnemy.transform.position = new Vector2 (UnityEngine.Random.Range(x-0.6F, x+0.6F), UnityEngine.Random.Range (y-0.6F,y+0.6F));
 		singleEnemy.SetActive (true); 
 		//Debug.Log(singleEnemy.transform.position.ToString()+ ":::"+this.transform.position.ToString());
 		//singleEnemy.transform.position = this.transform.position;
@@ -114,7 +170,7 @@ public class Spawn : MonoBehaviour {
 
 	void LoadNextWave()
 	{
-		Debug.Log ("Wczytywanie fali:"+ waveReleased.ToString());
+		//Debug.Log ("Wczytywanie fali:"+ waveReleased.ToString());
 
 		if (waveReleased==0) LoadWave (waveReleased, enemy0);
 			else
@@ -206,9 +262,13 @@ public class Spawn : MonoBehaviour {
 		//System.DateTime moment = new System.DateTime.Now;
 		t = Time.time;
 		//Debug.Log (t.ToString());
+
+
+
 		if ((System.DateTime.Now.Second % 2 == 0) && (oneSpawned==false) /* &&  enemySpawned<enemy.Count*/) 
 		{ //w parzyste sekundy rusza enemy
 			ActiveNextWavedButton();
+			//PushNextWave();
 			//Debug.Log(( ).ToString());
 			for (int i=0;i<waveReleased;i++)
 			{
