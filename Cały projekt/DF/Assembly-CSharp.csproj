@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Pause.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Point.cs" />
+     <Compile Include="Assets\Scripts\ProgressBar.cs" />
      <Compile Include="Assets\Scripts\Spawn.cs" />
      <Compile Include="Assets\Scripts\Towers.cs" />
      <None Include="Assets\Grafiki\Readme.txt" />

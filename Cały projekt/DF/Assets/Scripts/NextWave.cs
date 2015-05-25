@@ -18,5 +18,6 @@ public class NextWave : MonoBehaviour {
 		
 		spawnPoint.isClickedNextWaved ();
 
+
 	}
 }
