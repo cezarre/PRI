@@ -15,14 +15,9 @@ public class NextWave : MonoBehaviour {
 	}
 	public void OnMouseDown(){
 		//spawnPoint = gameObject.GetComponent<Spawn>();
-		//Spawn s = spawnPoint.GetComponent<Spawn>();
-		//s.isClickedNextWaved ();
-		//spawnPoint.isClickedNextWaved ();
-		try {
+		
 		spawnPoint.isClickedNextWaved ();
-		}
-		catch(System.NullReferenceException e) {
-			print ("ERROR: " + e.Message);
-		}
+
+
 	}
 }
