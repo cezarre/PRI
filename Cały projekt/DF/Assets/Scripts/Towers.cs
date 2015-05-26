@@ -111,6 +111,19 @@ public class Towers : MonoBehaviour {
 
 	}
 
+	//------------BUILDING TOWERS----------------
+
+	void OnMouseDown() {
+		print ("KID: " + transform.root.GetChild (0).name);
+
+		transform.FindChild ("TowerPlace").gameObject.SetActive (false);
+		transform.FindChild ("Tesla").gameObject.SetActive (true);
+
+
+
+	}
+
+
 	void LevelUpgrade(){
 		//Change t_level
 	}
