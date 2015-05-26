@@ -83,7 +83,7 @@ public class Spawn : MonoBehaviour {
 	}
 	void ActiveNextWavedButton()
 	{
-		//Debug.Log (numberOfWavesLeft);
+		Debug.Log (numberOfWavesLeft);
 		if (numberOfWavesLeft > 0) {
 
 			//Debug.Log (((System.DateTime.Now - whenDeactiveNextWaveButton) >= System.TimeSpan.FromSeconds (30)).ToString ());
