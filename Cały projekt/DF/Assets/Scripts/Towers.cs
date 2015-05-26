@@ -11,7 +11,7 @@ public class Towers : MonoBehaviour {
 
 	IEnumerator Start()
 	{
-		damage = 11;
+		damage = 0;
 		radius = 10;
 		timeInterval = 4f;
 		type3 = false;
@@ -112,12 +112,21 @@ public class Towers : MonoBehaviour {
 	}
 
 	//------------BUILDING TOWERS----------------
+	void BuildTesla() {
+		transform.FindChild ("Tesla").gameObject.SetActive (true);
+		damage = 11;
+		radius = 10;
+		timeInterval = 4f;
+
+	}
+
 
 	void OnMouseDown() {
-		print ("KID: " + transform.root.GetChild (0).name);
+		//print ("KID: " + transform.root.GetChild (0).name);
 
 		transform.FindChild ("TowerPlace").gameObject.SetActive (false);
-		transform.FindChild ("Tesla").gameObject.SetActive (true);
+		BuildTesla ();
+
 
 
 
