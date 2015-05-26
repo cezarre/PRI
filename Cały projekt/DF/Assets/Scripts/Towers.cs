@@ -11,7 +11,8 @@ public class Towers : MonoBehaviour {
 
 	IEnumerator Start()
 	{
-		damage = 11;
+		t_level = 0;
+		damage = 0;
 		radius = 10;
 		timeInterval = 4f;
 		type3 = false;
@@ -111,9 +112,49 @@ public class Towers : MonoBehaviour {
 
 	}
 
-	void LevelUpgrade(){
-		//Change t_level
+	//------------BUILDING TOWERS----------------
+	void BuildTesla1() {
+		t_level = 1;
+		transform.FindChild ("Tesla").FindChild("Tesla1").gameObject.SetActive (true);
+		damage = 11;
+		radius = 10;
+		timeInterval = 4f;
+
 	}
+	void BuildTesla2() {
+		t_level = 2;
+		transform.FindChild ("Tesla").FindChild("Tesla1").gameObject.SetActive (false);
+		transform.FindChild ("Tesla").FindChild ("Tesla2").gameObject.SetActive (true);
+		damage = 16;
+		radius = 12;
+		timeInterval = 3f;
+	}
+	void BuildTesla3() {
+		t_level = 3;
+		transform.FindChild ("Tesla").FindChild("Tesla2").gameObject.SetActive (false);
+		transform.FindChild ("Tesla").FindChild ("Tesla3").gameObject.SetActive (true);
+		damage = 22;
+		radius = 15;
+		timeInterval = 2f;
+	}
+	void OnMouseDown() {
+		//print ("KID: " + transform.root.GetChild (0).name);
+
+		transform.FindChild ("TowerPlace").gameObject.SetActive (false);
+		if (t_level == 0) {
+			BuildTesla1 ();
+		}
+		else if (t_level == 1) {
+			BuildTesla2();
+		}
+		else if (t_level == 2) {
+			BuildTesla3();
+		}
+
+
+
+	}
+	
 
 
 	
