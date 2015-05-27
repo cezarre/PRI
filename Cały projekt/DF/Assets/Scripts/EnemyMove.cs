@@ -6,7 +6,8 @@ public class EnemyMove : MonoBehaviour {
 	Rigidbody2D player;
 	bool firstPath = true;
 	public float hp;
-
+	float timer = 0;
+	public float distance;
 	//public GameObject spawnPoint;
 
 	Animator anim;
@@ -39,8 +40,8 @@ public class EnemyMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-	
+		timer += Time.deltaTime;
+		distance = timer * speed;
 	}
 	void OnTriggerEnter2D(Collider2D col)
 

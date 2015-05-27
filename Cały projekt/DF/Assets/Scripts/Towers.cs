@@ -8,6 +8,7 @@ using System.Collections.Generic;
 public class Towers : MonoBehaviour {
 
 	public List <GameObject> enemies = new List<GameObject>();
+	List <GameObject> detectedEnemies = new List<GameObject>();
 
 	IEnumerator Start()
 	{
@@ -77,20 +78,30 @@ public class Towers : MonoBehaviour {
 	}
 
 	void ActionOnEnemy(){
-
+		float bestDistance = 0;
 		LoadEnemies();
+		//GameObject enemyWithBestDistance = new GameObject ();
+		int enemyWithBestDistance =0;
+		detectedEnemies.Clear();
+
 		foreach (GameObject enemy in enemies) {
-
 			if (DetectedEnemy(enemy)) {
-				if (type3) {
-					AreaShoot(enemy);
-				} else {
-					Shoot(enemy);
-				}
-
-
-				break;
-				//other actions, if any
+				detectedEnemies.Add(enemy);
+			}
+		}
+		//foreach (GameObject enemy in detectedEnemies) {
+		for (int i=0 ; i<detectedEnemies.Count ; i++){
+			if (bestDistance < detectedEnemies[i].GetComponent<EnemyMove>().distance){
+				bestDistance = detectedEnemies[i].GetComponent<EnemyMove>().distance;
+				enemyWithBestDistance = i;
+			}
+		}
+		//}
+		if (detectedEnemies.Count > 0) {
+			if (type3) {
+				//AreaShoot(detectedEnemies[enemyWithBestDistance]);
+			} else {
+				Shoot(detectedEnemies[enemyWithBestDistance]);
 			}
 		}
 
@@ -114,6 +125,7 @@ public class Towers : MonoBehaviour {
 
 	//------------BUILDING TOWERS----------------
 	void BuildTesla1() {
+		transform.FindChild ("TowerPlace").gameObject.SetActive (false);
 		t_level = 1;
 		transform.FindChild ("Tesla").FindChild("Tesla1").gameObject.SetActive (true);
 		damage = 11;
@@ -139,8 +151,7 @@ public class Towers : MonoBehaviour {
 	}
 	void OnMouseDown() {
 		//print ("KID: " + transform.root.GetChild (0).name);
-
-		transform.FindChild ("TowerPlace").gameObject.SetActive (false);
+		
 		if (t_level == 0) {
 			BuildTesla1 ();
 		}
