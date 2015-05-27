@@ -70,7 +70,7 @@ public class Spawn : MonoBehaviour {
 		if (waveReleased<allWaves.Count) LoadNextWave ();
 		whenDeactiveNextWaveButton = System.DateTime.Now;
 		NextWaveGameObject.SetActive (false);
-
+		restartProgressBar ();
 		progressBarNextWave.SetActive (false);
 		//progressBarImage.re
 		numberOfWavesLeft=numberOfWavesLeft-1;
@@ -355,7 +355,7 @@ public class Spawn : MonoBehaviour {
 		
 		if (progressBarCounter < 1){ // while t below the end limit...
 			// increment it at the desired rate every update:
-			progressBarCounter += Time.deltaTime/NextWaveButtonInterval;
+			progressBarCounter += Time.deltaTime/(NextWaveTimeInterval-NextWaveButtonInterval);
 		}
 		
 	}
