@@ -107,9 +107,26 @@ public class Towers : MonoBehaviour {
 
 	}
 
-	void Shoot(GameObject enemy) {
-		enemy.GetComponent<EnemyMove>().damage(damage);
+	void bullet(GameObject enemy) {
+		float x = this.transform.position.x;
+		float y = this.transform.position.y;
+		GameObject bullet = (GameObject)Instantiate(Resources.Load("TeslaBullet"));
+		bullet.transform.position = new Vector2 (x, y+2);
+		//float buletSize = bullet.transform.localScale;
+		bullet.transform.localScale *= 1.7f;
+		bullet.GetComponent<BulletMove> ().enemyPosition = enemy.transform.position;
+		bullet.SetActive (true);
+		bullet.GetComponent<BulletMove> ().damage = damage;
+		//float speed = 0.01;
+		//float step = speed * Time.deWltaTime;
+		//bullet.transform.position = Vector2.MoveTowards (bullet.transform.position, bullet.transform.position * 2, step);
+
 	}
+	void Shoot(GameObject enemy) {
+		bullet (enemy);
+		//enemy.GetComponent<EnemyMove>().damage(damage);
+	}
+
 
 	void AreaShoot(GameObject enemy) {
 		/*Shoot (enemy);
