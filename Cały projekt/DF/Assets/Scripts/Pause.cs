@@ -1,11 +1,23 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
+using System;
 
 public class Pause : MonoBehaviour {
 
-	bool pause =false;
+	public bool pause =false;
 	GUITexture pauseGUI;
+	public DateTime whenPaused;
+	public DateTime whenResrumed;
+	public bool isPaused=false;
+	GameObject spawn;
+	Spawn spawnScript;
+	public bool gameEnded=false;
 
+	void Start()
+	{
+		spawn = GameObject.Find ("SpawnPoint");
+		spawnScript= (Spawn) spawn.GetComponent(typeof(Spawn));
+	}
 	void Update()
 	{
 		/*
@@ -24,9 +36,16 @@ public class Pause : MonoBehaviour {
 		}
 		*/
 	}
+
+	public void resetWhen()
+	{
+		whenPaused=new DateTime();
+		whenResrumed=new DateTime();
+		
+	}
 	
 	public void OnMouseDown(){
-		if(pause==true){
+		if(pause==true && !gameEnded){
 			pause = false;
 				
 			}
@@ -34,10 +53,15 @@ public class Pause : MonoBehaviour {
 				pause = true;
 			} if(pause == true) {
 				Time.timeScale = 0;
+				if (spawnScript.waveReleased!=0) whenPaused=DateTime.Now;
+				isPaused=true;
+				
 				
 			}
 			else {
 				Time.timeScale = 1;
+			if (spawnScript.waveReleased!=0) whenResrumed=DateTime.Now;
+				isPaused=false;
 				
 			}
 

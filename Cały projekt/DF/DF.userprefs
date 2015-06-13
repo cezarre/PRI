@@ -1,11 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Spawn.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player.cs">
     <Files>
-      <File FileName="Assets\Scripts\Spawn.cs" Line="73" Column="25" />
-      <File FileName="Assets\Scripts\EnemyMove.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyMove.cs" Line="46" Column="36" />
+      <File FileName="Assets\Scripts\Player.cs" Line="65" Column="11" />
+      <File FileName="Assets\Scripts\Spawn.cs" Line="179" Column="3" />
       <File FileName="Assets\Scripts\ProgressBar.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Towers.cs" Line="98" Column="4" />
+      <File FileName="Assets\Scripts\Towers.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Pause.cs" Line="14" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

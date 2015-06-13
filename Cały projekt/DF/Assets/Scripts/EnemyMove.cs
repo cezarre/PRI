@@ -8,6 +8,9 @@ public class EnemyMove : MonoBehaviour {
 	public float hp;
 	float timer = 0;
 	public float distance;
+	GameObject mainPlayerObject; 
+	Player mainPlayerScript;
+	//public GameObject mainPlayer;
 	//public GameObject spawnPoint;
 
 	Animator anim;
@@ -17,6 +20,11 @@ public class EnemyMove : MonoBehaviour {
 		//hp = 10;
 		anim = GetComponent<Animator> ();
 		player = GetComponent<Rigidbody2D> ();
+		mainPlayerObject = GameObject.Find("Player");
+		mainPlayerScript= (Player) mainPlayerObject.GetComponent(typeof(Player));
+
+
+
 
 	}
 
@@ -26,12 +34,18 @@ public class EnemyMove : MonoBehaviour {
 	{
 		hp -= d;
 		if (hp <= 0) {
+			mainPlayerScript.addGold(20);
+			mainPlayerScript.numberOfEnemy--;
 			Destroy (gameObject);
 		}
 	}
 	public void EndPointReached()
 	{
+		Debug.Log ("enemy reached end point");
+		mainPlayerScript.decresseHp (1);
+		mainPlayerScript.numberOfEnemy--;
 		Destroy (gameObject);
+
 	}
 	void FixedUpdate ()
 	{

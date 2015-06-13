@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -55,35 +55,46 @@ public class Spawn : MonoBehaviour {
 	float t;
 	float progressBarCounter=0;
 
-	int waveReleased=0;  //ktora fala zostala wypuszczona
+	public int waveReleased=0;  //ktora fala zostala wypuszczona
 	List<List<int>> allWaves=new List<List<int>>();
+
+	GameObject pause;
+	Pause pauseScript;
+
+	public int numberOfEnemy;
 
 	public void isClickedNextWaved()
 	{
-		if (!nextWaveButtonClickedFirstTime) {
-			InvokeRepeating ("PushNextWave", 2, 1F);
+		if (pauseScript.isPaused != true) {
+			if (!nextWaveButtonClickedFirstTime) {
+				InvokeRepeating ("PushNextWave", 2, 1F);
 			
-			nextWaveButtonClickedFirstTime = true;
-		}
+				nextWaveButtonClickedFirstTime = true;
+			}
 		
-		Debug.Log ("isClickedNextWaved");
-		if (waveReleased<allWaves.Count) LoadNextWave ();
-		whenDeactiveNextWaveButton = System.DateTime.Now;
-		NextWaveGameObject.SetActive (false);
-		restartProgressBar ();
-		progressBarNextWave.SetActive (false);
-		//progressBarImage.re
-		numberOfWavesLeft=numberOfWavesLeft-1;
+			//Debug.Log ("isClickedNextWaved");
+			if (waveReleased < allWaves.Count)
+				LoadNextWave ();
+			whenDeactiveNextWaveButton = System.DateTime.Now;
+			restartProgressBar ();
+			restart = true;
+			NextWaveGameObject.SetActive (false);
 
+			progressBarNextWave.SetActive (false);
+			//progressBarImage.re
+			numberOfWavesLeft = numberOfWavesLeft - 1;
 
+		}
 
 
 	
 
 	}
+
+	bool restart=true;
 	void ActiveNextWavedButton()
 	{
-		Debug.Log (numberOfWavesLeft);
+		//Debug.Log (numberOfWavesLeft);
 		if (numberOfWavesLeft > 0) {
 
 			//Debug.Log (((System.DateTime.Now - whenDeactiveNextWaveButton) >= System.TimeSpan.FromSeconds (30)).ToString ());
@@ -92,14 +103,33 @@ public class Spawn : MonoBehaviour {
 				//nextWaveProgressBar.fillProgressBar((((System.DateTime.Now - whenDeactiveNextWaveButton).TotalSeconds)*100/(System.TimeSpan.FromSeconds(NextWaveButtonInterval)).TotalSeconds));
 				//nextWaveProgressBar.fillProgressBar(amount);
 
-				if ((System.DateTime.Now - whenDeactiveNextWaveButton) >= System.TimeSpan.FromSeconds (NextWaveButtonInterval)) {
-					progressBarNextWave.SetActive(true);
-
-					NextWaveGameObject.SetActive (true);
-					if (progressBarImage.fillAmount<=0) restartProgressBar ();
-
-
+				//Debug.Log(pauseScript.whenResrumed-pauseScript.whenPaused);
+				if (pauseScript.whenResrumed>=pauseScript.whenPaused)
+				{
+					whenDeactiveNextWaveButton=whenDeactiveNextWaveButton+ (pauseScript.whenResrumed-pauseScript.whenPaused);
+					pauseScript.resetWhen();
 				}
+				if ((pauseScript.whenResrumed>=pauseScript.whenPaused)){
+					if (((System.DateTime.Now) - whenDeactiveNextWaveButton) >= System.TimeSpan.FromSeconds (NextWaveButtonInterval)) {
+						if (restart) 
+						{
+							restartProgressBar ();
+							restart=false;
+						}
+						progressBarNextWave.SetActive(true);
+
+						NextWaveGameObject.SetActive (true);
+						if (progressBarImage.fillAmount<=0) restartProgressBar ();
+
+
+						pauseScript.whenResrumed=new DateTime();
+						pauseScript.whenPaused=new DateTime();
+					
+					}
+				}
+
+
+
 
 			}
 		} else
@@ -114,11 +144,22 @@ public class Spawn : MonoBehaviour {
 			//Debug.Log (((System.DateTime.Now - whenDeactiveNextWaveButton) >= System.TimeSpan.FromSeconds (30)).ToString ());
 			{
 
-				if ((System.DateTime.Now - whenDeactiveNextWaveButton) >= System.TimeSpan.FromSeconds (NextWaveTimeInterval))
+				if (pauseScript.whenResrumed>=pauseScript.whenPaused)
 				{
-					//Debug.Log ((System.DateTime.Now - whenDeactiveNextWaveButton).ToString());
-					isClickedNextWaved();
-					//numberOfWavesLeft=numberOfWavesLeft-1;
+					whenDeactiveNextWaveButton=whenDeactiveNextWaveButton+ (pauseScript.whenResrumed-pauseScript.whenPaused);
+					pauseScript.resetWhen();
+				}
+				{
+
+					if ((System.DateTime.Now - whenDeactiveNextWaveButton) >= System.TimeSpan.FromSeconds (NextWaveTimeInterval))
+					{
+						//Debug.Log ((System.DateTime.Now - whenDeactiveNextWaveButton).ToString());
+					
+						isClickedNextWaved();
+
+
+						//numberOfWavesLeft=numberOfWavesLeft-1;
+					}
 				}
 				
 			}
@@ -134,6 +175,11 @@ public class Spawn : MonoBehaviour {
 		NumerOfWaves ();
 		//LoadNextWave();
 		progressBarImage = progressBarNextWave.GetComponent<Image> ();
+
+		pause = GameObject.Find ("Pause");
+		pauseScript= (Pause) pause.GetComponent(typeof(Pause));
+		numberOfEnemy = howManyEnemy ();
+
 		
 
 
@@ -218,7 +264,7 @@ public class Spawn : MonoBehaviour {
 	//tutaj ładowani są wrogowie do listy Gameobject
 	void LoadWave(int whichWave, List <GameObject> enemySingleWave)
 	{
-		Debug.Log ("Wszystkich fal:"+ allWaves.Count.ToString());
+		//Debug.Log ("Wszystkich fal:"+ allWaves.Count.ToString());
 		if (waveReleased < allWaves.Count) {
 			//kiedy dojdzie wiecej wrogow trzeba dodac wiecej warunkow
 			while (allWaves[whichWave][0]!=0 || allWaves[whichWave][1]!=0)
@@ -279,8 +325,22 @@ public class Spawn : MonoBehaviour {
 
 		}
 	}
+	public int howManyEnemy()
+	{
+		int amount=0;
+		foreach (List<int> wave in allWaves)
+		{
+			foreach(int i in wave)
+			{
+				amount=amount+i;
+			}
+
+		}
+		return amount;
+	}
 	// Update is called once per frame
 	void Update () {
+
 		if (waveReleased!=0) fillProgressBar ();
 		//SpawnEnemy ();
 		//System.DateTime moment = new System.DateTime.Now;
@@ -355,6 +415,7 @@ public class Spawn : MonoBehaviour {
 		
 		if (progressBarCounter < 1){ // while t below the end limit...
 			// increment it at the desired rate every update:
+			//Debug.Log (progressBarCounter);
 			progressBarCounter += Time.deltaTime/(NextWaveTimeInterval-NextWaveButtonInterval);
 		}
 		
@@ -362,6 +423,7 @@ public class Spawn : MonoBehaviour {
 	public void restartProgressBar()
 	{
 		progressBarCounter = 0;
+
 		
 	}
 }
