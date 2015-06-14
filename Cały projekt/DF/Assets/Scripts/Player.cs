@@ -10,7 +10,7 @@ public class Player : MonoBehaviour {
 	GameObject HPGameObject, GoldGameObject, Spawn;
 	Text HPText, GoldGameText;
 
-	GameObject spawn, win, gameOver;
+	GameObject spawn, win, gameOver, retry,backToMenu;
 	Spawn spawnScript;
 
 	GameObject pause;
@@ -24,16 +24,21 @@ public class Player : MonoBehaviour {
 		GoldGameObject = GameObject.Find("Right Text");
 		GoldGameText = GoldGameObject.GetComponent<Text> ();
 
-		HPText.text = hp.ToString ();
+		HPText.text = hp.ToString () + "/3";
 		GoldGameText.text = gold.ToString () + "$";
 
 		spawn = GameObject.Find ("SpawnPoint");
 		spawnScript= (Spawn) spawn.GetComponent(typeof(Spawn));
 		win= GameObject.Find("You Win");
 		gameOver=GameObject.Find("Game Over");
+		retry=GameObject.Find("Retry");
+		backToMenu=GameObject.Find("BackMenu");
 
 		win.SetActive (false);
 		gameOver.SetActive(false);
+		retry.SetActive (false);
+		backToMenu.SetActive (false);
+
 
 		pause = GameObject.Find ("Pause");
 		pauseScript= (Pause) pause.GetComponent(typeof(Pause));
@@ -50,15 +55,13 @@ public class Player : MonoBehaviour {
 		if (numberOfEnemy == 0 && hp > 0) {
 			//win
 			win.SetActive(true);
+			retry.SetActive(true);
+			backToMenu.SetActive (true);
 			Time.timeScale = 0;
 			pauseScript.gameEnded=true;
 		}
-
-
-
-
-	
 	}
+
 	public void decresseHp(int howMuchLessHp)
 	{
 		if (hp - howMuchLessHp <= 0) {
@@ -66,13 +69,14 @@ public class Player : MonoBehaviour {
 
 			//gameover
 			gameOver.SetActive(true);
+			retry.SetActive(true);
 			Time.timeScale = 0;
 			pauseScript.gameEnded=true;
 
 
 		} else
 			hp = hp - howMuchLessHp;
-		HPText.text = hp.ToString ();
+			HPText.text = hp.ToString () + "/3";
 
 	}
 	public void addGold(int amountOfGold)
@@ -80,5 +84,19 @@ public class Player : MonoBehaviour {
 		gold = gold + amountOfGold;
 		GoldGameText.text = gold.ToString ()+ "$";
 
+	}
+
+	public void Retry(){
+		pauseScript.gameEnded=false;
+		first=true;
+		Time.timeScale = 1;
+		Application.LoadLevel(Application.loadedLevelName);
+	}
+
+	public void BackMenu(){
+		pauseScript.gameEnded=false;
+		first=true;
+		Time.timeScale = 1;
+		Application.LoadLevel("menu");
 	}
 }
