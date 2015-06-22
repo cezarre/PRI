@@ -24,7 +24,7 @@ public class Player : MonoBehaviour {
 		GoldGameObject = GameObject.Find("Right Text");
 		GoldGameText = GoldGameObject.GetComponent<Text> ();
 
-		HPText.text = hp.ToString () + "/3";
+		HPText.text = hp.ToString ();
 		GoldGameText.text = gold.ToString () + "$";
 
 		spawn = GameObject.Find ("SpawnPoint");
@@ -76,7 +76,7 @@ public class Player : MonoBehaviour {
 
 		} else
 			hp = hp - howMuchLessHp;
-			HPText.text = hp.ToString () + "/3";
+			HPText.text = hp.ToString ();
 
 	}
 	public void addGold(int amountOfGold)

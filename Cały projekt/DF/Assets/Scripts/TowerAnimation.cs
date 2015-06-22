@@ -28,7 +28,7 @@ public class TowerAnimation : MonoBehaviour {
 				transform.GetChild (next(i)).gameObject.SetActive (true);
 				i = (i+1) % transform.childCount;
 			}
-			yield return new WaitForSeconds (1);
+			yield return new WaitForSeconds (0.4f);
 		}
 
 	}
