@@ -24,6 +24,7 @@ public class Towers : MonoBehaviour {
 		yield return new WaitForSeconds(1);
 		LoadEnemies ();
 		StartCoroutine(Actioning ());
+		Player = GameObject.Find("Player");
 
 	}
 
@@ -44,7 +45,7 @@ public class Towers : MonoBehaviour {
 	public float radius;
 	public bool type3;
 	public Point TowerCord;
-
+	public GameObject Player;
 
 
 	float distance(Point a, Point b) {
@@ -97,7 +98,7 @@ public class Towers : MonoBehaviour {
 			}
 		}
 		//}
-		if (detectedEnemies.Count > 0) {
+		if (detectedEnemies.Count > 0 && t_level > 0) {
 			if (type3) {
 				//AreaShoot(detectedEnemies[enemyWithBestDistance]);
 			} else {
@@ -148,6 +149,7 @@ public class Towers : MonoBehaviour {
 		damage = 11;
 		radius = 10;
 		timeInterval = 4f;
+		Player.GetComponent<Player> ().addGold (-50);
 
 	}
 	void BuildTesla2() {
@@ -157,6 +159,7 @@ public class Towers : MonoBehaviour {
 		damage = 16;
 		radius = 12;
 		timeInterval = 3f;
+		Player.GetComponent<Player> ().addGold (-100);
 	}
 	void BuildTesla3() {
 		t_level = 3;
@@ -165,17 +168,18 @@ public class Towers : MonoBehaviour {
 		damage = 22;
 		radius = 15;
 		timeInterval = 2f;
+		Player.GetComponent<Player> ().addGold (-200);
 	}
 	void OnMouseDown() {
 		//print ("KID: " + transform.root.GetChild (0).name);
 		
-		if (t_level == 0) {
+		if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
 			BuildTesla1 ();
 		}
-		else if (t_level == 1) {
+		else if (t_level == 1 && Player.GetComponent<Player> ().gold >= 100) {
 			BuildTesla2();
 		}
-		else if (t_level == 2) {
+		else if (t_level == 2 && Player.GetComponent<Player> ().gold >= 200) {
 			BuildTesla3();
 		}
 
@@ -189,7 +193,6 @@ public class Towers : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
 
 		//Debug.Log("From tower: " + enemies.Count);
 	}
