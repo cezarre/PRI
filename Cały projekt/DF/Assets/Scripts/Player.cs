@@ -99,4 +99,10 @@ public class Player : MonoBehaviour {
 		Time.timeScale = 1;
 		Application.LoadLevel("menu");
 	}
+	public void NextScene(){
+		pauseScript.gameEnded=false;
+		first=true;
+		Time.timeScale = 1;
+		Application.LoadLevel("exampleScene2");
+	}
 }
