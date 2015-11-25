@@ -9,7 +9,7 @@ public class Menu : MonoBehaviour {
 	}
 
 	public void LoadScene(){
-		Application.LoadLevel("exampleScene");
+		Application.LoadLevel("campaign");
 	}
 
 	public void Quit(){

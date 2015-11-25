@@ -39,26 +39,24 @@ public class Player : MonoBehaviour {
 		retry.SetActive (false);
 		backToMenu.SetActive (false);
 
-
 		pause = GameObject.Find ("Pause");
 		pauseScript= (Pause) pause.GetComponent(typeof(Pause));
+    }
 
-	
-	}
-	
-	// Update is called once per frame
-	bool first=true;
-	void Update () {
+    public bool first = true;
+
+    // Update is called once per frame
+    void Update () {
 		if (first) numberOfEnemy = spawnScript.numberOfEnemy;
 		first = false;
 		//Debug.Log ("liczba wrogow: " + numberOfEnemy.ToString ());
 		if (numberOfEnemy == 0 && hp > 0) {
 			//win
 			win.SetActive(true);
-			retry.SetActive(true);
 			backToMenu.SetActive (true);
 			Time.timeScale = 0;
 			pauseScript.gameEnded=true;
+            Campaign.level2 = true;
 		}
 	}
 
@@ -105,4 +103,11 @@ public class Player : MonoBehaviour {
 		Time.timeScale = 1;
 		Application.LoadLevel("exampleScene2");
 	}
+    public void CampaignScene()
+    {
+        //pauseScript.gameEnded = false;
+        first = true;
+        Time.timeScale = 1;
+        Application.LoadLevel("campaign");
+    }
 }

@@ -37,8 +37,6 @@ public class Spawn : MonoBehaviour {
 	public GameObject spawnPoint;
 	private int enemyMoved=0;  //ile wrogow jest wprawionych w ruch
 
-
-
 	System.DateTime whenDeactiveNextWaveButton; 
 	//ProgressBar nextWaveProgressBar = new ProgressBar ();
 	
@@ -60,8 +58,9 @@ public class Spawn : MonoBehaviour {
 
 	GameObject pause;
 	Pause pauseScript;
+    public GameObject Player;
 
-	public int numberOfEnemy;
+    public int numberOfEnemy;
 
 	public void isClickedNextWaved()
 	{
@@ -83,12 +82,11 @@ public class Spawn : MonoBehaviour {
 			progressBarNextWave.SetActive (false);
 			//progressBarImage.re
 			numberOfWavesLeft = numberOfWavesLeft - 1;
-
-		}
-
-
-	
-
+            
+            Player.GetComponent<Player>().addGold(50);
+            Debug.Log("Next Wave clicked. Added 50 gold");
+ 
+        }
 	}
 
 	bool restart=true;
@@ -124,17 +122,11 @@ public class Spawn : MonoBehaviour {
 
 						pauseScript.whenResrumed=new DateTime();
 						pauseScript.whenPaused=new DateTime();
-					
 					}
 				}
-
-
-
-
 			}
 		} else
 			CancelInvoke ("PushNextWave");
-
 	}
 
 	void PushNextWave()
@@ -157,14 +149,12 @@ public class Spawn : MonoBehaviour {
 					
 						isClickedNextWaved();
 
-
 						//numberOfWavesLeft=numberOfWavesLeft-1;
 					}
 				}
 				
 			}
 		}
-
 	}
 	void Start () {
 		for (int i =0; i<7; i++) {
@@ -180,31 +170,26 @@ public class Spawn : MonoBehaviour {
 		pauseScript= (Pause) pause.GetComponent(typeof(Pause));
 		numberOfEnemy = howManyEnemy ();
 
-		
-
-
-
-	}	
+        Player = GameObject.Find("Player");
+    }	
 
 	void FillAllWaves()
 	{
 		if (numberToSpawnInFirstWave.Count!=0)
 			allWaves.Add(numberToSpawnInFirstWave);
-		if (numberToSpawnInSecondWave.Count!=0)
-			allWaves.Add(numberToSpawnInSecondWave);
-		if (numberToSpawnInThirdWave.Count!=0)
-			allWaves.Add(numberToSpawnInThirdWave);
-		if (numberToSpawnInFourthWave.Count!=0)
-			allWaves.Add(numberToSpawnInFourthWave);
-		if (numberToSpawnInFifthWave.Count!=0)
-			allWaves.Add(numberToSpawnInFifthWave);
-		if (numberToSpawnInSixthWave.Count!=0)
-			allWaves.Add(numberToSpawnInSixthWave);
-		if (numberToSpawnInSeventhWave.Count!=0)
-			allWaves.Add(numberToSpawnInSeventhWave);
-
-
-	}
+        if (numberToSpawnInSecondWave.Count != 0)
+            allWaves.Add(numberToSpawnInSecondWave);
+        //if (numberToSpawnInThirdWave.Count != 0)
+        //    allWaves.Add(numberToSpawnInThirdWave);
+        //if (numberToSpawnInFourthWave.Count != 0)
+        //    allWaves.Add(numberToSpawnInFourthWave);
+        //if (numberToSpawnInFifthWave.Count != 0)
+        //    allWaves.Add(numberToSpawnInFifthWave);
+        //if (numberToSpawnInSixthWave.Count != 0)
+        //    allWaves.Add(numberToSpawnInSixthWave);
+        //if (numberToSpawnInSeventhWave.Count != 0)
+        //    allWaves.Add(numberToSpawnInSeventhWave);
+    }
 
 	void NumerOfWaves()
 	{
@@ -257,8 +242,6 @@ public class Spawn : MonoBehaviour {
 
 			
 		Debug.Log ("Wczytano fale:"+ waveReleased.ToString());
-		
-
 	}
 
 	//tutaj ładowani są wrogowie do listy Gameobject
@@ -348,7 +331,6 @@ public class Spawn : MonoBehaviour {
 		//ebug.Log (waveReleased.ToString());
 
 
-
 		if ((System.DateTime.Now.Second % 2 == 0) && (oneSpawned==false) /* &&  enemySpawned<enemy.Count*/) 
 		{ //w parzyste sekundy rusza enemy
 			ActiveNextWavedButton();
@@ -406,8 +388,6 @@ public class Spawn : MonoBehaviour {
 		else
 		if ((System.DateTime.Now.Second % 2 != 0))
 			oneSpawned = false;
-	
-		
 	}
 	public void fillProgressBar()
 	{
@@ -418,12 +398,9 @@ public class Spawn : MonoBehaviour {
 			//Debug.Log (progressBarCounter);
 			progressBarCounter += Time.deltaTime/(NextWaveTimeInterval-NextWaveButtonInterval);
 		}
-		
 	}
 	public void restartProgressBar()
 	{
 		progressBarCounter = 0;
-
-		
 	}
 }

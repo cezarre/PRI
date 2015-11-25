@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+// DO CZEGO TO? ----> do usunięcia!!!!
 public class NextScene : MonoBehaviour {
 	
 	// Use this for initialization
@@ -11,10 +11,10 @@ public class NextScene : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown("escape")) {//When a key is pressed down it see if it was the escape key if it was it will execute the code
-			Application.LoadLevel("exampleScene2");
+			Application.LoadLevel("campaign");
 		}
 		if(Input.GetKeyDown("backspace")) {//When a key is pressed down it see if it was the escape key if it was it will execute the code
-			Application.LoadLevel("exampleScene2");
+			Application.LoadLevel("campaign");
 		}
 	}
 }
