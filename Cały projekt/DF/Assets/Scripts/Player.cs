@@ -9,12 +9,11 @@ public class Player : MonoBehaviour {
 	public int numberOfEnemy;
 
 	GameObject HPGameObject, GoldGameObject, Spawn;
-	Text HPText, GoldGameText;
+    GameObject spawn, win, gameOver, retry, backToMenu, pause;
 
-	GameObject spawn, win, gameOver, retry,backToMenu;
-	Spawn spawnScript;
+    Text HPText, GoldGameText;
 
-	GameObject pause;
+    Spawn spawnScript;
 	Pause pauseScript;
 
 	// Use this for initialization
@@ -75,18 +74,14 @@ public class Player : MonoBehaviour {
 			retry.SetActive(true);
 			Time.timeScale = 0;
 			pauseScript.gameEnded=true;
-
-
 		} else
 			hp = hp - howMuchLessHp;
 			HPText.text = hp.ToString ();
-
 	}
 	public void addGold(int amountOfGold)
 	{
 		gold = gold + amountOfGold;
 		GoldGameText.text = gold.ToString ()+ "$";
-
 	}
 
 	public void Retry(){
