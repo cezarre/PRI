@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 public class Player : MonoBehaviour {
 	public int hp;
@@ -56,6 +57,10 @@ public class Player : MonoBehaviour {
 			backToMenu.SetActive (true);
 			Time.timeScale = 0;
 			pauseScript.gameEnded=true;
+            string[] levelName = Application.loadedLevelName.Split(' ');
+            int level;
+            Int32.TryParse(levelName[levelName.Length - 1], out level);
+            PlayerPrefs.SetInt("PlayerProgress", level+1);
             Campaign.level2 = true;
 		}
 	}

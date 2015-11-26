@@ -16,7 +16,7 @@ public class Campaign : MonoBehaviour {
     void Update()
     {
 
-        if (level2)
+        if (level2 || PlayerPrefs.GetInt("PlayerProgress")==2 )
             Level_2.SetActive(true);
 
         if (Input.GetKeyDown("escape"))
