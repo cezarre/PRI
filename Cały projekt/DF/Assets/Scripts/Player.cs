@@ -95,17 +95,17 @@ public class Player : MonoBehaviour {
 		pauseScript.gameEnded=false;
 		first=true;
 		Time.timeScale = 1;
-		Application.LoadLevel("menu");
+		Application.LoadLevel("Menu");
 	}
 	public void NextScene(){
 		pauseScript.gameEnded=false;
 		first=true;
 		Time.timeScale = 1;
-		Application.LoadLevel("exampleScene2");
+		Application.LoadLevel("Level 2");
 	}
     public void CampaignScene()
     {
-        //pauseScript.gameEnded = false;
+        pauseScript.gameEnded = false;
         first = true;
         Time.timeScale = 1;
         Application.LoadLevel("campaign");

@@ -12,33 +12,27 @@ public class Campaign : MonoBehaviour {
         Level_2.SetActive(false);
 	}
 
-    public void Level_1()
+    // Update is called once per frame
+    void Update()
     {
-        Time.timeScale = 1;
-        Application.LoadLevel("exampleScene");
+
+        if (level2)
+            Level_2.SetActive(true);
+
+        if (Input.GetKeyDown("escape"))
+            Application.LoadLevel("Menu");
+
+        if (Input.GetKeyDown("backspace"))
+            Application.LoadLevel("Menu");
+    }
+
+    public void LoadLevel_1()
+    {
+        Application.LoadLevel("Level 1");
     }
 
     public void LoadLevel_2()
     {
-        Time.timeScale = 1;
-        Application.LoadLevel("exampleScene2");
-    }
-    
-    // Update is called once per frame
-    void Update () {
-        //Debug.Log("OK");
-        if (level2)
-        {
-            Level_2.SetActive(true);
-        }
-
-        if (Input.GetKeyDown("escape"))
-        {//When a key is pressed down it see if it was the escape key if it was it will execute the code
-            Application.LoadLevel("menu");
-        }
-        if (Input.GetKeyDown("backspace"))
-        {//When a key is pressed down it see if it was the escape key if it was it will execute the code
-            Application.LoadLevel("menu");
-        }
+        Application.LoadLevel("Level 2");
     }
 }
