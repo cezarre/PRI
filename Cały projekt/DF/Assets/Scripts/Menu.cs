@@ -3,8 +3,10 @@ using System.Collections;
 
 public class Menu : MonoBehaviour {
 
-	// Use this for initialization
-	public void Start () {
+    public static bool isPlaying = true;
+
+    // Use this for initialization
+    public void Start () {
         ActiveContinoune();
     }
 
