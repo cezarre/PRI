@@ -15,14 +15,15 @@ public class Menu : MonoBehaviour {
     }
 
     public void LoadScene(){
-		Application.LoadLevel("Campaign");
+        PlayerPrefs.SetInt("PlayerProgress", 1);
+        Application.LoadLevel("Campaign");
 	}
 
     public void ActiveContinoune()
     {
         GameObject resume = GameObject.Find("Resume");
         GameObject continoune = GameObject.Find("Continue");
-        if (PlayerPrefs.GetInt("PlayerProgress") != 1)
+        if (PlayerPrefs.GetInt("PlayerProgress") > 1)
         {
             continoune.SetActive(true);
             resume.SetActive(false);
@@ -34,6 +35,13 @@ public class Menu : MonoBehaviour {
         }
 
      }
+
+    public void LoadContiunue()
+    {
+
+        Application.LoadLevel("Campaign");
+
+    }
 
     public void Quit(){
 		Application.Quit ();
