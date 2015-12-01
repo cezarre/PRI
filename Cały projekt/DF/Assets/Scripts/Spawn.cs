@@ -251,7 +251,8 @@ public class Spawn : MonoBehaviour {
 		//Debug.Log ("Wszystkich fal:"+ allWaves.Count.ToString());
 		if (waveReleased < allWaves.Count) {
 			//kiedy dojdzie wiecej wrogow trzeba dodac wiecej warunkow
-			while (allWaves[whichWave][0]!=0 || allWaves[whichWave][1]!=0)
+            print (allWaves[whichWave][2]);
+			while (allWaves[whichWave][0]!=0 || allWaves[whichWave][1]!=0 || allWaves[whichWave][2] != 0)
 			{
 				for (int whichEnemy=0;whichEnemy<allWaves[whichWave].Count;whichEnemy++)
 				{
@@ -276,11 +277,12 @@ public class Spawn : MonoBehaviour {
 						enemySingleWave[whichEnemy].transform.position = this.transform.position;
 						
 						allWaves[whichWave][whichEnemy]=allWaves[whichWave][whichEnemy]-1;
-						//Debug.Log(enemy[whichEnemy].transform.position.ToString()+ ":::"+this.transform.position.ToString());
-						//enemy[whichEnemy].SetActive(false);	
+                        //Debug.Log(enemy[whichEnemy].transform.position.ToString()+ ":::"+this.transform.position.ToString());
+                        //enemy[whichEnemy].SetActive(false);	
+                        
 					}
                     else
-                        if (whichEnemy == 2 && allWaves[whichWave][1] != 0)
+                        if (whichEnemy == 2 && allWaves[whichWave][2] != 0)
                     {
                         enemySingleWave.Add(Instantiate(Resources.Load("Enemy3")) as GameObject);
                         enemySingleWave[whichEnemy].transform.position = this.transform.position;
@@ -289,7 +291,7 @@ public class Spawn : MonoBehaviour {
                         //Debug.Log(enemy[whichEnemy].transform.position.ToString()+ ":::"+this.transform.position.ToString());
                         //enemy[whichEnemy].SetActive(false);	
                     }
-
+                    //print(whichEnemy);
 
                 }
 			}
@@ -331,6 +333,7 @@ public class Spawn : MonoBehaviour {
 			}
 
 		}
+        print("many: " + amount.ToString());
 		return amount;
 	}
 	// Update is called once per frame

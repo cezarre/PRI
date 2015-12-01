@@ -119,7 +119,9 @@ public class Bomb : MonoBehaviour {
             
             if (currentSprite.sprite.name == "006")
             {
-                coll.gameObject.GetComponent<EnemyMove>().damage(30.0f);
+                if (coll.gameObject.GetComponent<EnemyMove>()==null) coll.gameObject.GetComponent<EnemyMoveEnemy3>().damage(30.0f); 
+                else
+                    coll.gameObject.GetComponent<EnemyMove>().damage(30.0f);
                 print("stay");
 
             }

@@ -13,8 +13,10 @@ public class BulletMove : MonoBehaviour {
 		//print("hit enemy");
 		if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Enemy2") {
 			//col.GetComponent<EnemyMove>().damage(damage);
-			collision.gameObject.GetComponent<EnemyMove>().damage(damage);
-			Destroy(gameObject);
+			if (collision.gameObject.GetComponent<EnemyMove>()== null) collision.gameObject.GetComponent<EnemyMoveEnemy3>().damage(damage); 
+            else
+                collision.gameObject.GetComponent<EnemyMove>().damage(damage);
+            Destroy(gameObject);
 		}
 
 	}
