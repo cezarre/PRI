@@ -179,16 +179,16 @@ public class Spawn : MonoBehaviour {
 			allWaves.Add(numberToSpawnInFirstWave);
         if (numberToSpawnInSecondWave.Count != 0)
             allWaves.Add(numberToSpawnInSecondWave);
-        //if (numberToSpawnInThirdWave.Count != 0)
-        //    allWaves.Add(numberToSpawnInThirdWave);
-        //if (numberToSpawnInFourthWave.Count != 0)
-        //    allWaves.Add(numberToSpawnInFourthWave);
-        //if (numberToSpawnInFifthWave.Count != 0)
-        //    allWaves.Add(numberToSpawnInFifthWave);
-        //if (numberToSpawnInSixthWave.Count != 0)
-        //    allWaves.Add(numberToSpawnInSixthWave);
-        //if (numberToSpawnInSeventhWave.Count != 0)
-        //    allWaves.Add(numberToSpawnInSeventhWave);
+        if (numberToSpawnInThirdWave.Count != 0)
+            allWaves.Add(numberToSpawnInThirdWave);
+        if (numberToSpawnInFourthWave.Count != 0)
+            allWaves.Add(numberToSpawnInFourthWave);
+        if (numberToSpawnInFifthWave.Count != 0)
+            allWaves.Add(numberToSpawnInFifthWave);
+        if (numberToSpawnInSixthWave.Count != 0)
+            allWaves.Add(numberToSpawnInSixthWave);
+        if (numberToSpawnInSeventhWave.Count != 0)
+            allWaves.Add(numberToSpawnInSeventhWave);
     }
 
 	void NumerOfWaves()

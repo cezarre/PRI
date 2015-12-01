@@ -9,7 +9,7 @@ public class Player : MonoBehaviour {
 	public int numberOfEnemy;
 
 	GameObject HPGameObject, GoldGameObject, Spawn;
-    GameObject spawn, win, gameOver, retry, backToMenu, pause;
+    GameObject spawn, win, gameOver, retry, backToMenu, pause, bombAbility;
 
     Text HPText, GoldGameText;
 
@@ -33,8 +33,9 @@ public class Player : MonoBehaviour {
 		gameOver=GameObject.Find("Game Over");
 		retry=GameObject.Find("Retry");
 		backToMenu=GameObject.Find("BackMenu");
+        bombAbility = GameObject.Find("BombAbility");
 
-		win.SetActive (false);
+        win.SetActive (false);
 		gameOver.SetActive(false);
 		retry.SetActive (false);
 		backToMenu.SetActive (false);
@@ -51,8 +52,9 @@ public class Player : MonoBehaviour {
 		first = false;
 		//Debug.Log ("liczba wrogow: " + numberOfEnemy.ToString ());
 		if (numberOfEnemy == 0 && hp > 0) {
-			//win
-			win.SetActive(true);
+            //win
+            bombAbility.SetActive(false);
+            win.SetActive(true);
 			backToMenu.SetActive (true);
 			Time.timeScale = 0;
 			pauseScript.gameEnded=true;
