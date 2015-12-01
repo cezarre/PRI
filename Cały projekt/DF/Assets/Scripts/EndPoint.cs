@@ -9,7 +9,10 @@ public class EndPoint : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		col.gameObject.GetComponent<EnemyMove> ().EndPointReached();
+        if (col.gameObject.GetComponent<EnemyMove>() == null)
+            col.gameObject.GetComponent<EnemyMoveEnemy3>().EndPointReached();
+        else
+        col.gameObject.GetComponent<EnemyMove> ().EndPointReached();
 	}
 
 	// Update is called once per frame

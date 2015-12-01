@@ -92,8 +92,14 @@ public class Towers : MonoBehaviour {
 		}
 		//foreach (GameObject enemy in detectedEnemies) {
 		for (int i=0 ; i<detectedEnemies.Count ; i++){
-			if (bestDistance < detectedEnemies[i].GetComponent<EnemyMove>().distance){
-				bestDistance = detectedEnemies[i].GetComponent<EnemyMove>().distance;
+            float dist;
+            if (detectedEnemies[i].GetComponent<EnemyMove>() == null)
+            {
+                dist = detectedEnemies[i].GetComponent<EnemyMoveEnemy3>().distance;
+            }
+            else dist = detectedEnemies[i].GetComponent<EnemyMove>().distance;
+            if (bestDistance < dist){
+				bestDistance = dist;
 				enemyWithBestDistance = i;
 			}
 		}

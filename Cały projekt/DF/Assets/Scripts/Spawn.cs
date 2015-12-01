@@ -217,8 +217,9 @@ public class Spawn : MonoBehaviour {
 		singleEnemy.SetActive (true); 
 		//Debug.Log(singleEnemy.transform.position.ToString()+ ":::"+this.transform.position.ToString());
 		//singleEnemy.transform.position = this.transform.position;
-
-		MoveEnemy(singleEnemy, singleEnemy.GetComponent<EnemyMove>().speed);
+        if (singleEnemy.GetComponent<EnemyMove>()==null) MoveEnemy(singleEnemy, singleEnemy.GetComponent<EnemyMoveEnemy3>().speed);
+        else
+        MoveEnemy(singleEnemy, singleEnemy.GetComponent<EnemyMove>().speed);
 	}
 
 
@@ -278,7 +279,17 @@ public class Spawn : MonoBehaviour {
 						//Debug.Log(enemy[whichEnemy].transform.position.ToString()+ ":::"+this.transform.position.ToString());
 						//enemy[whichEnemy].SetActive(false);	
 					}
-                    
+                    else
+                        if (whichEnemy == 2 && allWaves[whichWave][1] != 0)
+                    {
+                        enemySingleWave.Add(Instantiate(Resources.Load("Enemy3")) as GameObject);
+                        enemySingleWave[whichEnemy].transform.position = this.transform.position;
+
+                        allWaves[whichWave][whichEnemy] = allWaves[whichWave][whichEnemy] - 1;
+                        //Debug.Log(enemy[whichEnemy].transform.position.ToString()+ ":::"+this.transform.position.ToString());
+                        //enemy[whichEnemy].SetActive(false);	
+                    }
+
 
                 }
 			}
@@ -295,16 +306,16 @@ public class Spawn : MonoBehaviour {
 	{
 		/*if (enemyMoved <= enemySpawned)*/ {
 			if (direction == "toDown")
-				singleEnemy.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0f, -speed));
+				singleEnemy.GetComponent<Rigidbody2D> ().velocity = (new Vector2 (0f, -speed));
 			else
 				if (direction == "toUp")
-				singleEnemy.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0f, speed));
+				singleEnemy.GetComponent<Rigidbody2D> ().velocity = (new Vector2 (0f, speed));
 			else 
 				if (direction == "toRight")
-				singleEnemy.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (speed, 0f));
+				singleEnemy.GetComponent<Rigidbody2D> ().velocity = (new Vector2 (speed, 0f));
 			else 
 				if (direction == "toLeft")
-				singleEnemy.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (-speed, 0f));
+				singleEnemy.GetComponent<Rigidbody2D> ().velocity = (new Vector2 (-speed, 0f));
 			enemyMoved++;
 
 		}
