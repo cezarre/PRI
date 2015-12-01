@@ -278,8 +278,9 @@ public class Spawn : MonoBehaviour {
 						//Debug.Log(enemy[whichEnemy].transform.position.ToString()+ ":::"+this.transform.position.ToString());
 						//enemy[whichEnemy].SetActive(false);	
 					}
+                    
 
-				}
+                }
 			}
 			waveReleased=waveReleased+1;
 			foreach (GameObject singleEnemy in enemySingleWave) 

@@ -141,4 +141,13 @@ public class EnemyMove : MonoBehaviour {
 		//Debug.Log (anim.GetInteger("Direction").ToString ());
 
 	}
+    public void SpeedUP()
+    {
+        speed = speed * 2;
+        Invoke("SpeedDown", 2);
+    }
+    void SpeedDown()
+    {
+        speed = speed / 2;
+    }
 }
