@@ -176,9 +176,8 @@ public class Towers : MonoBehaviour {
 		timeInterval = 2f;
 		Player.GetComponent<Player> ().addGold (-200);
 	}
-	void OnMouseDown() {
-		//print ("KID: " + transform.root.GetChild (0).name);
-		
+
+	public void BuildTesla(){
 		if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
 			BuildTesla1 ();
 		}
@@ -190,9 +189,71 @@ public class Towers : MonoBehaviour {
 		}
 
 
+	}
+	//-----------------------------------------------------------------------------------------------------
+
+	void BuildAlch1() {
+		transform.FindChild ("TowerPlace").gameObject.SetActive (false);
+		t_level = 1;
+		transform.FindChild ("Alchemist").FindChild("Alchemist1").gameObject.SetActive (true);
+		damage = 11;
+		radius = 10;
+		timeInterval = 4f;
+		Player.GetComponent<Player> ().addGold (-50);
+		
+	}
+	void BuildAlch2() {
+		t_level = 2;
+		transform.FindChild ("Alchemist").FindChild("Alchemist1").gameObject.SetActive (false);
+		transform.FindChild ("Alchemist").FindChild ("Alchemist2").gameObject.SetActive (true);
+		damage = 16;
+		radius = 12;
+		timeInterval = 3f;
+		Player.GetComponent<Player> ().addGold (-100);
+	}
+	void BuildAlch3() {
+		t_level = 3;
+		transform.FindChild ("Alchemist").FindChild("Alchemist2").gameObject.SetActive (false);
+		transform.FindChild ("Alchemist").FindChild ("Alchemist3").gameObject.SetActive (true);
+		damage = 22;
+		radius = 15;
+		timeInterval = 2f;
+		Player.GetComponent<Player> ().addGold (-200);
+	}
+
+	public void BuildAlch(){
+		if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
+			BuildAlch1 ();
+		}
+		else if (t_level == 1 && Player.GetComponent<Player> ().gold >= 100) {
+			BuildAlch2();
+		}
+		else if (t_level == 2 && Player.GetComponent<Player> ().gold >= 200) {
+			BuildAlch3();
+		}
+		
+		//transform.FindChild ("Tower-UI").gameObject.SetActive (false);
+	}
+
+	void OnMouseDown() {
+		//print ("KID: " + transform.root.GetChild (0).name);
+		/*
+		if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
+			BuildTesla1 ();
+		}
+		else if (t_level == 1 && Player.GetComponent<Player> ().gold >= 100) {
+			BuildTesla2();
+		}
+		else if (t_level == 2 && Player.GetComponent<Player> ().gold >= 200) {
+			BuildTesla3();
+		}
+		*/
+
+		transform.FindChild ("Tower-UI").gameObject.SetActive (!transform.FindChild ("Tower-UI").gameObject.activeSelf);
+
 
 	}
-	
+
 
 
 	
