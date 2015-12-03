@@ -12,6 +12,7 @@ public class Towers : MonoBehaviour {
 
 	IEnumerator Start()
 	{
+		block = false;
 		t_level = 0;
 		damage = 0;
 		radius = 10;
@@ -47,6 +48,7 @@ public class Towers : MonoBehaviour {
 	public Point TowerCord;
 	public GameObject Player;
 
+	private bool block;
 
 	float distance(Point a, Point b) {
 		//calculate distance
@@ -73,7 +75,9 @@ public class Towers : MonoBehaviour {
 
 	IEnumerator Actioning() {
 		while(true) {
-			ActionOnEnemy ();
+			if (block == false) {
+				ActionOnEnemy ();
+			}
 			yield return new WaitForSeconds (timeInterval);
 		}
 	}
@@ -256,6 +260,9 @@ public class Towers : MonoBehaviour {
 
 
 
+	public void TowerBlock(bool b) {
+		block = b;
+	}
 	
 
 	// Update is called once per frame
