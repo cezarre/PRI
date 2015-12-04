@@ -20,6 +20,7 @@ public class Towers : MonoBehaviour {
 		type3 = false;
 		TowerCord = gameObject.AddComponent<Point>();
 		TowerCord.Set (gameObject.transform.position.x, gameObject.transform.position.y);
+		TowerType = 0;
 
 
 		yield return new WaitForSeconds(1);
@@ -47,6 +48,7 @@ public class Towers : MonoBehaviour {
 	public bool type3;
 	public Point TowerCord;
 	public GameObject Player;
+	public int TowerType;
 
 	private bool block;
 
@@ -182,6 +184,7 @@ public class Towers : MonoBehaviour {
 	}
 
 	public void BuildTesla(){
+		TowerType = 1;
 		if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
 			BuildTesla1 ();
 		}
@@ -226,6 +229,7 @@ public class Towers : MonoBehaviour {
 	}
 
 	public void BuildAlch(){
+		TowerType = 2;
 		if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
 			BuildAlch1 ();
 		}

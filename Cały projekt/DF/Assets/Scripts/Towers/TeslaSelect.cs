@@ -15,9 +15,11 @@ public class TeslaSelect : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
+		int t = transform.parent.parent.GetComponent<Towers> ().TowerType;
+		if (t == 0 || t == 1) {
+			transform.parent.parent.gameObject.GetComponent<Towers> ().BuildTesla ();
+		}
 
-		transform.parent.parent.gameObject.GetComponent<Towers>().BuildTesla ();
-
-		
 	}
+
 }
