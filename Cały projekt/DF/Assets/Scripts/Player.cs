@@ -113,4 +113,8 @@ public class Player : MonoBehaviour {
         Time.timeScale = 1;
         Application.LoadLevel("campaign");
     }
+    public void LoadHelp()
+    {
+        Application.LoadLevel("Help");
+    }
 }

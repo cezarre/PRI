@@ -15,15 +15,20 @@ public class Campaign : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
         if (level2 || PlayerPrefs.GetInt("PlayerProgress")==2 )
             Level_2.SetActive(true);
 
         if (Input.GetKeyDown("escape"))
+        {
+            Menu.isPlaying = true;
             Application.LoadLevel("Menu");
+        }
 
         if (Input.GetKeyDown("backspace"))
+        {
+            Menu.isPlaying = true;
             Application.LoadLevel("Menu");
+        }
     }
 
     public void LoadLevel_1()

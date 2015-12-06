@@ -17,9 +17,10 @@ public class Menu : MonoBehaviour {
     }
 
     public void LoadScene(){
+        isPlaying = false;
         PlayerPrefs.SetInt("PlayerProgress", 1);
         Application.LoadLevel("Campaign");
-	}
+    }
 
     public void ActiveContinoune()
     {
@@ -40,9 +41,13 @@ public class Menu : MonoBehaviour {
 
     public void LoadContiunue()
     {
-
+        isPlaying = false;
         Application.LoadLevel("Campaign");
+    }
 
+    public void LoadHelp()
+    {
+        Application.LoadLevel("Help");
     }
 
     public void Quit(){
