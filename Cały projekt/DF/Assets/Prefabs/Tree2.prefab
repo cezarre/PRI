@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 495344}
   m_Layer: 0
-  m_Name: Gear
+  m_Name: Tree2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ GameObject:
   - 4: {fileID: 402160}
   - 212: {fileID: 21235482}
   m_Layer: 0
-  m_Name: Gear Sprite
+  m_Name: Tree2 Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8ff44ad682437a44aa0c6217a300c4c8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e872910874debfa458950eca1a02d450, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -90,7 +90,16 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Name
+      value: Tree2 Sprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e872910874debfa458950eca1a02d450,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 129216}
