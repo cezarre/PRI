@@ -35,6 +35,8 @@ TagManager:
   - Continune
   - BombAbbility
   - BombAbbilityProgress
+  - Tower
+  - EnemyDisable
   layers:
   - Default
   - TransparentFX

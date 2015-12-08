@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Campaign.cs" />
      <Compile Include="Assets\Scripts\EndPoint.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\Enemy4DisableTower.cs" />
      <Compile Include="Assets\Scripts\EnemyMove.cs" />
      <Compile Include="Assets\Scripts\EnemyMoveEnemy3.cs" />
      <Compile Include="Assets\Scripts\Exit.cs" />
@@ -70,17 +71,11 @@
      <Compile Include="Assets\Scripts\Towers\AlchSelect.cs" />
      <Compile Include="Assets\Scripts\Towers\TeslaSelect.cs" />
      <None Include="Assets\Grafiki\Readme.txt" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>

@@ -266,11 +266,18 @@ public class Towers : MonoBehaviour {
 
 	public void TowerBlock(bool b) {
 		block = b;
+        Invoke("TowerEnable", 2);
 	}
-	
+    public void TowerEnable()
+    {
+        block = false;
+        print("Tower enabled");
 
-	// Update is called once per frame
-	void Update () {
+    }
+
+
+    // Update is called once per frame
+    void Update () {
 
 		//Debug.Log("From tower: " + enemies.Count);
 	}

@@ -252,7 +252,7 @@ public class Spawn : MonoBehaviour {
 		if (waveReleased < allWaves.Count) {
 			//kiedy dojdzie wiecej wrogow trzeba dodac wiecej warunkow
             print (allWaves[whichWave][2]);
-			while (allWaves[whichWave][0]!=0 || allWaves[whichWave][1]!=0 || allWaves[whichWave][2] != 0)
+			while (allWaves[whichWave][0]!=0 || allWaves[whichWave][1]!=0 || allWaves[whichWave][2] != 0 || allWaves[whichWave][3] != 0)
 			{
 				for (int whichEnemy=0;whichEnemy<allWaves[whichWave].Count;whichEnemy++)
 				{
@@ -290,6 +290,15 @@ public class Spawn : MonoBehaviour {
                         allWaves[whichWave][whichEnemy] = allWaves[whichWave][whichEnemy] - 1;
                         //Debug.Log(enemy[whichEnemy].transform.position.ToString()+ ":::"+this.transform.position.ToString());
                         //enemy[whichEnemy].SetActive(false);	
+                    }
+                    else
+                        if (whichEnemy == 3 && allWaves[whichWave][3] != 0)
+                    {
+                        enemySingleWave.Add(Instantiate(Resources.Load("Enemy4")) as GameObject);
+                        enemySingleWave[whichEnemy].transform.position = this.transform.position;
+
+                        allWaves[whichWave][whichEnemy] = allWaves[whichWave][whichEnemy] - 1;
+                        	
                     }
                     //print(whichEnemy);
 

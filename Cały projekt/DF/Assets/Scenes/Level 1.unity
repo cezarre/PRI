@@ -5314,7 +5314,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFirstWave.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFourthWave.Array.size
@@ -5402,7 +5402,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFirstWave.Array.data[3]
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFirstWave.Array.data[4]
@@ -7053,6 +7053,10 @@ Prefab:
     - target: {fileID: 420404, guid: a1ca207baee925944b36372bcaea6bad, type: 2}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 115036, guid: a1ca207baee925944b36372bcaea6bad, type: 2}
+      propertyPath: m_TagString
+      value: Tower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1ca207baee925944b36372bcaea6bad, type: 2}
