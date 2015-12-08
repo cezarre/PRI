@@ -69,8 +69,9 @@ public class EnemyMoveEnemy3 : MonoBehaviour
         //player = GetComponent<Rigidbody2D> ();
         //Debug.Log("Something has entered this zone."+ col.gameObject.tag);
         
-        if (col.gameObject.tag=="Enemy")
+        if (col.gameObject.tag=="Enemy" && col.gameObject.GetComponent<EnemyMove>().wall!=false )
         {
+            print(col.gameObject.GetComponent<Rigidbody2D>().velocity.ToString());
             col.gameObject.GetComponent<EnemyMove>().SpeedUP();
         }
             //player = GetComponent<Rigidbody2D> ();
@@ -169,5 +170,38 @@ public class EnemyMoveEnemy3 : MonoBehaviour
         //Debug.Log (anim.GetInteger("Direction").ToString ());
 
     }
-   
+
+    public void WallSpeedZero()
+    {
+        player.velocity = (new Vector2(0, 0f));
+    }
+    public void WallSpeedNormal()
+    {
+        int direction = anim.GetInteger("Direction");
+
+        if (direction == 0)
+        {
+            player.velocity = (new Vector2(-speed, 0f));
+        }
+        else
+            if (direction == 2)
+        {
+
+            player.velocity = (new Vector2(speed, 0f));
+        }
+        else
+            if (direction == 3)
+        {
+            player.velocity = (new Vector2(0f, speed));
+
+        }
+        else
+            if (direction == 1)
+        {
+            player.velocity = (new Vector2(0f, -speed));
+        }
+
+    }
+
+
 }

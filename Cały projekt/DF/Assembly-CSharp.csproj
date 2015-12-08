@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\Towers.cs" />
      <Compile Include="Assets\Scripts\Towers\AlchSelect.cs" />
      <Compile Include="Assets\Scripts\Towers\TeslaSelect.cs" />
+     <Compile Include="Assets\Scripts\Wall.cs" />
      <None Include="Assets\Grafiki\Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
