@@ -2,10 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Towers.cs">
     <Files>
+      <File FileName="Assets/Scripts/Towers.cs" Line="303" Column="59" />
       <File FileName="Assets/Scripts/Towers/SellSelect.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Towers/TeslaSelect.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Towers.cs" Line="270" Column="3" />
-      <File FileName="Assets/Scripts/TowerAnimation.cs" Line="11" Column="19" />
+      <File FileName="Assets/Scripts/Towers/TeslaSelect.cs" Line="22" Column="3" />
+      <File FileName="Assets/Scripts/TowerAnimation.cs" Line="1" Column="1" />
+      <File FileName="Assets/EmmiterSelect.cs" Line="19" Column="75" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

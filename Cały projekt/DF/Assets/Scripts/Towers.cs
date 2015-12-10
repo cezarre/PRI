@@ -254,6 +254,61 @@ public class Towers : MonoBehaviour {
 		}
 	}
 
+	//---------------------------------- EMITTER --------------------------------
+
+	
+	void BuildEmitter1() {
+		transform.FindChild ("TowerPlace").gameObject.SetActive (false);
+		t_level = 1;
+		transform.FindChild ("Emitter").gameObject.SetActive (true);
+		transform.FindChild ("Emitter").FindChild("Emitter1").gameObject.SetActive (true);
+		damage = 11;
+		radius = 10;
+		timeInterval = 4f;
+		Player.GetComponent<Player> ().addGold (-50);
+		
+	}
+	void BuildEmitter2() {
+		t_level = 2;
+		transform.FindChild ("Emitter").FindChild("Emitter1").gameObject.SetActive (false);
+		transform.FindChild ("Emitter").FindChild ("Emitter2").gameObject.SetActive (true);
+		damage = 16;
+		radius = 12;
+		timeInterval = 3f;
+		Player.GetComponent<Player> ().addGold (-100);
+	}
+	void BuildEmitter3() {
+		t_level = 3;
+		transform.FindChild ("Emitter").FindChild("Emitter2").gameObject.SetActive (false);
+		transform.FindChild ("Emitter").FindChild ("Emitter3").gameObject.SetActive (true);
+		damage = 22;
+		radius = 15;
+		timeInterval = 2f;
+		Player.GetComponent<Player> ().addGold (-200);
+	}
+	
+	public void BuildEmitter(){
+		TowerType = 3;
+		if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
+			BuildEmitter1 ();
+		}
+		else if (t_level == 1 && Player.GetComponent<Player> ().gold >= 100) {
+			BuildEmitter2();
+		}
+		else if (t_level == 2 && Player.GetComponent<Player> ().gold >= 200) {
+			BuildEmitter3();
+		}
+		
+		
+		foreach (Transform child in transform.FindChild("Emitter")) { 
+			if(child.gameObject.activeSelf) {
+				child.gameObject.GetComponent<TowerAnimation> ().Start ();
+			}
+		}
+	}
+
+	//---------------------------------------------------------------------------------------
+
 	public void SellTower() {
 		Player.GetComponent<Player> ().addGold (50);
 		t_level = 0;
