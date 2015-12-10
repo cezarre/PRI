@@ -6,7 +6,7 @@ public class TowerAnimation : MonoBehaviour {
 	int i;
 
 	// Use this for initialization
-	void Start () {
+	public void Start () {
 		i = 0;
 		StartCoroutine (anim ());
 		
