@@ -17,7 +17,6 @@ public class Towers : MonoBehaviour {
 		damage = 0;
 		radius = 10;
 		timeInterval = 4f;
-		type3 = false;
 		TowerCord = gameObject.AddComponent<Point>();
 		TowerCord.Set (gameObject.transform.position.x, gameObject.transform.position.y);
 		TowerType = 0;
@@ -45,7 +44,6 @@ public class Towers : MonoBehaviour {
 	public float areaDamageDist;
 	public float timeInterval;
 	public float radius;
-	public bool type3;
 	public Point TowerCord;
 	public GameObject Player;
 	public int TowerType;
@@ -111,8 +109,8 @@ public class Towers : MonoBehaviour {
 		}
 		//}
 		if (detectedEnemies.Count > 0 && t_level > 0) {
-			if (type3) {
-				//AreaShoot(detectedEnemies[enemyWithBestDistance]);
+			if (TowerType == 3) {
+				AreaShoot(detectedEnemies[enemyWithBestDistance]);
 			} else {
 				Shoot(detectedEnemies[enemyWithBestDistance]);
 			}
@@ -123,7 +121,20 @@ public class Towers : MonoBehaviour {
 	void bullet(GameObject enemy) {
 		float x = this.transform.position.x;
 		float y = this.transform.position.y;
-		GameObject bullet = (GameObject)Instantiate(Resources.Load("TeslaBullet"));
+		GameObject bullet = new GameObject();
+
+		switch (TowerType) {
+			case 1:
+				bullet = (GameObject)Instantiate(Resources.Load("TeslaBullet"));
+				break;
+			case 2:
+				bullet = (GameObject)Instantiate(Resources.Load("AlchemistBullet"));
+				break;
+			case 3: 
+				break;
+		}
+
+
 		bullet.transform.position = new Vector2 (x, y+2);
 		//float buletSize = bullet.transform.localScale;
 		bullet.transform.localScale *= 1.7f;
@@ -142,6 +153,7 @@ public class Towers : MonoBehaviour {
 
 
 	void AreaShoot(GameObject enemy) {
+		enemy.GetComponent<EnemyMove> ().speed /= 2;
 		/*Shoot (enemy);
 
 		foreach (GameObject otherEnemy in enemies) {
