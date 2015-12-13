@@ -203,6 +203,10 @@ Prefab:
       propertyPath: m_Name
       value: LeftToRight (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 197086, guid: c523d14653a6f494cada7d58df1748d7, type: 2}
+      propertyPath: m_TagString
+      value: LTRTL
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_IsPrefabParent: 0
@@ -493,7 +497,7 @@ GameObject:
   - 4: {fileID: 95925140}
   m_Layer: 8
   m_Name: DownToRight
-  m_TagString: Untagged
+  m_TagString: DTRTD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1233,7 +1237,7 @@ GameObject:
   - 4: {fileID: 219448353}
   m_Layer: 9
   m_Name: LeftToRight (5)
-  m_TagString: Untagged
+  m_TagString: LTRTL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2691,7 +2695,7 @@ GameObject:
   - 4: {fileID: 1595020511}
   m_Layer: 9
   m_Name: UpToRight
-  m_TagString: Untagged
+  m_TagString: UTRTU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3028,7 +3032,7 @@ GameObject:
   - 4: {fileID: 542803574}
   m_Layer: 9
   m_Name: LeftToRight (10)
-  m_TagString: Untagged
+  m_TagString: LTRTL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3177,7 +3181,7 @@ GameObject:
   - 4: {fileID: 564563270}
   m_Layer: 8
   m_Name: UpToDown (7)
-  m_TagString: Untagged
+  m_TagString: DTUTD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3550,7 +3554,7 @@ GameObject:
   - 4: {fileID: 1623037114}
   m_Layer: 8
   m_Name: UpToDown
-  m_TagString: Untagged
+  m_TagString: UTDTU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4095,7 +4099,7 @@ GameObject:
   - 4: {fileID: 750005497}
   m_Layer: 9
   m_Name: LeftToRight (6)
-  m_TagString: Untagged
+  m_TagString: LTRTL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5000,7 +5004,7 @@ GameObject:
   - 4: {fileID: 1352554280}
   m_Layer: 9
   m_Name: UpToLeft
-  m_TagString: Untagged
+  m_TagString: UTLTU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5051,6 +5055,10 @@ Prefab:
     - target: {fileID: 197086, guid: c523d14653a6f494cada7d58df1748d7, type: 2}
       propertyPath: m_Name
       value: LeftToRight (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 197086, guid: c523d14653a6f494cada7d58df1748d7, type: 2}
+      propertyPath: m_TagString
+      value: LTRTL
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
@@ -5463,6 +5471,10 @@ Prefab:
       propertyPath: m_Name
       value: LeftToRight (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 197086, guid: c523d14653a6f494cada7d58df1748d7, type: 2}
+      propertyPath: m_TagString
+      value: LTRTL
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_IsPrefabParent: 0
@@ -5708,7 +5720,7 @@ GameObject:
   - 4: {fileID: 1166206817}
   m_Layer: 9
   m_Name: DownToUp (3)
-  m_TagString: Untagged
+  m_TagString: DTUTD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5969,6 +5981,10 @@ Prefab:
       propertyPath: m_Name
       value: DownToUp
       objectReference: {fileID: 0}
+    - target: {fileID: 111362, guid: 5444468fed5993c4889a6699b56d9597, type: 2}
+      propertyPath: m_TagString
+      value: DTUTD
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5444468fed5993c4889a6699b56d9597, type: 2}
   m_IsPrefabParent: 0
@@ -6032,7 +6048,7 @@ GameObject:
   - 4: {fileID: 1205835241}
   m_Layer: 9
   m_Name: DownToUp (2)
-  m_TagString: Untagged
+  m_TagString: DTUTD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6202,7 +6218,7 @@ GameObject:
   - 4: {fileID: 1241526634}
   m_Layer: 9
   m_Name: DownToUp
-  m_TagString: Untagged
+  m_TagString: DTUTD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6231,7 +6247,7 @@ GameObject:
   - 4: {fileID: 1261571974}
   m_Layer: 9
   m_Name: DownToLeft
-  m_TagString: Untagged
+  m_TagString: DTLTD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6482,7 +6498,7 @@ GameObject:
   - 4: {fileID: 1343496296}
   m_Layer: 9
   m_Name: RightToLeft
-  m_TagString: Untagged
+  m_TagString: RTLTR
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6649,7 +6665,7 @@ GameObject:
   - 4: {fileID: 1396287218}
   m_Layer: 8
   m_Name: UpToDown (6)
-  m_TagString: Untagged
+  m_TagString: UTDTU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6983,7 +6999,7 @@ GameObject:
   - 4: {fileID: 1511273464}
   m_Layer: 9
   m_Name: RightToUp
-  m_TagString: Untagged
+  m_TagString: RTUTR
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7922,6 +7938,10 @@ Prefab:
       propertyPath: m_Name
       value: LeftToRight (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 197086, guid: c523d14653a6f494cada7d58df1748d7, type: 2}
+      propertyPath: m_TagString
+      value: LTRTL
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_IsPrefabParent: 0
@@ -8204,6 +8224,10 @@ Prefab:
     - target: {fileID: 169040, guid: b4e61755397eb4af38f4ed0a007d004d, type: 2}
       propertyPath: m_Name
       value: UpToDown (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 169040, guid: b4e61755397eb4af38f4ed0a007d004d, type: 2}
+      propertyPath: m_TagString
+      value: UTDTU
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
@@ -8755,7 +8779,7 @@ GameObject:
   - 4: {fileID: 170253677}
   m_Layer: 9
   m_Name: LeftToUP
-  m_TagString: Untagged
+  m_TagString: LTUTL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8827,7 +8851,7 @@ GameObject:
   - 4: {fileID: 243130659}
   m_Layer: 9
   m_Name: RightToDown
-  m_TagString: Untagged
+  m_TagString: RTDTD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8956,7 +8980,7 @@ GameObject:
   - 4: {fileID: 2003195725}
   m_Layer: 9
   m_Name: LeftToRight (4)
-  m_TagString: Untagged
+  m_TagString: LTRTL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9286,6 +9310,10 @@ Prefab:
       propertyPath: m_Name
       value: UpToDown (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 169040, guid: b4e61755397eb4af38f4ed0a007d004d, type: 2}
+      propertyPath: m_TagString
+      value: UTDTU
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_IsPrefabParent: 0
@@ -9551,7 +9579,7 @@ GameObject:
   - 4: {fileID: 2130316492}
   m_Layer: 8
   m_Name: UpToDown (4)
-  m_TagString: Untagged
+  m_TagString: UTDTU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
