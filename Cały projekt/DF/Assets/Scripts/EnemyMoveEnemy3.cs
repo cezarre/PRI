@@ -68,81 +68,81 @@ public class EnemyMoveEnemy3 : MonoBehaviour
 
         //player = GetComponent<Rigidbody2D> ();
         //Debug.Log("Something has entered this zone."+ col.gameObject.tag);
-        
-        if (col.gameObject.tag=="Enemy" && col.gameObject.GetComponent<EnemyMove>().wall!=false )
+
+        if (col.gameObject.tag == "Enemy" && col.gameObject.GetComponent<EnemyMove>().wall != true && player.velocity != (new Vector2(0, 0f)))
         {
-            print(col.gameObject.GetComponent<Rigidbody2D>().velocity.ToString());
+            //print("speedup");
             col.gameObject.GetComponent<EnemyMove>().SpeedUP();
         }
-            //player = GetComponent<Rigidbody2D> ();
-            //Debug.Log("Something has entered this zone."+ col.gameObject.tag);
+        //player = GetComponent<Rigidbody2D> ();
+        //Debug.Log("Something has entered this zone."+ col.gameObject.tag);
 
-            if (firstPath)
+        if (firstPath)
+        {
+            firstPath = false;
+            //pierwsze wejscie na sciezke
+            /*if (col.gameObject.tag == "RTLTR" || col.gameObject.tag == "RTUTR" || col.gameObject.tag == "RTDTR") {
+
+                player.velocity = (new Vector2 (-(speed), 0f));
+
+
+            }else
+            if (col.gameObject.tag == "UTDTU" || col.gameObject.tag == "UTLTU" || col.gameObject.tag == "UTRTU" ) {
+
+                player.velocity = (new Vector2 (0f, -speed));
+
+            }else
+            if (col.gameObject.tag == "DTUTD" || col.gameObject.tag == "DTLTD" || col.gameObject.tag == "DTRTD") {
+
+                player.velocity = (new Vector2 (0f, speed));
+
+            }else
+            if (col.gameObject.tag == "LTDTL" || col.gameObject.tag == "LTUTL" || col.gameObject.tag == "LTRTL") {
+
+                player.velocity = (new Vector2 (speed, 0f));
+
+            }
+            */
+        }
+        else
+        {
+
+            //zakrety
+            if (col.gameObject.tag == "UTLTL" || col.gameObject.tag == "DTLTL")
             {
-                firstPath = false;
-                //pierwsze wejscie na sciezke
-                /*if (col.gameObject.tag == "RTLTR" || col.gameObject.tag == "RTUTR" || col.gameObject.tag == "RTDTR") {
 
-                    player.velocity = (new Vector2 (-(speed), 0f));
+                player.velocity = (new Vector2(-speed, 0f));
 
-
-                }else
-                if (col.gameObject.tag == "UTDTU" || col.gameObject.tag == "UTLTU" || col.gameObject.tag == "UTRTU" ) {
-
-                    player.velocity = (new Vector2 (0f, -speed));
-
-                }else
-                if (col.gameObject.tag == "DTUTD" || col.gameObject.tag == "DTLTD" || col.gameObject.tag == "DTRTD") {
-
-                    player.velocity = (new Vector2 (0f, speed));
-
-                }else
-                if (col.gameObject.tag == "LTDTL" || col.gameObject.tag == "LTUTL" || col.gameObject.tag == "LTRTL") {
-
-                    player.velocity = (new Vector2 (speed, 0f));
-
-                }
-                */
             }
             else
+
+            if (col.gameObject.tag == "UTRTR" || col.gameObject.tag == "DTRTR")
             {
 
-                //zakrety
-                if (col.gameObject.tag == "UTLTL" || col.gameObject.tag == "DTLTL")
-                {
-
-                    player.velocity = (new Vector2(-speed, 0f));
-
-                }
-                else
-
-                if (col.gameObject.tag == "UTRTR" || col.gameObject.tag == "DTRTR")
-                {
-
-                    player.velocity = (new Vector2(speed, 0f));
+                player.velocity = (new Vector2(speed, 0f));
 
 
-                }
-                else
-                if (col.gameObject.tag == "LTUTU" || col.gameObject.tag == "RTUTU")
-                {
+            }
+            else
+            if (col.gameObject.tag == "LTUTU" || col.gameObject.tag == "RTUTU")
+            {
 
-                    player.velocity = (new Vector2(0f, speed));
+                player.velocity = (new Vector2(0f, speed));
 
 
 
-                }
-                else
-                if (col.gameObject.tag == "LTDTD" || col.gameObject.tag == "RTDTD")
-                {
+            }
+            else
+            if (col.gameObject.tag == "LTDTD" || col.gameObject.tag == "RTDTD")
+            {
 
-                    player.velocity = (new Vector2(0f, -speed));
+                player.velocity = (new Vector2(0f, -speed));
 
 
-                }
             }
         }
-        void ChangeDirection()
+    }
+    void ChangeDirection()
     {
 
         //player = GetComponent<Rigidbody2D> ();

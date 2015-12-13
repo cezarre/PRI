@@ -1,65 +1,69 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyMove : MonoBehaviour {
-	public float speed; //predkosc wroga
-	Rigidbody2D player;
-	bool firstPath = true;
-	public float hp;
-	float timer = 0;
-	public float distance;
-	GameObject mainPlayerObject; 
-	Player mainPlayerScript;
-	//public GameObject mainPlayer;
-	//public GameObject spawnPoint;
+public class EnemyMove : MonoBehaviour
+{
+    public float speed; //predkosc wroga
+    Rigidbody2D player;
+    bool firstPath = true;
+    public float hp;
+    float timer = 0;
+    public float distance;
+    GameObject mainPlayerObject;
+    Player mainPlayerScript;
+    //public GameObject mainPlayer;
+    //public GameObject spawnPoint;
 
-	Animator anim;
+    Animator anim;
 
-	void Start () {
+    void Start()
+    {
 
-		//hp = 10;
-		anim = GetComponent<Animator> ();
-		player = GetComponent<Rigidbody2D> ();
-		mainPlayerObject = GameObject.Find("Player");
-		mainPlayerScript= (Player) mainPlayerObject.GetComponent(typeof(Player));
-
-
-
-
-	}
+        //hp = 10;
+        anim = GetComponent<Animator>();
+        player = GetComponent<Rigidbody2D>();
+        mainPlayerObject = GameObject.Find("Player");
+        mainPlayerScript = (Player)mainPlayerObject.GetComponent(typeof(Player));
 
 
 
-	public void damage (float d)
-	{
-		hp -= d;
-		if (hp <= 0) {
-			mainPlayerScript.addGold(20);
-			mainPlayerScript.numberOfEnemy--;
-			Destroy (gameObject);
-		}
-	}
-	public void EndPointReached()
-	{
-		Debug.Log ("enemy reached end point");
-		mainPlayerScript.decresseHp (1);
-		mainPlayerScript.numberOfEnemy--;
-		Destroy (gameObject);
 
-	}
-	void FixedUpdate ()
-	{
-		ChangeDirection ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		timer += Time.deltaTime;
-		distance = timer * speed;
-	}
-	void OnTriggerEnter2D(Collider2D col)
+    }
 
-	{
+
+
+    public void damage(float d)
+    {
+        hp -= d;
+        if (hp <= 0)
+        {
+            mainPlayerScript.addGold(20);
+            mainPlayerScript.numberOfEnemy--;
+            Destroy(gameObject);
+        }
+    }
+    public void EndPointReached()
+    {
+        //Debug.Log ("enemy reached end point");
+        mainPlayerScript.decresseHp(1);
+        mainPlayerScript.numberOfEnemy--;
+        Destroy(gameObject);
+
+    }
+    void FixedUpdate()
+    {
+        ChangeDirection();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        timer += Time.deltaTime;
+        distance = timer * speed;
+    }
+    void OnTriggerEnter2D(Collider2D col)
+
+    {
 
 
         //player = GetComponent<Rigidbody2D> ();
@@ -131,28 +135,35 @@ public class EnemyMove : MonoBehaviour {
                 }
             }
         }
-	}
-	void ChangeDirection()
-	{
+    }
+    void ChangeDirection()
+    {
 
-		//player = GetComponent<Rigidbody2D> ();
-		if (player.velocity.y < 0) { //to down
-				//animation["animation"].time = 0;
-			//anim.Stop();
-				anim.SetInteger ("Direction", 1);
-		} else 
-			if (player.velocity.y > 0) {//to up
-				anim.SetInteger ("Direction", 3);
-		} else
-			if (player.velocity.x < 0) { //to left
-				anim.SetInteger ("Direction", 0);
-		} else
-			if (player.velocity.x > 0) {//to right
-				anim.SetInteger ("Direction", 2);
-		}
-		//Debug.Log (anim.GetInteger("Direction").ToString ());
+        //player = GetComponent<Rigidbody2D> ();
+        if (player.velocity.y < 0)
+        { //to down
+          //animation["animation"].time = 0;
+          //anim.Stop();
+            anim.SetInteger("Direction", 1);
+        }
+        else
+            if (player.velocity.y > 0)
+        {//to up
+            anim.SetInteger("Direction", 3);
+        }
+        else
+            if (player.velocity.x < 0)
+        { //to left
+            anim.SetInteger("Direction", 0);
+        }
+        else
+            if (player.velocity.x > 0)
+        {//to right
+            anim.SetInteger("Direction", 2);
+        }
+        //Debug.Log (anim.GetInteger("Direction").ToString ());
 
-	}
+    }
     public void SpeedUP()
     {
         if (wall == false)
@@ -212,7 +223,7 @@ public class EnemyMove : MonoBehaviour {
             player.velocity = (new Vector2(0f, -speed));
         }
     }
-    public bool wall=false;
+    public bool wall = false;
     public void WallSpeedZero()
     {
         wall = true;

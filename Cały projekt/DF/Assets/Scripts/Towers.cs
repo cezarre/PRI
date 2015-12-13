@@ -349,17 +349,26 @@ public class Towers : MonoBehaviour {
 		transform.FindChild ("Tower-UI").gameObject.SetActive (!transform.FindChild ("Tower-UI").gameObject.activeSelf);
 
 	}
-	
 
 
 
-	public void TowerBlock(bool b) {
-		block = b;
-	}
-	
 
-	// Update is called once per frame
-	void Update () {
+    public void TowerBlock(bool b)
+    {
+        block = b;
+        Invoke("TowerEnable", 2);
+    }
+
+    public void TowerEnable()
+    {
+        block = false;
+        print("tower enabled");
+
+    }
+
+
+    // Update is called once per frame
+    void Update () {
 
 		//Debug.Log("From tower: " + enemies.Count);
 	}
