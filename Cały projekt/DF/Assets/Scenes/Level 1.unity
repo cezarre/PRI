@@ -3474,7 +3474,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -3496,7 +3496,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
 --- !u!4 &641137521
 Transform:
   m_ObjectHideFlags: 0
@@ -3750,7 +3750,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFirstWave.Array.data[2]
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFourthWave.Array.data[0]
@@ -3786,7 +3786,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFirstWave.Array.data[3]
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFirstWave.Array.data[4]
@@ -3914,11 +3914,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFirstWave.Array.data[0]
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFirstWave.Array.data[1]
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 454180, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: m_LocalPosition.x

@@ -56,7 +56,6 @@ public class Bomb : MonoBehaviour
             enemysOnBomb = new List<GameObject>();
         }
         //if (enemysOnBomb.Count!=0) print("enemyOnBomb: " + enemysOnBomb.Count.ToString());
-        //print(firstClick.ToString() + "<--firstclkick");
 
 
     }
@@ -141,8 +140,8 @@ public class Bomb : MonoBehaviour
                 if (!enemysOnBomb.Contains(coll.gameObject))
                 {
                     enemysOnBomb.Add(coll.gameObject);
-                    //print(coll.gameObject.tag);
-                    //print("dodano enemy");
+                    print(coll.gameObject.tag);
+                    print("dodano enemy");
                 }
             }
         }
@@ -156,8 +155,8 @@ public class Bomb : MonoBehaviour
                 if (!enemysOnBomb.Contains(coll.gameObject))
                 {
                     enemysOnBomb.Add(coll.gameObject);
-                    //print(coll.gameObject.tag);
-                    //print("dodano enemy");
+                    print(coll.gameObject.tag);
+                    print("dodano enemy");
                 }
 
             }
@@ -168,12 +167,11 @@ public class Bomb : MonoBehaviour
 
     void Damage()
     {
-        print(enemysOnBomb.Count);
+
         foreach (GameObject enem in enemysOnBomb)
         {
             if (enem.GetComponent<EnemyMove>() == null) enem.GetComponent<EnemyMoveEnemy3>().damage(30.0f);
             else
-                
                 enem.GetComponent<EnemyMove>().damage(30.0f);
         }
 
