@@ -8,6 +8,7 @@ public class EnemyMoveEnemy3 : MonoBehaviour
     bool firstPath = true;
     public float hp;
     float timer = 0;
+    float preTimer = 0;
     public float distance;
     GameObject mainPlayerObject;
     public int goldOfKill = 20;
@@ -59,9 +60,11 @@ public class EnemyMoveEnemy3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        distance = timer * speed;
+            timer += Time.deltaTime;
+            distance += (timer - preTimer) * speed;
+            preTimer = timer;
     }
+
     void OnTriggerEnter2D(Collider2D col)
 
     {

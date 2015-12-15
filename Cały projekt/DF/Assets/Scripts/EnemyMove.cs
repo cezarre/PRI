@@ -9,6 +9,7 @@ public class EnemyMove : MonoBehaviour
     public float hp;
     float timer = 0;
     public float distance;
+    float preTimer = 0;
     public int goldOfKill=20;
     GameObject mainPlayerObject;
     Player mainPlayerScript;
@@ -59,8 +60,10 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         timer += Time.deltaTime;
-        distance = timer * speed;
+        distance += (timer-preTimer) * speed;
+        preTimer = timer;
     }
     void OnTriggerEnter2D(Collider2D col)
 

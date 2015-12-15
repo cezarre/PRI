@@ -169,7 +169,7 @@ public class Towers : MonoBehaviour {
 	void AreaShoot(GameObject enemy) {
         //enemy.GetComponent<EnemyMove>().SpeedDown();
         bullet(enemy);
-        //enemy.GetComponent<EnemyMove> ().speed /= 2;
+        //enemy.GetComponent<EnemyMove> ().speed = 1;
         /*Shoot (enemy);
 
 		foreach (GameObject otherEnemy in enemies) {
@@ -377,7 +377,7 @@ public class Towers : MonoBehaviour {
 		transform.FindChild ("Tesla").FindChild("Tesla1").gameObject.SetActive (true);
 		damage = 11;
 		radius = 10;
-		timeInterval = 4f;
+		timeInterval = 5f;
 		Player.GetComponent<Player> ().addGold (-50);
 
 	}
@@ -387,7 +387,7 @@ public class Towers : MonoBehaviour {
 		transform.FindChild ("Tesla").FindChild ("Tesla2").gameObject.SetActive (true);
 		damage = 16;
 		radius = 12;
-		timeInterval = 3f;
+		timeInterval = 4f;
 		Player.GetComponent<Player> ().addGold (-100);
 	}
 	void BuildTesla3() {
@@ -396,7 +396,7 @@ public class Towers : MonoBehaviour {
 		transform.FindChild ("Tesla").FindChild ("Tesla3").gameObject.SetActive (true);
 		damage = 22;
 		radius = 15;
-		timeInterval = 2f;
+		timeInterval = 3f;
 		Player.GetComponent<Player> ().addGold (-200);
 	}
 
@@ -427,9 +427,9 @@ public class Towers : MonoBehaviour {
 		t_level = 1;
 		transform.FindChild ("Alchemist").gameObject.SetActive (true);
 		transform.FindChild ("Alchemist").FindChild("Alchemist1").gameObject.SetActive (true);
-		damage = 11;
+		damage = 4;
 		radius = 10;
-		timeInterval = 4f;
+		timeInterval = 2f;
 		Player.GetComponent<Player> ().addGold (-50);
 		
 	}
@@ -437,18 +437,18 @@ public class Towers : MonoBehaviour {
 		t_level = 2;
 		transform.FindChild ("Alchemist").FindChild("Alchemist1").gameObject.SetActive (false);
 		transform.FindChild ("Alchemist").FindChild ("Alchemist2").gameObject.SetActive (true);
-		damage = 16;
+		damage = 6;
 		radius = 12;
-		timeInterval = 3f;
+		timeInterval = 1f;
 		Player.GetComponent<Player> ().addGold (-100);
 	}
 	void BuildAlch3() {
 		t_level = 3;
 		transform.FindChild ("Alchemist").FindChild("Alchemist2").gameObject.SetActive (false);
 		transform.FindChild ("Alchemist").FindChild ("Alchemist3").gameObject.SetActive (true);
-		damage = 22;
+		damage = 10;
 		radius = 15;
-		timeInterval = 2f;
+		timeInterval = 0.5f;
 		Player.GetComponent<Player> ().addGold (-200);
 	}
 
@@ -491,7 +491,7 @@ public class Towers : MonoBehaviour {
 		t_level = 2;
 		transform.FindChild ("Emitter").FindChild("Emitter1").gameObject.SetActive (false);
 		transform.FindChild ("Emitter").FindChild ("Emitter2").gameObject.SetActive (true);
-		damage = 16;
+		damage = 2;
 		radius = 12;
 		timeInterval = 0.1f;
 		Player.GetComponent<Player> ().addGold (-100);
@@ -500,7 +500,7 @@ public class Towers : MonoBehaviour {
 		t_level = 3;
 		transform.FindChild ("Emitter").FindChild("Emitter2").gameObject.SetActive (false);
 		transform.FindChild ("Emitter").FindChild ("Emitter3").gameObject.SetActive (true);
-		damage = 22;
+		damage = 3;
 		radius = 15;
 		timeInterval = 0.1f;
 		Player.GetComponent<Player> ().addGold (-200);
