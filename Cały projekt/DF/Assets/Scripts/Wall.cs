@@ -4,10 +4,12 @@ using System.Collections.Generic;
 
 public class Wall : MonoBehaviour
 {
+    public int secondToLoadNewWall = 15;
     public int secondToDestroy = 5;
-    bool isActive = false;
+    public bool isActive = false;
     List<GameObject> enemysOnWall = new List<GameObject>();
     BoxCollider2D kol;
+    public bool abilityBlocked = false;
     //kol.enabled = false;
 
 
@@ -18,11 +20,11 @@ public class Wall : MonoBehaviour
         //Invoke("DestroyThisWall", 5);
         kol = GetComponent<BoxCollider2D>();
     }
-    void DestroyThisWall()
-    {
-        enemysOnWall = new List<GameObject>();
-        Destroy(gameObject);
-    }
+    //void DestroyThisWall()
+   // {
+    //    enemysOnWall = new List<GameObject>();
+    //    Destroy(gameObject);
+    //}
 
     // Update is called once per frame
     void Update()
@@ -50,7 +52,7 @@ public class Wall : MonoBehaviour
     bool firstClickOnButton = false;
     public void ActiveWall()
     {
-        if (!dropped && numberOfWall > 0)
+        if (!dropped && numberOfWall > 0 && !abilityBlocked)
         {
             if (!firstClickOnButton)
             {
@@ -66,7 +68,7 @@ public class Wall : MonoBehaviour
                 kol.enabled = false;
                 firstClickOnButton = false;
                 isActive = false;
-                gameObject.SetActive(false);
+                fakeFalseActive();
             }
         }
 
@@ -114,7 +116,7 @@ public class Wall : MonoBehaviour
             }
         }
     }
-    bool dropped = false;
+    public bool dropped = false;
     bool delete = false;
     void DeleteWall()
     {
@@ -142,6 +144,18 @@ public class Wall : MonoBehaviour
         firstClickOnButton = false;
         isActive = false;
         firstClickAfterSelect = false;
-        gameObject.SetActive(false);
+        fakeFalseActive();
     }
+
+
+    void fakeFalseActive()
+    {
+        transform.position = new Vector2(-1000, -1000);
+        kol.enabled = false;
+        firstClickOnButton = false;
+        isActive = false;
+        firstClickAfterSelect = false;
+    }
+
+
 }
