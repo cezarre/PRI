@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 160796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 19.9, y: -12.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -41,9 +41,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -0.112392426, y: -1.136179}
+  m_Offset: {x: -0.06869125, y: 0}
   serializedVersion: 2
-  m_Size: {x: 5.2775726, y: 3.4065056}
+  m_Size: {x: 3.092616, y: 9}
 --- !u!114 &11404226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1272751715
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0139fa0f4f625d7498ec97e6171daa2a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4eb098b79efd784684afa8ecc36df57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,11 +102,6 @@ Prefab:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0139fa0f4f625d7498ec97e6171daa2a,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 160796}
