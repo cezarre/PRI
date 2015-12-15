@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 462144}
   m_Layer: 9
   m_Name: LeftToUP
-  m_TagString: DTLTD
+  m_TagString: LTUTL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ GameObject:
   - 61: {fileID: 6181706}
   m_Layer: 9
   m_Name: DownTrigger
-  m_TagString: DTLTD
+  m_TagString: LTUTL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   - 60: {fileID: 6086186}
   m_Layer: 9
   m_Name: Right Trigger
-  m_TagString: DTLTL
+  m_TagString: LTUTU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,8 +77,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136424}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 25.4, y: 0.46, z: 0.0546875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.4, y: -11.3, z: 0.0546875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 423256}
