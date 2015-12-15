@@ -64,7 +64,6 @@ public class Player : MonoBehaviour {
             int level;
             Int32.TryParse(levelName[levelName.Length - 1], out level);
             PlayerPrefs.SetInt("PlayerProgress", level+1);
-            Campaign.level2 = true;
 		}
 	}
 
