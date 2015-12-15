@@ -51,8 +51,9 @@ public class Player : MonoBehaviour {
 		if (first) numberOfEnemy = spawnScript.numberOfEnemy;
 		first = false;
         //Debug.Log ("liczba wrogow: " + numberOfEnemy.ToString ());
-        //print(numberOfEnemy);
-		if (numberOfEnemy == 0 && hp > 0) {
+       
+      
+        if (numberOfEnemy == 0 && hp > 0) {
             //win
             bombAbility.SetActive(false);
             win.SetActive(true);

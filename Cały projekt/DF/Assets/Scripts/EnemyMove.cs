@@ -9,6 +9,7 @@ public class EnemyMove : MonoBehaviour
     public float hp;
     float timer = 0;
     public float distance;
+    public int goldOfKill=20;
     GameObject mainPlayerObject;
     Player mainPlayerScript;
     //public GameObject mainPlayer;
@@ -37,7 +38,7 @@ public class EnemyMove : MonoBehaviour
         hp -= d;
         if (hp <= 0)
         {
-            mainPlayerScript.addGold(20);
+            mainPlayerScript.addGold(goldOfKill);
             mainPlayerScript.numberOfEnemy--;
             Destroy(gameObject);
         }

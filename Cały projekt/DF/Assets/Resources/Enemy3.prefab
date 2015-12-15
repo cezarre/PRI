@@ -160,6 +160,7 @@ MonoBehaviour:
   speed: 8
   hp: 25
   distance: 0
+  goldOfKill: 30
 --- !u!114 &11438698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -374,6 +375,10 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b2551b0f64047154e93bbf8c121387b4, type: 2}
+    - target: {fileID: 0}
+      propertyPath: goldOfKill
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 110896}
