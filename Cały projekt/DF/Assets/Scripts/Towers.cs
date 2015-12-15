@@ -12,7 +12,7 @@ public class Towers : MonoBehaviour {
 
 	IEnumerator Start()
 	{
-		block = false;
+		block = true;
 		t_level = 0;
 		damage = 0;
 		radius = 10;
@@ -20,6 +20,7 @@ public class Towers : MonoBehaviour {
 		TowerCord = gameObject.AddComponent<Point>();
 		TowerCord.Set (gameObject.transform.position.x, gameObject.transform.position.y);
 		TowerType = 0;
+        isShotAnim = false;
 
 
 		yield return new WaitForSeconds(1);
@@ -50,7 +51,9 @@ public class Towers : MonoBehaviour {
 
 	private bool block;
 
-	float distance(Point a, Point b) {
+    bool isShotAnim;
+
+    float distance(Point a, Point b) {
 		//calculate distance
 		float x = a.GetX () - b.GetX ();
 		float y = a.GetY () - b.GetY ();
@@ -108,13 +111,22 @@ public class Towers : MonoBehaviour {
 			}
 		}
 		//}
-		if (detectedEnemies.Count > 0 && t_level > 0) {
-			if (TowerType == 3) {
+		if (detectedEnemies.Count > 0 && t_level > 0 ) {
+            if (!isShotAnim)
+            {
+                ShotAnim();
+            }
+            
+            if (TowerType == 3) {
 				AreaShoot(detectedEnemies[enemyWithBestDistance]);
 			} else {
 				Shoot(detectedEnemies[enemyWithBestDistance]);
 			}
 		}
+        else if (isShotAnim)
+        {
+            DeactivateShotAnim();
+        }
 
 	}
 
@@ -130,10 +142,11 @@ public class Towers : MonoBehaviour {
 			case 2:
 				bullet = (GameObject)Instantiate(Resources.Load("AlchemistBullet"));
 				break;
-			case 3: 
-				break;
+			case 3:
+                bullet = (GameObject)Instantiate(Resources.Load("EmitterBullet"));              
+                break;
 		}
-
+        
 
 		bullet.transform.position = new Vector2 (x, y+2);
 		//float buletSize = bullet.transform.localScale;
@@ -147,14 +160,17 @@ public class Towers : MonoBehaviour {
 
 	}
 	void Shoot(GameObject enemy) {
-		bullet (enemy);
-		//enemy.GetComponent<EnemyMove>().damage(damage);
-	}
+        bullet (enemy);
+        
+        //enemy.GetComponent<EnemyMove>().damage(damage);
+    }
 
 
 	void AreaShoot(GameObject enemy) {
-		enemy.GetComponent<EnemyMove> ().speed /= 2;
-		/*Shoot (enemy);
+        //enemy.GetComponent<EnemyMove>().SpeedDown();
+        bullet(enemy);
+        //enemy.GetComponent<EnemyMove> ().speed /= 2;
+        /*Shoot (enemy);
 
 		foreach (GameObject otherEnemy in enemies) {
 			float dist = distance(enemyToPoint(otherEnemy), enemyToPoint(enemy));
@@ -163,7 +179,195 @@ public class Towers : MonoBehaviour {
 			}
 		}*/
 
-	}
+    }
+
+    void ShotAnim()
+    {
+        isShotAnim = true;
+        transform.FindChild("TowerShots").gameObject.SetActive(true);
+
+        if (TowerType == 1)
+        {
+            if (t_level == 1)
+            {
+
+                transform.FindChild("Tesla").FindChild("Tesla1").gameObject.SetActive(false);
+                transform.FindChild("TowerShots").FindChild("TeslaTower1S").gameObject.SetActive(true);
+
+            }
+            if (t_level == 2)
+            {
+
+                transform.FindChild("Tesla").FindChild("Tesla2").gameObject.SetActive(false);
+                transform.FindChild("TowerShots").FindChild("TeslaTower2S").gameObject.SetActive(true);
+
+            }
+            if (t_level == 3)
+            {
+
+                transform.FindChild("Tesla").FindChild("Tesla3").gameObject.SetActive(false);
+                transform.FindChild("TowerShots").FindChild("TeslaTower3S").gameObject.SetActive(true);
+
+            }
+
+            Invoke("DeactivateShotAnim", 1);
+        }
+
+
+        if (TowerType == 2)
+        {
+            if (t_level == 1)
+            {
+
+                transform.FindChild("Alchemist").FindChild("Alchemist1").gameObject.SetActive(false);
+                transform.FindChild("TowerShots").FindChild("AlchemistTower1S").gameObject.SetActive(true);
+
+            }
+            if (t_level == 2)
+            {
+
+                transform.FindChild("Alchemist").FindChild("Alchemist2").gameObject.SetActive(false);
+                transform.FindChild("TowerShots").FindChild("AlchemistTower2S").gameObject.SetActive(true);
+
+            }
+            if (t_level == 3)
+            {
+
+                transform.FindChild("Alchemist").FindChild("Alchemist3").gameObject.SetActive(false);
+                transform.FindChild("TowerShots").FindChild("AlchemistTower3S").gameObject.SetActive(true);
+
+            }
+
+            Invoke("DeactivateShotAnim", 1);
+        }
+
+        if (TowerType == 3)
+        {
+            if (t_level == 1)
+            {
+
+                transform.FindChild("Emitter").FindChild("Emitter1").gameObject.SetActive(false);
+                transform.FindChild("TowerShots").FindChild("EmitterTower1S").gameObject.SetActive(true);
+
+            }
+            if (t_level == 2)
+            {
+
+                transform.FindChild("Emitter").FindChild("Emitter2").gameObject.SetActive(false);
+                transform.FindChild("TowerShots").FindChild("EmitterTower2S").gameObject.SetActive(true);
+
+            }
+            if (t_level == 3)
+            {
+
+                transform.FindChild("Emitter").FindChild("Emitter3").gameObject.SetActive(false);
+                transform.FindChild("TowerShots").FindChild("EmitterTower3S").gameObject.SetActive(true);
+
+            }
+
+        }       
+
+    }
+
+    void DeactivateShotAnim()
+    {
+        RestartChilds();
+        isShotAnim = false;
+
+        
+
+
+        if (TowerType == 1)
+        {
+            if (t_level == 1)
+            {
+                transform.FindChild("TowerShots").FindChild("TeslaTower1S").gameObject.SetActive(false);
+                transform.FindChild("Tesla").gameObject.SetActive(true);
+                transform.FindChild("Tesla").FindChild("Tesla1").gameObject.SetActive(true);
+
+                transform.FindChild("Tesla").FindChild("Tesla1").gameObject.GetComponent<TowerAnimation>().Start();
+            }
+            if (t_level == 2)
+            {
+                transform.FindChild("TowerShots").FindChild("TeslaTower2S").gameObject.SetActive(false);
+                transform.FindChild("Tesla").gameObject.SetActive(true);
+                transform.FindChild("Tesla").FindChild("Tesla2").gameObject.SetActive(true);
+
+                transform.FindChild("Tesla").FindChild("Tesla2").gameObject.GetComponent<TowerAnimation>().Start();
+            }
+            if (t_level == 3)
+            {
+                transform.FindChild("TowerShots").FindChild("TeslaTower3S").gameObject.SetActive(false);
+                transform.FindChild("Tesla").gameObject.SetActive(true);
+                transform.FindChild("Tesla").FindChild("Tesla3").gameObject.SetActive(true);
+
+                transform.FindChild("Tesla").FindChild("Tesla3").gameObject.GetComponent<TowerAnimation>().Start();
+            }
+
+        }
+
+
+
+        if (TowerType == 2)
+        {
+            if (t_level == 1)
+            {
+                transform.FindChild("TowerShots").FindChild("AlchemistTower1S").gameObject.SetActive(false);
+                transform.FindChild("Alchemist").gameObject.SetActive(true);
+                transform.FindChild("Alchemist").FindChild("Alchemist1").gameObject.SetActive(true);
+
+                transform.FindChild("Alchemist").FindChild("Alchemist1").gameObject.GetComponent<TowerAnimation>().Start();
+            }
+            if (t_level == 2)
+            {
+                transform.FindChild("TowerShots").FindChild("AlchemistTower2S").gameObject.SetActive(false);
+                transform.FindChild("Alchemist").gameObject.SetActive(true);
+                transform.FindChild("Alchemist").FindChild("Alchemist2").gameObject.SetActive(true);
+
+                transform.FindChild("Alchemist").FindChild("Alchemist2").gameObject.GetComponent<TowerAnimation>().Start();
+            }
+            if (t_level == 3)
+            {
+                transform.FindChild("TowerShots").FindChild("AlchemistTower3S").gameObject.SetActive(false);
+                transform.FindChild("Alchemist").gameObject.SetActive(true);
+                transform.FindChild("Alchemist").FindChild("Alchemist3").gameObject.SetActive(true);
+
+                transform.FindChild("Alchemist").FindChild("Alchemist3").gameObject.GetComponent<TowerAnimation>().Start();
+            }
+
+        }
+
+
+        if (TowerType == 3)
+        {
+            if (t_level == 1)
+            {
+                transform.FindChild("TowerShots").FindChild("EmitterTower1S").gameObject.SetActive(false);
+                transform.FindChild("Emitter").gameObject.SetActive(true);
+                transform.FindChild("Emitter").FindChild("Emitter1").gameObject.SetActive(true);
+
+                transform.FindChild("Emitter").FindChild("Emitter1").gameObject.GetComponent<TowerAnimation>().Start();
+            }
+            if (t_level == 2)
+            {
+                transform.FindChild("TowerShots").FindChild("EmitterTower2S").gameObject.SetActive(false);
+                transform.FindChild("Emitter").gameObject.SetActive(true);
+                transform.FindChild("Emitter").FindChild("Emitter2").gameObject.SetActive(true);
+
+                transform.FindChild("Emitter").FindChild("Emitter2").gameObject.GetComponent<TowerAnimation>().Start();
+            }
+            if (t_level == 3)
+            {
+                transform.FindChild("TowerShots").FindChild("EmitterTower3S").gameObject.SetActive(false);
+                transform.FindChild("Emitter").gameObject.SetActive(true);
+                transform.FindChild("Emitter").FindChild("Emitter3").gameObject.SetActive(true);
+
+                transform.FindChild("Emitter").FindChild("Emitter3").gameObject.GetComponent<TowerAnimation>().Start();
+            }
+
+        }
+    }
+
 
 	//------------BUILDING TOWERS----------------
 	void BuildTesla1() {
@@ -208,7 +412,9 @@ public class Towers : MonoBehaviour {
 			BuildTesla3();
 		}
 
-		foreach (Transform child in transform.FindChild("Tesla")) { 
+        block = false;
+
+        foreach (Transform child in transform.FindChild("Tesla")) { 
 			if(child.gameObject.activeSelf) {
 				child.gameObject.GetComponent<TowerAnimation> ().Start ();
 			}
@@ -258,8 +464,9 @@ public class Towers : MonoBehaviour {
 			BuildAlch3();
 		}
 
-		
-		foreach (Transform child in transform.FindChild("Alchemist")) { 
+        block = false;
+
+        foreach (Transform child in transform.FindChild("Alchemist")) { 
 			if(child.gameObject.activeSelf) {
 				child.gameObject.GetComponent<TowerAnimation> ().Start ();
 			}
@@ -274,9 +481,9 @@ public class Towers : MonoBehaviour {
 		t_level = 1;
 		transform.FindChild ("Emitter").gameObject.SetActive (true);
 		transform.FindChild ("Emitter").FindChild("Emitter1").gameObject.SetActive (true);
-		damage = 11;
+		damage = 1;
 		radius = 10;
-		timeInterval = 4f;
+		timeInterval = 0.1f;
 		Player.GetComponent<Player> ().addGold (-50);
 		
 	}
@@ -286,7 +493,7 @@ public class Towers : MonoBehaviour {
 		transform.FindChild ("Emitter").FindChild ("Emitter2").gameObject.SetActive (true);
 		damage = 16;
 		radius = 12;
-		timeInterval = 3f;
+		timeInterval = 0.1f;
 		Player.GetComponent<Player> ().addGold (-100);
 	}
 	void BuildEmitter3() {
@@ -295,7 +502,7 @@ public class Towers : MonoBehaviour {
 		transform.FindChild ("Emitter").FindChild ("Emitter3").gameObject.SetActive (true);
 		damage = 22;
 		radius = 15;
-		timeInterval = 2f;
+		timeInterval = 0.1f;
 		Player.GetComponent<Player> ().addGold (-200);
 	}
 	
@@ -310,9 +517,10 @@ public class Towers : MonoBehaviour {
 		else if (t_level == 2 && Player.GetComponent<Player> ().gold >= 200) {
 			BuildEmitter3();
 		}
-		
-		
-		foreach (Transform child in transform.FindChild("Emitter")) { 
+
+        block = false;
+
+        foreach (Transform child in transform.FindChild("Emitter")) { 
 			if(child.gameObject.activeSelf) {
 				child.gameObject.GetComponent<TowerAnimation> ().Start ();
 			}
@@ -320,27 +528,39 @@ public class Towers : MonoBehaviour {
 	}
 
 	//---------------------------------------------------------------------------------------
+    void RestartChilds ()
+    {
+        foreach (Transform childs in transform)
+        {
+            childs.gameObject.SetActive(false);
+            foreach (Transform child in childs)
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
 
-	public void SellTower() {
+        
+
+        foreach (Transform child in transform.FindChild("Tower-UI"))
+        {
+            child.gameObject.SetActive(true);
+        }
+    }
+
+    public void SellTower() {
 		Player.GetComponent<Player> ().addGold (50);
 		t_level = 0;
 		TowerType = 0;
+        block = true;
 
-		foreach (Transform childs in transform) {
-			childs.gameObject.SetActive(false);
-			foreach (Transform child in childs) {
-				child.gameObject.SetActive(false);
-			}
-		}
+        RestartChilds();
+
 		transform.FindChild ("TowerPlace").gameObject.SetActive (true);
 		transform.FindChild ("TowerPlace").FindChild ("TowerPlace1a").gameObject.SetActive (true);
-		transform.FindChild ("Tower-UI").gameObject.SetActive (true);
 
-		foreach (Transform child in transform.FindChild ("Tower-UI")) {
-			child.gameObject.SetActive(true);
-		}
+        transform.FindChild("Tower-UI").gameObject.SetActive(true);
 
-		transform.FindChild ("TowerPlace").gameObject.GetComponent<TowerAnimation> ().Start (); //Nie wiem dlaczego ale jest to niezbędne
+        transform.FindChild ("TowerPlace").gameObject.GetComponent<TowerAnimation> ().Start (); //Nie wiem dlaczego ale jest to niezbędne
 
 	}
 
