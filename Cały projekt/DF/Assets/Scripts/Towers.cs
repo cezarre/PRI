@@ -21,9 +21,9 @@ public class Towers : MonoBehaviour {
 		TowerCord.Set (gameObject.transform.position.x, gameObject.transform.position.y);
 		TowerType = 0;
         isShotAnim = false;
+        secondsToNextTower = 5;
 
-
-		yield return new WaitForSeconds(1);
+    yield return new WaitForSeconds(1);
 		LoadEnemies ();
 		StartCoroutine(Actioning ());
 		Player = GameObject.Find("Player");
@@ -48,6 +48,7 @@ public class Towers : MonoBehaviour {
 	public Point TowerCord;
 	public GameObject Player;
 	public int TowerType;
+    public int secondsToNextTower;
 
 	private bool block;
 
@@ -402,7 +403,10 @@ public class Towers : MonoBehaviour {
 
 	public void BuildTesla(){
 		TowerType = 1;
-		if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
+
+        transform.FindChild("Tesla").gameObject.SetActive(true);
+
+        if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
 			BuildTesla1 ();
 		}
 		else if (t_level == 1 && Player.GetComponent<Player> ().gold >= 100) {
@@ -454,7 +458,10 @@ public class Towers : MonoBehaviour {
 
 	public void BuildAlch(){
 		TowerType = 2;
-		if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
+
+        transform.FindChild("Alchemist").gameObject.SetActive(true);
+
+        if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
 			BuildAlch1 ();
 		}
 		else if (t_level == 1 && Player.GetComponent<Player> ().gold >= 100) {
@@ -508,7 +515,10 @@ public class Towers : MonoBehaviour {
 	
 	public void BuildEmitter(){
 		TowerType = 3;
-		if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
+
+        transform.FindChild("Emitter").gameObject.SetActive(true);
+
+        if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
 			BuildEmitter1 ();
 		}
 		else if (t_level == 1 && Player.GetComponent<Player> ().gold >= 100) {
@@ -525,6 +535,7 @@ public class Towers : MonoBehaviour {
 				child.gameObject.GetComponent<TowerAnimation> ().Start ();
 			}
 		}
+        
 	}
 
 	//---------------------------------------------------------------------------------------
@@ -539,7 +550,8 @@ public class Towers : MonoBehaviour {
             }
         }
 
-        
+        transform.FindChild("TowerPlace").gameObject.SetActive(true);
+        transform.FindChild("TowerPlace").FindChild("TowerPlace1a").gameObject.SetActive(true);
 
         foreach (Transform child in transform.FindChild("Tower-UI"))
         {
@@ -563,6 +575,59 @@ public class Towers : MonoBehaviour {
         transform.FindChild ("TowerPlace").gameObject.GetComponent<TowerAnimation> ().Start (); //Nie wiem dlaczego ale jest to niezbędne
 
 	}
+
+    public void BuildWait()
+    {
+
+        block = true;
+        RestartChilds();
+
+        if (transform.FindChild("TowerPlace").gameObject.activeSelf)
+        {
+            transform.FindChild("TowerPlace").gameObject.SetActive(false);
+            transform.FindChild("TowerPlace").FindChild("TowerPlace1a").gameObject.SetActive(false);
+
+        } 
+        
+
+        transform.FindChild("BuildWait").gameObject.SetActive(true);
+        transform.FindChild("BuildWait").FindChild("Building").gameObject.SetActive(true);
+        transform.FindChild("BuildWait").FindChild("Building").FindChild("TowerPlace1a").gameObject.SetActive(true);
+
+        transform.FindChild("Tower-UI").gameObject.SetActive(!transform.FindChild("Tower-UI").gameObject.activeSelf);
+
+
+        transform.FindChild("BuildWait").FindChild("Building").GetComponent<TowerAnimation>().Start();
+
+        //transform.FindChild("BuildWait").FindChild("ProgressBar").gameObject.GetComponent<ProgressBarTower>().tapped = true;
+        transform.FindChild("BuildWait").FindChild("ProgressBar").gameObject.SetActive(true);
+
+        transform.FindChild("BuildWait").FindChild("ProgressBar").gameObject.GetComponent<ProgressBarTower>().MyStart();
+
+    }
+
+    public void BuildWaitEnd()
+    {
+        transform.FindChild("BuildWait").gameObject.SetActive(false);
+
+        block = false;
+
+        if (TowerType == 1)
+        {
+            BuildTesla();
+        }
+
+        if (TowerType == 2)
+        {
+            BuildAlch();
+        }
+
+        if (TowerType == 3)
+        {
+            BuildEmitter();
+        }
+    }
+
 
 	void OnMouseDown() {
 

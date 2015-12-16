@@ -16,9 +16,14 @@ public class AlchSelect : MonoBehaviour {
 	void OnMouseDown() {
 
 		int t = transform.parent.parent.GetComponent<Towers> ().TowerType;
-		if (t == 0 || t == 2) {
-			transform.parent.parent.gameObject.GetComponent<Towers> ().BuildAlch ();
-		}
+        int t_level = transform.parent.parent.GetComponent<Towers>().t_level;
+        if (t == 0 || t == 2) {
+            if (t_level <  3)
+            {
+                transform.parent.parent.gameObject.GetComponent<Towers>().BuildWait();
+                transform.parent.parent.GetComponent<Towers>().TowerType = 2;
+            }
+        }
 		
 	}
 }
