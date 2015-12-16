@@ -244,7 +244,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 129, y: 37}
+  m_AnchoredPosition: {x: 60, y: 102.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &11931990
@@ -2399,7 +2399,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInThirdWave.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFirstWave.Array.size
@@ -2407,11 +2407,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFourthWave.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInSecondWave.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 417322, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2459,11 +2459,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFourthWave.Array.data[0]
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFourthWave.Array.data[1]
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFifthWave.Array.data[0]
@@ -2483,7 +2483,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInSecondWave.Array.data[0]
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInSecondWave.Array.data[1]
@@ -2611,11 +2611,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInThirdWave.Array.data[1]
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInThirdWave.Array.data[2]
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFirstWave.Array.data[0]
@@ -2640,6 +2640,26 @@ Prefab:
     - target: {fileID: 22485800, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: m_AnchoredPosition.x
       value: -46.0900002
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInSecondWave.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInSecondWave.Array.data[3]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInThirdWave.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInFourthWave.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInFourthWave.Array.data[3]
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1e3995f4517eb6459286811291615ae, type: 2}

@@ -1977,11 +1977,23 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFifthWave.Array.size
-      value: 2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInFirstWave.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInThirdWave.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFourthWave.Array.size
-      value: 2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInSecondWave.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 417322, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2025,27 +2037,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFirstWave.Array.data[2]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFourthWave.Array.data[0]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
-      propertyPath: numberToSpawnInFourthWave.Array.data[1]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
-      propertyPath: numberToSpawnInFifthWave.Array.data[0]
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInFourthWave.Array.data[1]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInFifthWave.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInFifthWave.Array.data[1]
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: direction
-      value: toDown
+      value: toRight
       objectReference: {fileID: 0}
     - target: {fileID: 454180, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2078,7 +2090,7 @@ Prefab:
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1263292099}
     - target: {fileID: 454180, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
@@ -2094,6 +2106,62 @@ Prefab:
     - target: {fileID: 489910, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInFirstWave.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInSecondWave.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInSecondWave.Array.data[3]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInFourthWave.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInFourthWave.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInFifthWave.Array.data[2]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInFifthWave.Array.data[3]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInThirdWave.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInThirdWave.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInThirdWave.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInThirdWave.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInFirstWave.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: numberToSpawnInFirstWave.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
+      propertyPath: sendNextWave
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1e3995f4517eb6459286811291615ae, type: 2}
@@ -3450,6 +3518,10 @@ Transform:
   - {fileID: 343796137}
   m_Father: {fileID: 138957043}
   m_RootOrder: 1
+--- !u!1 &1263292099 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 195326, guid: 67b6556c7d4ecd3459340d4e12986351, type: 2}
+  m_PrefabInternal: {fileID: 1202653303}
 --- !u!1001 &1269212523
 Prefab:
   m_ObjectHideFlags: 0
