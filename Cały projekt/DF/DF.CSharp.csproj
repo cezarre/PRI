@@ -55,12 +55,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -69,7 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EmmiterSelect.cs" />
     <Compile Include="Assets\Scripts\BackMenu.cs" />
     <Compile Include="Assets\Scripts\Bomb.cs" />
     <Compile Include="Assets\Scripts\BulletMove.cs" />
@@ -96,6 +89,8 @@
     <Compile Include="Assets\Scripts\TowerAnimation.cs" />
     <Compile Include="Assets\Scripts\Towers.cs" />
     <Compile Include="Assets\Scripts\Towers\AlchSelect.cs" />
+    <Compile Include="Assets\Scripts\Towers\EmmiterSelect.cs" />
+    <Compile Include="Assets\Scripts\Towers\ProgressBarTower.cs" />
     <Compile Include="Assets\Scripts\Towers\SellSelect.cs" />
     <Compile Include="Assets\Scripts\Towers\TeslaSelect.cs" />
     <Compile Include="Assets\Scripts\Wall.cs" />
