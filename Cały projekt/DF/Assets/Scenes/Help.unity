@@ -116,8 +116,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 64, y: -129.300003}
-  m_SizeDelta: {x: 223, y: 23}
+  m_AnchoredPosition: {x: 140, y: -103}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &12085631
 MonoBehaviour:
@@ -140,17 +140,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- definition'
+  m_Text: "Balon bojowy - przy\u015Bpiesza pozosta\u0142ych wrog\xF3w"
 --- !u!222 &12085632
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -254,7 +254,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 772094776}
+  - {fileID: 1400115393}
   - {fileID: 1840154491}
+  - {fileID: 790666205}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
@@ -347,7 +349,7 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -77, y: -174.000031}
+  m_AnchoredPosition: {x: 83, y: -172}
   m_SizeDelta: {x: 36, y: 36}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &49060476
@@ -369,7 +371,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7b530683f89aab549a744c05e1a18f98, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 24f0364c49e7ba74a818e5ffb5109aee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -414,7 +416,7 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -77, y: -174.000031}
+  m_AnchoredPosition: {x: -77, y: -194}
   m_SizeDelta: {x: 36, y: 36}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &327724742
@@ -555,7 +557,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -77, y: -42}
+  m_AnchoredPosition: {x: -76, y: -34}
   m_SizeDelta: {x: 36, y: 36}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &539750580
@@ -577,7 +579,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1787ce81a6ce1de40ad1bfef4d568af6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df5bb74ff13f97c4989684c66b2d6d66, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -622,8 +624,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 64, y: -85}
-  m_SizeDelta: {x: 223, y: 23}
+  m_AnchoredPosition: {x: 25, y: -92}
+  m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &584051726
 MonoBehaviour:
@@ -646,17 +648,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- definition'
+  m_Text: "zakup/ulepszenie wie\u017Cy Alchemika"
 --- !u!222 &584051727
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -694,7 +696,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -77, y: -129.999985}
+  m_AnchoredPosition: {x: 84, y: -35}
   m_SizeDelta: {x: 36, y: 36}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &695927745
@@ -716,7 +718,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 89199180737184641a8d5f3fbf92775c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 30d0c1a10bd289743b4f5053bf562892, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -757,12 +759,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 772094776}
-  m_RootOrder: 15
+  m_Father: {fileID: 1400115393}
+  m_RootOrder: 5
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 367, y: -168}
-  m_SizeDelta: {x: 270, y: 23}
+  m_AnchoredPosition: {x: 39, y: -209}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &757846570
 MonoBehaviour:
@@ -785,17 +787,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- definition'
+  m_Text: "Emiter Czasu - wie\u017Ca zadaj\u0105ca niewielkie obra\u017Cenia wszystkim
+    wrogom w zasi\u0119gu"
 --- !u!222 &757846571
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -837,21 +840,11 @@ RectTransform:
   - {fileID: 2064954430}
   - {fileID: 1633600493}
   - {fileID: 327724741}
-  - {fileID: 1728210604}
-  - {fileID: 968720275}
-  - {fileID: 1103993846}
-  - {fileID: 846390222}
-  - {fileID: 828195299}
-  - {fileID: 1006203179}
-  - {fileID: 1298361920}
-  - {fileID: 757846569}
-  - {fileID: 1739821258}
-  - {fileID: 1806612315}
   m_Father: {fileID: 34081869}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -258, y: 157}
+  m_AnchoredPosition: {x: -284, y: 208}
   m_SizeDelta: {x: 188.699997, y: 30.5}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &772094777
@@ -885,7 +878,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Building towers:'
+  m_Text: 'Menu budowy:'
 --- !u!222 &772094778
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -923,8 +916,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 64, y: -90.1999969}
-  m_SizeDelta: {x: 223, y: 23}
+  m_AnchoredPosition: {x: -20, y: -241}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &773313172
 MonoBehaviour:
@@ -947,7 +940,85 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Zwiadowca - szybsza wersja zwyczajnego bandyty
+--- !u!222 &773313173
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 773313170}
+--- !u!1 &790666204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 790666205}
+  - 222: {fileID: 790666207}
+  - 114: {fileID: 790666206}
+  m_Layer: 5
+  m_Name: Others
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &790666205
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 790666204}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1728210604}
+  - {fileID: 968720275}
+  - {fileID: 1806612315}
+  - {fileID: 1739821258}
+  - {fileID: 1490035422}
+  - {fileID: 1888726296}
+  m_Father: {fileID: 34081869}
+  m_RootOrder: 3
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -287, y: -76}
+  m_SizeDelta: {x: 188.699997, y: 30.5}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &790666206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 790666204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .903448343, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -957,13 +1028,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- definition'
---- !u!222 &773313173
+  m_Text: 'Inne funkcje:'
+--- !u!222 &790666207
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 773313170}
+  m_GameObject: {fileID: 790666204}
 --- !u!1 &801241057
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,8 +1066,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 64, y: -41}
-  m_SizeDelta: {x: 223, y: 23}
+  m_AnchoredPosition: {x: 25, y: -42}
+  m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &801241059
 MonoBehaviour:
@@ -1019,17 +1090,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- definition'
+  m_Text: "sprzeda\u017C wie\u017Cy"
 --- !u!222 &801241060
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1063,11 +1134,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 772094776}
-  m_RootOrder: 12
+  m_Father: {fileID: 1400115393}
+  m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 191, y: -95}
+  m_AnchoredPosition: {x: -66.9999695, y: -115}
   m_SizeDelta: {x: 59, y: 59}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &828195300
@@ -1089,7 +1160,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3791dd9b01693c54bb600a9b4f3bfd1c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9cb7fd69e1ddc24883786b7e73c4099, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1130,12 +1201,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 772094776}
-  m_RootOrder: 11
+  m_Father: {fileID: 1400115393}
+  m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 367, y: -42}
-  m_SizeDelta: {x: 270, y: 23}
+  m_AnchoredPosition: {x: 37, y: -44}
+  m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &846390223
 MonoBehaviour:
@@ -1158,17 +1229,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- definition'
+  m_Text: "Cewka Tesli - wolna lecz pot\u0119\u017Cna wie\u017Ca"
 --- !u!222 &846390224
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1202,11 +1273,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 772094776}
-  m_RootOrder: 9
+  m_Father: {fileID: 790666205}
+  m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -77, y: -218}
+  m_AnchoredPosition: {x: -60, y: -42}
   m_SizeDelta: {x: 64, y: 35}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &968720276
@@ -1269,12 +1340,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 772094776}
-  m_RootOrder: 13
+  m_Father: {fileID: 1400115393}
+  m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 367, y: -104}
-  m_SizeDelta: {x: 270, y: 23}
+  m_AnchoredPosition: {x: 39, y: -117}
+  m_SizeDelta: {x: 150, y: 80}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1006203180
 MonoBehaviour:
@@ -1297,17 +1368,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- definition'
+  m_Text: "Alchemik - szybka aczkolwiek niezbyt silna wie\u017Ca"
 --- !u!222 &1006203181
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1345,7 +1416,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -77, y: -85}
+  m_AnchoredPosition: {x: -76.9999924, y: -94}
   m_SizeDelta: {x: 36, y: 36}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1052220789
@@ -1412,8 +1483,8 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 64, y: -175}
-  m_SizeDelta: {x: 223, y: 23}
+  m_AnchoredPosition: {x: 141, y: -240}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1096607965
 MonoBehaviour:
@@ -1436,17 +1507,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- definition'
+  m_Text: "Czo\u0142g parowy - mo\u017Ce czasowo dezaktywowa\u0107 wie\u017Ce"
 --- !u!222 &1096607966
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1480,11 +1551,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 772094776}
-  m_RootOrder: 10
+  m_Father: {fileID: 1400115393}
+  m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 191, y: -35}
+  m_AnchoredPosition: {x: -66.9999695, y: -46}
   m_SizeDelta: {x: 59, y: 59}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1103993847
@@ -1506,7 +1577,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 590da264a4106fd4b8cf8f19d073fd46, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7448566dbe4818041bde2cd6c91268c8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1551,8 +1622,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 64, y: -128.000031}
-  m_SizeDelta: {x: 223, y: 23}
+  m_AnchoredPosition: {x: 25, y: -142}
+  m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1216619783
 MonoBehaviour:
@@ -1575,17 +1646,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- definition'
+  m_Text: "zakup/ulepszenie wie\u017Cy Emiter czasu"
 --- !u!222 &1216619784
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1619,11 +1690,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 772094776}
-  m_RootOrder: 14
+  m_Father: {fileID: 1400115393}
+  m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 191, y: -159}
+  m_AnchoredPosition: {x: -66.9999695, y: -207}
   m_SizeDelta: {x: 59, y: 59}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1298361921
@@ -1645,7 +1716,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ce236332da12eb341b646b9a1d8318a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c8f534acfaa7afd46873ddeddc9f43cd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1690,7 +1761,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -77, y: -85}
+  m_AnchoredPosition: {x: -78, y: -172}
   m_SizeDelta: {x: 36, y: 36}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1327660909
@@ -1712,7 +1783,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c8be2c39413d4684297001ae65879548, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c14017613d634e64897a8b5e68075e17, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1812,6 +1883,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &1400115392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1400115393}
+  - 222: {fileID: 1400115395}
+  - 114: {fileID: 1400115394}
+  m_Layer: 5
+  m_Name: Towers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1400115393
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1400115392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1103993846}
+  - {fileID: 846390222}
+  - {fileID: 828195299}
+  - {fileID: 1006203179}
+  - {fileID: 1298361920}
+  - {fileID: 757846569}
+  m_Father: {fileID: 34081869}
+  m_RootOrder: 1
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -65, y: 208}
+  m_SizeDelta: {x: 188.699997, y: 30.5}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1400115394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1400115392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .903448343, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Wie\u017Ce:"
+--- !u!222 &1400115395
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1400115392}
 --- !u!1 &1490035421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,12 +1988,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1840154491}
-  m_RootOrder: 8
+  m_Father: {fileID: 790666205}
+  m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 64, y: -221.199997}
-  m_SizeDelta: {x: 223, y: 23}
+  m_AnchoredPosition: {x: 495, y: -42}
+  m_SizeDelta: {x: 150, y: 80}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1490035423
 MonoBehaviour:
@@ -1867,17 +2016,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- definition'
+  m_Text: "Pole si\u0142owe - zatrzymuje wrog\xF3w w zasi\u0119gu dzia\u0142ania"
 --- !u!222 &1490035424
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1915,8 +2064,8 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 64, y: -175}
-  m_SizeDelta: {x: 223, y: 23}
+  m_AnchoredPosition: {x: 25, y: -193}
+  m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1633600494
 MonoBehaviour:
@@ -1939,17 +2088,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- definition'
+  m_Text: "zakup/ulepszenie wie\u017Cy Cewka Tesli"
 --- !u!222 &1633600495
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1987,7 +2136,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -77, y: -42}
+  m_AnchoredPosition: {x: -77, y: -44}
   m_SizeDelta: {x: 36, y: 36}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1706985752
@@ -2050,12 +2199,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 772094776}
-  m_RootOrder: 8
+  m_Father: {fileID: 790666205}
+  m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 72, y: -216}
-  m_SizeDelta: {x: 223, y: 23}
+  m_AnchoredPosition: {x: 60, y: -44}
+  m_SizeDelta: {x: 150, y: 80}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1728210605
 MonoBehaviour:
@@ -2078,17 +2227,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- definition'
+  m_Text: "Przycisk wypuszczaj\u0105cy kolejn\u0105 fal\u0119 wrog\xF3w"
 --- !u!222 &1728210606
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2122,11 +2271,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 772094776}
-  m_RootOrder: 16
+  m_Father: {fileID: 790666205}
+  m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 191, y: -232}
+  m_AnchoredPosition: {x: 164, y: -41}
   m_SizeDelta: {x: 59, y: 59}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1739821259
@@ -2189,12 +2338,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 772094776}
-  m_RootOrder: 17
+  m_Father: {fileID: 790666205}
+  m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 367, y: -232}
-  m_SizeDelta: {x: 270, y: 23}
+  m_AnchoredPosition: {x: 273, y: -42}
+  m_SizeDelta: {x: 150, y: 80}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1806612316
 MonoBehaviour:
@@ -2217,17 +2366,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- definition'
+  m_Text: "Bomba - niszczy wszystko w polu ra\u017Cenia"
 --- !u!222 &1806612317
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2269,13 +2418,11 @@ RectTransform:
   - {fileID: 695927744}
   - {fileID: 1096607964}
   - {fileID: 49060475}
-  - {fileID: 1490035422}
-  - {fileID: 1888726296}
   m_Father: {fileID: 34081869}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 289.799988, y: 157}
+  m_AnchoredPosition: {x: 178, y: 208}
   m_SizeDelta: {x: 188.699997, y: 30.5}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1840154492
@@ -2309,7 +2456,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Enemies:'
+  m_Text: 'Wrogowie:'
 --- !u!222 &1840154493
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2327,7 +2474,7 @@ GameObject:
   - 222: {fileID: 1888726295}
   - 114: {fileID: 1888726294}
   m_Layer: 5
-  m_Name: Enemy 5
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2352,7 +2499,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6248fa3d478e4c34e88beddb59000a39, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0139fa0f4f625d7498ec97e6171daa2a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2376,12 +2523,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1840154491}
-  m_RootOrder: 9
+  m_Father: {fileID: 790666205}
+  m_RootOrder: 5
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -77, y: -218}
-  m_SizeDelta: {x: 36, y: 36}
+  m_AnchoredPosition: {x: 377, y: -35}
+  m_SizeDelta: {x: 59, y: 59}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &2064954427
 GameObject:
@@ -2419,7 +2566,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ce10b9eb252d8394d8cd026ade611d3f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 218fe1e1a18d1694aa3aa73364ba9f81, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2447,7 +2594,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -77, y: -129.999985}
+  m_AnchoredPosition: {x: -77, y: -144}
   m_SizeDelta: {x: 36, y: 36}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &2109557535
@@ -2481,8 +2628,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 64, y: -43.7999992}
-  m_SizeDelta: {x: 223, y: 23}
+  m_AnchoredPosition: {x: -20, y: -102}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2109557537
 MonoBehaviour:
@@ -2505,17 +2652,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- definition'
+  m_Text: "Bandyta - standartowy wr\xF3g o przeci\u0119tnej szyblo\u015Bci i \u017Cywotno\u015Bci"
 --- !u!222 &2109557538
 CanvasRenderer:
   m_ObjectHideFlags: 0
