@@ -273,6 +273,7 @@ public class Towers : MonoBehaviour {
     void DeactivateShotAnim()
     {
         RestartChilds();
+
         isShotAnim = false;
 
         
@@ -379,7 +380,7 @@ public class Towers : MonoBehaviour {
 		damage = 11;
 		radius = 10;
 		timeInterval = 5f;
-		Player.GetComponent<Player> ().addGold (-50);
+		//Player.GetComponent<Player> ().addGold (-50);
 
 	}
 	void BuildTesla2() {
@@ -389,7 +390,7 @@ public class Towers : MonoBehaviour {
 		damage = 16;
 		radius = 12;
 		timeInterval = 4f;
-		Player.GetComponent<Player> ().addGold (-100);
+		//Player.GetComponent<Player> ().addGold (-100);
 	}
 	void BuildTesla3() {
 		t_level = 3;
@@ -398,7 +399,7 @@ public class Towers : MonoBehaviour {
 		damage = 22;
 		radius = 15;
 		timeInterval = 3f;
-		Player.GetComponent<Player> ().addGold (-200);
+		//Player.GetComponent<Player> ().addGold (-200);
 	}
 
 	public void BuildTesla(){
@@ -406,13 +407,13 @@ public class Towers : MonoBehaviour {
 
         transform.FindChild("Tesla").gameObject.SetActive(true);
 
-        if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
+        if (t_level == 0 ) {
 			BuildTesla1 ();
 		}
-		else if (t_level == 1 && Player.GetComponent<Player> ().gold >= 100) {
+		else if (t_level == 1) {
 			BuildTesla2();
 		}
-		else if (t_level == 2 && Player.GetComponent<Player> ().gold >= 200) {
+		else if (t_level == 2) {
 			BuildTesla3();
 		}
 
@@ -434,7 +435,7 @@ public class Towers : MonoBehaviour {
 		damage = 4;
 		radius = 10;
 		timeInterval = 2f;
-		Player.GetComponent<Player> ().addGold (-50);
+		//Player.GetComponent<Player> ().addGold (-50);
 		
 	}
 	void BuildAlch2() {
@@ -444,7 +445,7 @@ public class Towers : MonoBehaviour {
 		damage = 6;
 		radius = 12;
 		timeInterval = 1f;
-		Player.GetComponent<Player> ().addGold (-100);
+		//Player.GetComponent<Player> ().addGold (-100);
 	}
 	void BuildAlch3() {
 		t_level = 3;
@@ -453,7 +454,7 @@ public class Towers : MonoBehaviour {
 		damage = 10;
 		radius = 15;
 		timeInterval = 0.5f;
-		Player.GetComponent<Player> ().addGold (-200);
+		//Player.GetComponent<Player> ().addGold (-200);
 	}
 
 	public void BuildAlch(){
@@ -461,13 +462,13 @@ public class Towers : MonoBehaviour {
 
         transform.FindChild("Alchemist").gameObject.SetActive(true);
 
-        if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
+        if (t_level == 0) {
 			BuildAlch1 ();
 		}
-		else if (t_level == 1 && Player.GetComponent<Player> ().gold >= 100) {
+		else if (t_level == 1) {
 			BuildAlch2();
 		}
-		else if (t_level == 2 && Player.GetComponent<Player> ().gold >= 200) {
+		else if (t_level == 2) {
 			BuildAlch3();
 		}
 
@@ -491,7 +492,7 @@ public class Towers : MonoBehaviour {
 		damage = 1;
 		radius = 10;
 		timeInterval = 0.1f;
-		Player.GetComponent<Player> ().addGold (-50);
+		//Player.GetComponent<Player> ().addGold (-50);
 		
 	}
 	void BuildEmitter2() {
@@ -501,7 +502,7 @@ public class Towers : MonoBehaviour {
 		damage = 2;
 		radius = 12;
 		timeInterval = 0.1f;
-		Player.GetComponent<Player> ().addGold (-100);
+		//Player.GetComponent<Player> ().addGold (-100);
 	}
 	void BuildEmitter3() {
 		t_level = 3;
@@ -510,7 +511,7 @@ public class Towers : MonoBehaviour {
 		damage = 3;
 		radius = 15;
 		timeInterval = 0.1f;
-		Player.GetComponent<Player> ().addGold (-200);
+		//Player.GetComponent<Player> ().addGold (-200);
 	}
 	
 	public void BuildEmitter(){
@@ -518,13 +519,13 @@ public class Towers : MonoBehaviour {
 
         transform.FindChild("Emitter").gameObject.SetActive(true);
 
-        if (t_level == 0 && Player.GetComponent<Player> ().gold >= 50) {
+        if (t_level == 0 ) {
 			BuildEmitter1 ();
 		}
-		else if (t_level == 1 && Player.GetComponent<Player> ().gold >= 100) {
+		else if (t_level == 1) {
 			BuildEmitter2();
 		}
-		else if (t_level == 2 && Player.GetComponent<Player> ().gold >= 200) {
+		else if (t_level == 2) {
 			BuildEmitter3();
 		}
 
@@ -549,10 +550,10 @@ public class Towers : MonoBehaviour {
                 child.gameObject.SetActive(false);
             }
         }
-
+        /*
         transform.FindChild("TowerPlace").gameObject.SetActive(true);
         transform.FindChild("TowerPlace").FindChild("TowerPlace1a").gameObject.SetActive(true);
-
+        */
         foreach (Transform child in transform.FindChild("Tower-UI"))
         {
             child.gameObject.SetActive(true);
@@ -582,13 +583,14 @@ public class Towers : MonoBehaviour {
         block = true;
         RestartChilds();
 
+        /*
         if (transform.FindChild("TowerPlace").gameObject.activeSelf)
         {
             transform.FindChild("TowerPlace").gameObject.SetActive(false);
             transform.FindChild("TowerPlace").FindChild("TowerPlace1a").gameObject.SetActive(false);
 
         } 
-        
+        */
 
         transform.FindChild("BuildWait").gameObject.SetActive(true);
         transform.FindChild("BuildWait").FindChild("Building").gameObject.SetActive(true);
@@ -635,6 +637,15 @@ public class Towers : MonoBehaviour {
 
 	}
 
+
+    public void addGoldToPlayer(int gold)
+    {
+        Player.GetComponent<Player>().addGold(gold);
+    }
+    public int PlayerGoldStatus()
+    {
+        return Player.GetComponent<Player>().gold;
+    }
 
 
 
