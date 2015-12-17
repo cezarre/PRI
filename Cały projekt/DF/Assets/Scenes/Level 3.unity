@@ -2627,19 +2627,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 454180, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 11.3000002
+      value: 11.3
       objectReference: {fileID: 0}
     - target: {fileID: 454180, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.03000021
+      value: -6.03
       objectReference: {fileID: 0}
     - target: {fileID: 22485800, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 177.410004
+      value: 167.6
       objectReference: {fileID: 0}
     - target: {fileID: 22485800, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -46.0900002
+      value: -46.09
       objectReference: {fileID: 0}
     - target: {fileID: 11406784, guid: f1e3995f4517eb6459286811291615ae, type: 2}
       propertyPath: numberToSpawnInSecondWave.Array.data[2]
