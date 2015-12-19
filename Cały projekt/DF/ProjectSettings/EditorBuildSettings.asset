@@ -6,6 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/SteamWars.unity
+  - enabled: 1
+    path: Assets/Scenes/Help.unity
+  - enabled: 1
     path: Assets/Scenes/menu.unity
   - enabled: 1
     path: Assets/Scenes/campaign.unity
@@ -21,5 +25,3 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 5.unity
   - enabled: 1
     path: Assets/Scenes/Final Level.unity
-  - enabled: 1
-    path: Assets/Scenes/Help.unity

@@ -55,16 +55,28 @@ public class Pause : MonoBehaviour {
 				Time.timeScale = 0;
 				if (spawnScript.waveReleased!=0) whenPaused=DateTime.Now;
 				isPaused=true;
-				
-				
 			}
 			else {
 				Time.timeScale = 1;
 			if (spawnScript.waveReleased!=0) whenResrumed=DateTime.Now;
 				isPaused=false;
-				
 			}
-
 	}
+
+    public void OnHelpClick()
+    {
+        if (pause == false && !gameEnded)
+        {
+            pause = true;
+
+        }
+
+        if (pause == true)
+        {
+            Time.timeScale = 0;
+            if (spawnScript.waveReleased != 0) whenPaused = DateTime.Now;
+            isPaused = true;
+        }
+    }
 
 }

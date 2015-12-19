@@ -19,7 +19,7 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		HPGameObject = GameObject.Find("Left Text");
-		HPText = HPGameObject.GetComponent<Text> ();
+		HPText = HPGameObject.GetComponent<Text>();
 
 		GoldGameObject = GameObject.Find("Right Text");
 		GoldGameText = GoldGameObject.GetComponent<Text> ();
