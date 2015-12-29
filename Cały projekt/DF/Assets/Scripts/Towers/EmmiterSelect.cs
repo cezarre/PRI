@@ -30,7 +30,7 @@ public class EmmiterSelect : MonoBehaviour {
                     transform.parent.parent.GetComponent<Towers>().addGoldToPlayer(-100);
                     JustBuild();
                 }
-                if (t_level == 2 && transform.parent.parent.GetComponent<Towers>().PlayerGoldStatus() >= -200)
+                if (t_level == 2 && transform.parent.parent.GetComponent<Towers>().PlayerGoldStatus() >= 200)
                 {
                     transform.parent.parent.GetComponent<Towers>().addGoldToPlayer(-200);
                     JustBuild();

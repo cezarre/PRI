@@ -489,8 +489,8 @@ public class Towers : MonoBehaviour {
 		t_level = 1;
 		transform.FindChild ("Emitter").gameObject.SetActive (true);
 		transform.FindChild ("Emitter").FindChild("Emitter1").gameObject.SetActive (true);
-		damage = 1;
-		radius = 10;
+		damage = 0.5f;
+		radius = 6;
 		timeInterval = 0.1f;
 		//Player.GetComponent<Player> ().addGold (-50);
 		
@@ -499,17 +499,17 @@ public class Towers : MonoBehaviour {
 		t_level = 2;
 		transform.FindChild ("Emitter").FindChild("Emitter1").gameObject.SetActive (false);
 		transform.FindChild ("Emitter").FindChild ("Emitter2").gameObject.SetActive (true);
-		damage = 2;
-		radius = 12;
+		damage = 1;
+		radius = 8;
 		timeInterval = 0.1f;
 		//Player.GetComponent<Player> ().addGold (-100);
 	}
 	void BuildEmitter3() {
-		t_level = 3;
+		t_level = 2;
 		transform.FindChild ("Emitter").FindChild("Emitter2").gameObject.SetActive (false);
 		transform.FindChild ("Emitter").FindChild ("Emitter3").gameObject.SetActive (true);
 		damage = 3;
-		radius = 15;
+		radius = 10;
 		timeInterval = 0.1f;
 		//Player.GetComponent<Player> ().addGold (-200);
 	}
