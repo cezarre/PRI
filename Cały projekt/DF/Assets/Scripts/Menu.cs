@@ -4,11 +4,10 @@ using System.Collections;
 public class Menu : MonoBehaviour {
 
     public static bool isPlaying = true;
-    public static bool isMenuLoadedOnce = false;
+
     // Use this for initialization
     public void Start () {
         ActiveContinoune();
-        isMenuLoadedOnce = true;
     }
 
     // Update is called once per frame

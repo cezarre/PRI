@@ -12,10 +12,7 @@ public class Help : MonoBehaviour {
     {
         if (PlayerPrefs.GetInt("PlayerProgress") > 1)
         {
-            if (Menu.isMenuLoadedOnce)
-            {
-                Application.LoadLevel("Menu");
-            }
+            Application.LoadLevel("Menu");
         }
     }
 
