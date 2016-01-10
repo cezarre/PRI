@@ -16,7 +16,7 @@ public class NextWave : MonoBehaviour {
 	public void OnMouseDown(){
 		//spawnPoint = gameObject.GetComponent<Spawn>();
 		
-		spawnPoint.isClickedNextWaved ();
+		spawnPoint.isClickedNextWavedAddGold();
 
 
 	}

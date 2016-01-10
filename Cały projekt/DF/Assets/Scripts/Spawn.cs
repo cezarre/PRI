@@ -86,6 +86,35 @@ public class Spawn : MonoBehaviour
             //progressBarImage.re
             numberOfWavesLeft = numberOfWavesLeft - 1;
 
+            
+            // Debug.Log("Next Wave clicked. Added 50 gold");
+
+        }
+    }
+
+    public void isClickedNextWavedAddGold()
+    {
+        if (pauseScript.isPaused != true)
+        {
+            if (!nextWaveButtonClickedFirstTime)
+            {
+                InvokeRepeating("PushNextWave", 2, 1F);
+
+                nextWaveButtonClickedFirstTime = true;
+            }
+
+            //Debug.Log ("isClickedNextWaved");
+            if (waveReleased < allWaves.Count)
+                LoadNextWave();
+            whenDeactiveNextWaveButton = System.DateTime.Now;
+            restartProgressBar();
+            restart = true;
+            NextWaveGameObject.SetActive(false);
+
+            progressBarNextWave.SetActive(false);
+            //progressBarImage.re
+            numberOfWavesLeft = numberOfWavesLeft - 1;
+
             Player.GetComponent<Player>().addGold(50);
             // Debug.Log("Next Wave clicked. Added 50 gold");
 
@@ -369,7 +398,7 @@ public class Spawn : MonoBehaviour
         //ebug.Log (waveReleased.ToString());
 
 
-        if ((System.DateTime.Now.Second % 2 == 0) && (oneSpawned == false) /* &&  enemySpawned<enemy.Count*/)
+        if ((System.DateTime.Now.Second % 2 == 0) && (oneSpawned == false) && (pauseScript.isPaused == false) /* &&  enemySpawned<enemy.Count*/)
         { //w parzyste sekundy rusza enemy
             ActiveNextWavedButton();
             //PushNextWave();
