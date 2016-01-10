@@ -23,16 +23,31 @@ public class Campaign : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (PlayerPrefs.GetInt("PlayerProgress") == 2)
-            Level_2.SetActive(true);
-        if (PlayerPrefs.GetInt("PlayerProgress") == 3)
-            Level_3.SetActive(true);
-        if (PlayerPrefs.GetInt("PlayerProgress") == 4)
+		if (PlayerPrefs.GetInt ("PlayerProgress") == 2)
+			Level_2.SetActive (true);
+		else if (PlayerPrefs.GetInt ("PlayerProgress") == 3) {
+			Level_2.SetActive (true);
+			Level_3.SetActive (true);
+		}
+		else if (PlayerPrefs.GetInt("PlayerProgress") == 4)
+		{
+			Level_2.SetActive(true);
+			Level_3.SetActive(true);
             Level_4.SetActive(true);
-        if (PlayerPrefs.GetInt("PlayerProgress") == 5)
+		}
+		else if (PlayerPrefs.GetInt("PlayerProgress") == 5) {
+			Level_2.SetActive(true);
+			Level_3.SetActive(true);
+			Level_4.SetActive(true);
             Level_5.SetActive(true);
-        if (PlayerPrefs.GetInt("PlayerProgress") == 6)
+		}
+		else if (PlayerPrefs.GetInt("PlayerProgress") == 6) {
+			Level_2.SetActive(true);
+			Level_3.SetActive(true);
+			Level_4.SetActive(true);
+			Level_5.SetActive(true);
             Final_Level.SetActive(true);
+		}
 
         if (Input.GetKeyDown("escape"))
         {
