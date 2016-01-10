@@ -12,7 +12,12 @@ public class Logo : MonoBehaviour {
     IEnumerator WaitFor3Seconds()
     {    
         yield return new WaitForSeconds(3);
-        Application.LoadLevel("Help");
+		if (PlayerPrefs.GetInt ("PlayerProgress") > 1) {
+			Application.LoadLevel ("Menu");
+		} else 
+		{
+			Application.LoadLevel("Help");
+		}
     }
 
     // Update is called once per frame
