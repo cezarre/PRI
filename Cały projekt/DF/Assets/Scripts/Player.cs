@@ -63,7 +63,7 @@ public class Player : MonoBehaviour {
             string[] levelName = Application.loadedLevelName.Split(' ');
             int level;
             Int32.TryParse(levelName[levelName.Length - 1], out level);
-            PlayerPrefs.SetInt("PlayerProgress", level+1);
+            if (level+1> PlayerPrefs.GetInt("PlayerProgress")) PlayerPrefs.SetInt("PlayerProgress", level+1);
 		}
 	}
 
