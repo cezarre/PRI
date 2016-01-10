@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Help.cs" />
      <Compile Include="Assets\Scripts\Logo.cs" />
+     <Compile Include="Assets\Scripts\LostEnemyCatcher.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\NextWave.cs" />
      <Compile Include="Assets\Scripts\Pause.cs" />

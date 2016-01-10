@@ -154,7 +154,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/Robix/Desktop/myKeystoreAndroid.keystore
+  AndroidKeystoreName: "C:/Users/Robix/Desktop/Projekt in\u017Cynierski/PRI/Ca\u0142y
+    projekt/DF/Assets/keystoreAndroid.keystore"
   AndroidKeyaliasName: steam wars
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
@@ -327,16 +328,16 @@ PlayerSettings:
   psmSplashimage: {fileID: 0}
   spritePackerPolicy: 
   scriptingDefineSymbols: {}
-  metroPackageName: 
+  metroPackageName: Steam-Wars
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: Assets\WSATestCertificate.pfx
-  metroCertificatePassword: 
-  metroCertificateSubject: Steam Wars
-  metroCertificateIssuer: Steam Wars
-  metroCertificateNotAfter: 00f74fd6be27d201
-  metroApplicationDescription: DF
+  metroCertificatePath: Assets/WSATestCertificate.pfx
+  metroCertificatePassword: ~cni~oeg=8
+  metroCertificateSubject: Robix
+  metroCertificateIssuer: Robix
+  metroCertificateNotAfter: 00b3c723006ad201
+  metroApplicationDescription: Steam Wars
   wsaImages: {}
-  metroTileShortName: Steam Wars
+  metroTileShortName: Steam-Wars
   metroCommandLineArgsFile: 
   metroTileShowName: 0
   metroMediumTileShowName: 0
