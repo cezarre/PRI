@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Bomb.cs" />
     <Compile Include="Assets\Scripts\BulletMove.cs" />
     <Compile Include="Assets\Scripts\Campaign.cs" />
+    <Compile Include="Assets\Scripts\Click.cs" />
     <Compile Include="Assets\Scripts\EndPoint.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemy4DisableTower.cs" />
