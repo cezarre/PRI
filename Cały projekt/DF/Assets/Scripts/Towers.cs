@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine.UI;
 
 
 
@@ -24,11 +24,14 @@ public class Towers : MonoBehaviour {
         secondsToNextTower = 5;
 
     yield return new WaitForSeconds(1);
-		LoadEnemies ();
+        
+        LoadEnemies ();
 		StartCoroutine(Actioning ());
 		Player = GameObject.Find("Player");
 
-	}
+        
+
+    }
 
 	public void LoadEnemies() {
 		enemies.Clear ();
@@ -36,7 +39,8 @@ public class Towers : MonoBehaviour {
 		{
 			enemies.Add (enem);
 		}
-	}
+        
+    }
 	
 	//----------------------------------
 
@@ -50,7 +54,12 @@ public class Towers : MonoBehaviour {
 	public int TowerType;
     public int secondsToNextTower;
 
-	private bool block;
+    public Text priceText1;
+    public Text priceText2;
+    public Text priceText3;
+    public Text priceText4;
+
+    private bool block;
 
     bool isShotAnim;
 
@@ -79,7 +88,8 @@ public class Towers : MonoBehaviour {
 
 	IEnumerator Actioning() {
 		while(true) {
-			if (!block) {
+            PriceUpdate();
+            if (!block) {
 				ActionOnEnemy ();
 			}
 			yield return new WaitForSeconds (timeInterval);
@@ -632,11 +642,29 @@ public class Towers : MonoBehaviour {
 
 
 	void OnMouseDown() {
-
+        PriceUpdate();
 		transform.FindChild ("Tower-UI").gameObject.SetActive (!transform.FindChild ("Tower-UI").gameObject.activeSelf);
 
 	}
 
+
+    void PriceUpdate()
+    {
+        string tmp;
+
+        tmp = transform.FindChild("Tower-UI").transform.FindChild("Tower1").gameObject.GetComponent<TeslaSelect>().Price.ToString();
+        priceText1.text = string.Format("$" + tmp);
+
+        tmp = transform.FindChild("Tower-UI").transform.FindChild("Tower2").gameObject.GetComponent<AlchSelect>().Price.ToString();
+        priceText2.text = string.Format("$" + tmp);
+
+        tmp = transform.FindChild("Tower-UI").transform.FindChild("Tower3").gameObject.GetComponent<EmmiterSelect>().Price.ToString();
+        priceText3.text = string.Format("$" + tmp);
+
+        tmp = transform.FindChild("Tower-UI").transform.FindChild("Tower4").gameObject.GetComponent<SellSelect>().Price.ToString();
+        priceText4.text = string.Format("-$" + tmp);
+
+    }
 
     public void addGoldToPlayer(int gold)
     {
