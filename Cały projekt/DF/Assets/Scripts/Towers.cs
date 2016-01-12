@@ -22,7 +22,6 @@ public class Towers : MonoBehaviour {
 		TowerType = 0;
         isShotAnim = false;
         secondsToNextTower = 5;
-        isClicked = false;
 
     yield return new WaitForSeconds(1);
         
@@ -64,8 +63,6 @@ public class Towers : MonoBehaviour {
 
     bool isShotAnim;
 
-    public bool isClicked;
-
     float distance(Point a, Point b) {
 		//calculate distance
 		float x = a.GetX () - b.GetX ();
@@ -91,7 +88,7 @@ public class Towers : MonoBehaviour {
 
 	IEnumerator Actioning() {
 		while(true) {
-            
+            PriceUpdate();
             if (!block) {
 				ActionOnEnemy ();
 			}
@@ -584,8 +581,7 @@ public class Towers : MonoBehaviour {
 		transform.FindChild ("TowerPlace").gameObject.SetActive (true);
 		transform.FindChild ("TowerPlace").FindChild ("TowerPlace1a").gameObject.SetActive (true);
 
-        //transform.FindChild("Tower-UI").gameObject.SetActive(true);
-        transform.FindChild("Tower-UI").gameObject.SetActive(!transform.FindChild("Tower-UI").gameObject.activeSelf);
+        transform.FindChild("Tower-UI").gameObject.SetActive(true);
 
         transform.FindChild ("TowerPlace").gameObject.GetComponent<TowerAnimation> ().Start (); //Nie wiem dlaczego ale jest to niezbędne
 
@@ -596,11 +592,6 @@ public class Towers : MonoBehaviour {
 
         block = true;
         RestartChilds();
-        print("YEACLICK " + isClicked);
-        //isClicked = false;
-        
-
-        //transform.FindChild("Tower-UI").gameObject.SetActive(false);
 
         /*
         if (transform.FindChild("TowerPlace").gameObject.activeSelf)
@@ -629,7 +620,6 @@ public class Towers : MonoBehaviour {
 
     public void BuildWaitEnd()
     {
-
         transform.FindChild("BuildWait").gameObject.SetActive(false);
 
         block = false;
@@ -653,13 +643,9 @@ public class Towers : MonoBehaviour {
 
 	void OnMouseDown() {
         PriceUpdate();
+		transform.FindChild ("Tower-UI").gameObject.SetActive (!transform.FindChild ("Tower-UI").gameObject.activeSelf);
 
-        isClicked = true;
-        //transform.FindChild("Tower-UI").gameObject.SetActive(true);
-        print("Tower Click");
-        transform.FindChild ("Tower-UI").gameObject.SetActive (!transform.FindChild ("Tower-UI").gameObject.activeSelf);
-
-    }
+	}
 
 
     void PriceUpdate()
@@ -667,16 +653,16 @@ public class Towers : MonoBehaviour {
         string tmp;
 
         tmp = transform.FindChild("Tower-UI").transform.FindChild("Tower1").gameObject.GetComponent<TeslaSelect>().Price.ToString();
-        priceText1.text = string.Format("-$" + tmp);
+        priceText1.text = string.Format("$" + tmp);
 
         tmp = transform.FindChild("Tower-UI").transform.FindChild("Tower2").gameObject.GetComponent<AlchSelect>().Price.ToString();
-        priceText2.text = string.Format("-$" + tmp);
+        priceText2.text = string.Format("$" + tmp);
 
         tmp = transform.FindChild("Tower-UI").transform.FindChild("Tower3").gameObject.GetComponent<EmmiterSelect>().Price.ToString();
-        priceText3.text = string.Format("-$" + tmp);
+        priceText3.text = string.Format("$" + tmp);
 
         tmp = transform.FindChild("Tower-UI").transform.FindChild("Tower4").gameObject.GetComponent<SellSelect>().Price.ToString();
-        priceText4.text = string.Format("$" + tmp);
+        priceText4.text = string.Format("-$" + tmp);
 
     }
 
