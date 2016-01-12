@@ -23,7 +23,6 @@ public class Towers : MonoBehaviour {
         isShotAnim = false;
         secondsToNextTower = 5;
         isClicked = false;
-        isBuilding = false;
 
     yield return new WaitForSeconds(1);
         
@@ -66,7 +65,6 @@ public class Towers : MonoBehaviour {
     bool isShotAnim;
 
     public bool isClicked;
-    public bool isBuilding;
 
     float distance(Point a, Point b) {
 		//calculate distance
@@ -595,7 +593,7 @@ public class Towers : MonoBehaviour {
 
     public void BuildWait()
     {
-        isBuilding = true;
+
         block = true;
         RestartChilds();
         print("YEACLICK " + isClicked);
@@ -634,7 +632,6 @@ public class Towers : MonoBehaviour {
 
         transform.FindChild("BuildWait").gameObject.SetActive(false);
 
-        isBuilding = false;
         block = false;
 
         if (TowerType == 1)
@@ -659,13 +656,8 @@ public class Towers : MonoBehaviour {
 
         isClicked = true;
         //transform.FindChild("Tower-UI").gameObject.SetActive(true);
-        print("Tower Click, isBuilding = " + isBuilding);
-
-        if (isBuilding == false || transform.FindChild("Tower-UI").gameObject.activeSelf == true)
-        {
-            transform.FindChild("Tower-UI").gameObject.SetActive(!transform.FindChild("Tower-UI").gameObject.activeSelf);
-        }
-       
+        print("Tower Click");
+        transform.FindChild ("Tower-UI").gameObject.SetActive (!transform.FindChild ("Tower-UI").gameObject.activeSelf);
 
     }
 
@@ -674,7 +666,6 @@ public class Towers : MonoBehaviour {
     {
         string tmp;
 
-        
         tmp = transform.FindChild("Tower-UI").transform.FindChild("Tower1").gameObject.GetComponent<TeslaSelect>().Price.ToString();
         priceText1.text = string.Format("-$" + tmp);
 

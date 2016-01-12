@@ -1151,7 +1151,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 85}
+  m_SizeDelta: {x: 50, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &366353440
 MonoBehaviour:
@@ -2880,7 +2880,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 85}
+  m_SizeDelta: {x: 50, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &860693573
 MonoBehaviour:
@@ -2914,7 +2914,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 0
 --- !u!222 &860693574
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3280,7 +3280,6 @@ MonoBehaviour:
   priceText3: {fileID: 1744350675}
   priceText4: {fileID: 1298822125}
   isClicked: 0
-  isBuilding: 0
 --- !u!1 &927724561
 GameObject:
   m_ObjectHideFlags: 0
@@ -4115,7 +4114,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1192599043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1953050347}
@@ -4145,7 +4144,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -4196,7 +4195,10 @@ Prefab:
     - target: {fileID: 11474834, guid: 67b6556c7d4ecd3459340d4e12986351, type: 2}
       propertyPath: gold
       value: 160
+<<<<<<< HEAD
       value: 1600
+=======
+>>>>>>> parent of e9011ab... Poprawka cen, blokada Tower-UI podczas budowania + kilkla drobniejszych rzeczy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 67b6556c7d4ecd3459340d4e12986351, type: 2}
@@ -4848,7 +4850,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 88}
+  m_SizeDelta: {x: 50, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1298822125
 MonoBehaviour:
@@ -5492,7 +5494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82637b669c07b4a51b729ff8fd4c3277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Price: 50
+  Price: 0
 --- !u!65 &1459496927
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6318,7 +6320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c13374815d5a482b9d7d4295e62b9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Price: 50
+  Price: 0
 --- !u!65 &1696342038
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6623,7 +6625,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 88}
+  m_SizeDelta: {x: 50, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1744350675
 MonoBehaviour:
@@ -6657,7 +6659,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: $0
 --- !u!222 &1744350676
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7854,7 +7856,6 @@ GameObject:
   - 222: {fileID: 1962166108}
   - 114: {fileID: 1962166107}
   - 114: {fileID: 1962166106}
-  - 212: {fileID: 1962166109}
   - 65: {fileID: 1962166105}
   - 114: {fileID: 1962166104}
   m_Layer: 5
@@ -7896,7 +7897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3585287f0a2a34cb20bf99d1c831ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Price: 50
+  Price: 0
 --- !u!65 &1962166105
 BoxCollider:
   m_ObjectHideFlags: 0
