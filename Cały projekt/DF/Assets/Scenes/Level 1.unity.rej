@@ -1,0 +1,11 @@
+diff a/Cały projekt/DF/Assets/Scenes/Level 1.unity b/Cały projekt/DF/Assets/Scenes/Level 1.unity	(rejected hunks)
+@@ -7950,8 +7950,8 @@
+   - 114: {fileID: 1946627353}
+   - 114: {fileID: 1946627352}
+   - 212: {fileID: 1946627351}
+-  - 114: {fileID: 1946627350}
+   - 65: {fileID: 1946627349}
++  - 114: {fileID: 1946627350}
+   m_Layer: 5
+   m_Name: Tower1
+   m_TagString: Untagged
