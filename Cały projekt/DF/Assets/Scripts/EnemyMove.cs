@@ -202,30 +202,36 @@ public class EnemyMove : MonoBehaviour
     }
     void SpeedDown()
     {
-        speed = speed - 7;
-        int direction = anim.GetInteger("Direction");
+        
+        if (wall == false)
+        {
+            speed = speed - 7;
+            int direction = anim.GetInteger("Direction");
 
-        if (direction == 0)
-        {
-            player.velocity = (new Vector2(-speed, 0f));
-        }
-        else
-            if (direction == 2)
-        {
+            if (direction == 0)
+            {
+                player.velocity = (new Vector2(-speed, 0f));
+            }
+            else
+                if (direction == 2)
+            {
 
-            player.velocity = (new Vector2(speed, 0f));
-        }
-        else
-            if (direction == 3)
-        {
-            player.velocity = (new Vector2(0f, speed));
+                player.velocity = (new Vector2(speed, 0f));
+            }
+            else
+                if (direction == 3)
+            {
+                player.velocity = (new Vector2(0f, speed));
 
+            }
+            else
+                if (direction == 1)
+            {
+                player.velocity = (new Vector2(0f, -speed));
+            }
         }
-        else
-            if (direction == 1)
-        {
-            player.velocity = (new Vector2(0f, -speed));
-        }
+        else Invoke("SpeedDown", 1);
+
     }
     public bool wall = false;
     public void WallSpeedZero()
