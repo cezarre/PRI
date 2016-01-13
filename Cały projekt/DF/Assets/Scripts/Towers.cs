@@ -665,8 +665,8 @@ public class Towers : MonoBehaviour {
         {
             transform.FindChild("Tower-UI").gameObject.SetActive(!transform.FindChild("Tower-UI").gameObject.activeSelf);
         }
-       
 
+        transform.parent.transform.FindChild("Click").gameObject.SetActive(true); //Nie mam pojęcia gdzie się wyłącza (chooć pojdejrzewam), ale tutaj muszę go aktywować
     }
 
 
