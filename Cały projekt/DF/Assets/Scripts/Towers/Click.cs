@@ -18,7 +18,7 @@ public class Click : MonoBehaviour
 
     void OnMouseDown()
     {
-        print("CLICK");
+        //print("CLICK");
         //bool isClicked = transform.parent.gameObject.GetComponent<Towers>().isClicked;
 
         //transform.FindChild("TowerWithBuild").transform.FindChild("Tower-UI").gameObject.SetActive(false);

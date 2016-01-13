@@ -17,7 +17,7 @@ public class ProgressBarTower : MonoBehaviour
         progressBar = GetComponent<Image>();
         progressBar.fillAmount = 0;
         iterator = 0;
-        print("EMITERSELECT");
+        //print("EMITERSELECT");
     }
 
     void Update()

@@ -598,7 +598,7 @@ public class Towers : MonoBehaviour {
         isBuilding = true;
         block = true;
         RestartChilds();
-        print("YEACLICK " + isClicked);
+        //print("YEACLICK " + isClicked);
         //isClicked = false;
         
 
@@ -659,7 +659,7 @@ public class Towers : MonoBehaviour {
 
         isClicked = true;
         //transform.FindChild("Tower-UI").gameObject.SetActive(true);
-        print("Tower Click, isBuilding = " + isBuilding);
+        //print("Tower Click, isBuilding = " + isBuilding);
 
         if (isBuilding == false || transform.FindChild("Tower-UI").gameObject.activeSelf == true)
         {
@@ -709,7 +709,7 @@ public class Towers : MonoBehaviour {
     public void TowerEnable()
     {
         block = false;
-        print("tower enabled");
+        //print("tower enabled");
 
     }
 

@@ -28,7 +28,7 @@ public class WallProgressBar : MonoBehaviour {
             wall.GetComponent<Wall>().abilityBlocked = true;
             k += 1.0f / secondToNextWall * Time.deltaTime;
             progressBar.fillAmount = k;
-            print(k.ToString());
+            //print(k.ToString());
             if (k >= 1.0f)
             {
                 wall.GetComponent<Wall>().abilityBlocked = false;
