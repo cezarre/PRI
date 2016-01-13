@@ -392,7 +392,7 @@ public class Towers : MonoBehaviour {
 		t_level = 1;
 		transform.FindChild ("Tesla").gameObject.SetActive (true);
 		transform.FindChild ("Tesla").FindChild("Tesla1").gameObject.SetActive (true);
-		damage = 11;
+		damage = 15;
 		radius = 10;
 		timeInterval = 5f;
 		//Player.GetComponent<Player> ().addGold (-50);
@@ -402,7 +402,7 @@ public class Towers : MonoBehaviour {
 		t_level = 2;
 		transform.FindChild ("Tesla").FindChild("Tesla1").gameObject.SetActive (false);
 		transform.FindChild ("Tesla").FindChild ("Tesla2").gameObject.SetActive (true);
-		damage = 16;
+		damage = 20;
 		radius = 12;
 		timeInterval = 4f;
 		//Player.GetComponent<Player> ().addGold (-100);
@@ -411,7 +411,7 @@ public class Towers : MonoBehaviour {
 		t_level = 3;
 		transform.FindChild ("Tesla").FindChild("Tesla2").gameObject.SetActive (false);
 		transform.FindChild ("Tesla").FindChild ("Tesla3").gameObject.SetActive (true);
-		damage = 22;
+		damage = 30;
 		radius = 15;
 		timeInterval = 3f;
 		//Player.GetComponent<Player> ().addGold (-200);

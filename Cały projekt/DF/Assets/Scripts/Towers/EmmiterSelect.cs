@@ -10,9 +10,9 @@ public class EmmiterSelect : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Price1 = 50;
-        Price2 = 100;
-        Price3 = 200;
+        Price1 = 60;
+        Price2 = 120;
+        Price3 = 240;
 
         Price = Price1;
     }

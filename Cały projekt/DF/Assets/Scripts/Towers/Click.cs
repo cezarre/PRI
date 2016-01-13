@@ -27,5 +27,6 @@ public class Click : MonoBehaviour
         {
             tower.transform.FindChild("Tower-UI").gameObject.SetActive(false);
         }
+        transform.gameObject.SetActive(false);
     }
 }

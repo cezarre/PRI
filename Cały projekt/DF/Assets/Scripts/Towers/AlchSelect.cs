@@ -11,8 +11,8 @@ public class AlchSelect : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Price1 = 50;
-        Price2 = 100;
-        Price3 = 200;
+        Price2 = 90;
+        Price3 = 190;
 
         Price = Price1;
     }
