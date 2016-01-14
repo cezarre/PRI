@@ -89,14 +89,14 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: com.company.DF
-  bundleVersion: 1.0
+  bundleVersion: 1.02
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
   productGUID: a82b882b88d97fd43982c13761e155fa
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -329,7 +329,7 @@ PlayerSettings:
   spritePackerPolicy: 
   scriptingDefineSymbols: {}
   metroPackageName: Steam-Wars
-  metroPackageVersion: 1.0.0.0
+  metroPackageVersion: 1.1.0.2
   metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: ~cni~oeg=8
   metroCertificateSubject: Robix
