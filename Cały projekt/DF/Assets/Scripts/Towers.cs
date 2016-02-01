@@ -104,8 +104,8 @@ public class Towers : MonoBehaviour {
 	void ActionOnEnemy(){
 		float bestDistance = 0;
 		LoadEnemies();
-		//GameObject enemyWithBestDistance = new GameObject ();
-		int enemyWithBestDistance =0;
+
+		int enemyWithBestDistance = 0;
 		detectedEnemies.Clear();
 
 		foreach (GameObject enemy in enemies) {
@@ -113,7 +113,7 @@ public class Towers : MonoBehaviour {
 				detectedEnemies.Add(enemy);
 			}
 		}
-		//foreach (GameObject enemy in detectedEnemies) {
+
 		for (int i=0 ; i<detectedEnemies.Count ; i++){
             float dist;
             if (detectedEnemies[i].GetComponent<EnemyMove>() == null)
@@ -126,7 +126,7 @@ public class Towers : MonoBehaviour {
 				enemyWithBestDistance = i;
 			}
 		}
-		//}
+
 		if (detectedEnemies.Count > 0 && t_level > 0 ) {
             if (!isShotAnim)
             {

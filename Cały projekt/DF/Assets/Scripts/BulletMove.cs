@@ -10,9 +10,7 @@ public class BulletMove : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collision) {
-		//print("hit enemy");
 		if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Enemy2") {
-			//col.GetComponent<EnemyMove>().damage(damage);
 			if (collision.gameObject.GetComponent<EnemyMove>()== null) collision.gameObject.GetComponent<EnemyMoveEnemy3>().damage(damage); 
             else
                 collision.gameObject.GetComponent<EnemyMove>().damage(damage);
@@ -20,7 +18,6 @@ public class BulletMove : MonoBehaviour {
 		}
 
 	}
-	// Update is called once per frame
 	void Update () {
 		float speed = 20;
 		float step = speed * Time.deltaTime;
@@ -29,9 +26,16 @@ public class BulletMove : MonoBehaviour {
 
 		Vector3 enemyPosition3D = new Vector3 (enemyPosition.x, enemyPosition.y, 0);
 		if (gameObject.transform.position == enemyPosition3D) {
-			Destroy(gameObject);
+			DestroyBullet ();
 		}
+	
+	}
 
+	IEnumerator DestroyBullet() {
+		print ("BEFORE");
+		yield return new WaitForSeconds(1.0f);
+		print ("AFTER");
+		Destroy(gameObject);
 
 	}
 }
