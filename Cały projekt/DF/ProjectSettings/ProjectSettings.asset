@@ -68,7 +68,6 @@ PlayerSettings:
   n3dsEnableSharedListOpt: 1
   n3dsEnableVSync: 0
   uiUse16BitDepthBuffer: 0
-  ignoreAlphaClear: 0
   xboxOneResolution: 0
   ps3SplashScreen: {fileID: 0}
   videoMemoryForVertexBuffers: 0
@@ -90,14 +89,14 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: com.company.DF
-  bundleVersion: 1.02
+  bundleVersion: 1.03
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
   productGUID: a82b882b88d97fd43982c13761e155fa
-  AndroidBundleVersionCode: 3
+  AndroidBundleVersionCode: 4
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -134,9 +133,6 @@ PlayerSettings:
   iPadLandscapeSplashScreen: {fileID: 0}
   iPadHighResLandscapeSplashScreen: {fileID: 0}
   appleTVSplashScreen: {fileID: 0}
-  tvOSSmallIconLayers: []
-  tvOSLargeIconLayers: []
-  tvOSTopShelfImageLayers: []
   iOSLaunchScreenType: 0
   iOSLaunchScreenPortrait: {fileID: 0}
   iOSLaunchScreenLandscape: {fileID: 0}
@@ -158,7 +154,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: "C:/Users/Robix/Desktop/Projekt in\u017Cynierski/PRI/Ca\u0142y
+  AndroidKeystoreName: "D:/Pulpit/[WMI]/[] Projekt in\u017Cynierski]/PRI/Ca\u0142y
     projekt/DF/Assets/keystoreAndroid.keystore"
   AndroidKeyaliasName: steam wars
   AndroidTVCompatibility: 1
@@ -333,7 +329,7 @@ PlayerSettings:
   spritePackerPolicy: 
   scriptingDefineSymbols: {}
   metroPackageName: Steam-Wars
-  metroPackageVersion: 1.1.0.2
+  metroPackageVersion: 1.1.0.3
   metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: ~cni~oeg=8
   metroCertificateSubject: Robix
