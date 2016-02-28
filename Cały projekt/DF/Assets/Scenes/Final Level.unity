@@ -3739,6 +3739,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11448716, guid: 2c0e4a66fc401064991376d513936578, type: 2}
+      propertyPath: m_Text
+      value: "Bandyta - wr\xF3g o przeci\u0119tnej pr\u0119dko\u015Bci i \u017Cywotno\u015Bci"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c0e4a66fc401064991376d513936578, type: 2}
   m_IsPrefabParent: 0
